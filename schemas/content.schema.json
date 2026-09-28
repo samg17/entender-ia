@@ -37,12 +37,16 @@
     "type": {
       "type": "string",
       "description": "Tipo editorial do conteúdo.",
-      "enum": ["concept", "guide", "playbook"]
+      "enum": ["concept", "guide", "playbook", "perspective"]
     },
     "category": {
       "type": "string",
       "description": "Categoria/pasta em content/.",
       "enum": ["fundamentals", "thinking", "systems", "business", "organization", "playbooks", "glossary"]
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Subpasta opcional dentro da categoria (hoje usada apenas em business/: market, economics, strategy, business-models, perspectives)."
     },
     "level": {
       "type": "string",
