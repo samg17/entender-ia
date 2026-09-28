@@ -58,4 +58,4 @@ O conteúdo é escrito inicialmente em português brasileiro (`pt-BR`). A arquit
 
 ## Licença
 
-A definir pelo mantenedor — veja [`LICENSE`](LICENSE) para a proposta inicial e as opções consideradas.
+O conteúdo editorial é licenciado sob [Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)](LICENSE) — uso e adaptação livres mediante atribuição, mas **sem uso comercial** sem autorização do mantenedor.

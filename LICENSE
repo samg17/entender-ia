@@ -1,24 +1,34 @@
 # Licença
 
-Este repositório ainda não tem uma licença definitiva escolhida. Esta é uma decisão do mantenedor e deve ser confirmada antes do primeiro release público.
+O conteúdo editorial deste repositório (textos em `content/`, `MANIFESTO.md`, `principles/`, `templates/`, diagramas em `diagrams/`) está licenciado sob:
 
-## Opções consideradas para o conteúdo editorial
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
 
-Para uma base aberta de conhecimento (texto, diagramas, explicações), as opções mais adequadas geralmente são:
+Texto legal completo: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Resumo legível: https://creativecommons.org/licenses/by-nc/4.0/
 
-### Creative Commons Attribution 4.0 (CC BY 4.0)
-Permite que qualquer pessoa use, adapte e redistribua o conteúdo, inclusive comercialmente, desde que dê crédito. É a opção mais permissiva e mais comum para bases de conhecimento abertas que querem maximizar alcance e reuso (ex.: Wikipedia usa uma variante ShareAlike; muitos cursos e livros abertos usam BY puro).
+## O que isso permite
 
-### Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
-Mesma permissividade, mas exige que qualquer trabalho derivado seja compartilhado sob a mesma licença. Protege contra forks fechados/proprietários do conteúdo, ao custo de ser mais restritiva para quem quer reaproveitar o material em contextos comerciais fechados.
+Qualquer pessoa pode, sem pedir permissão:
 
-### Recomendação preliminar
-Para um projeto que quer circular amplamente (inclusive alimentando um site comercial do próprio autor) mas também quer que eventuais forks continuem abertos, **CC BY-SA 4.0** tende a ser o equilíbrio mais comum. Se o objetivo é maximizar adoção e citação sem restrição de reuso, **CC BY 4.0** é mais simples.
+- **Compartilhar** — copiar e redistribuir o material em qualquer formato, gratuitamente.
+- **Adaptar** — remixar, transformar e criar a partir do material.
 
-## Código vs. conteúdo
+## As condições
 
-Uma licença de software (MIT, Apache 2.0, etc.) **não é adequada** para o conteúdo editorial (textos, diagramas, manifesto). Se scripts em `scripts/` crescerem e fizerem sentido como projeto de software independente, eles podem futuramente receber uma licença de código separada (ex.: MIT), diferente da licença do conteúdo em `content/`.
+- **Atribuição** — dar crédito apropriado, incluir um link para a licença, e indicar se foram feitas alterações.
+- **Não Comercial** — o material **não pode ser usado para fins comerciais** sem autorização explícita do mantenedor. Isso inclui vender o conteúdo, incluí-lo em produtos pagos, ou monetizá-lo diretamente (ex.: atrás de paywall, como parte de um curso pago, embutido em um produto SaaS cobrado).
 
-## Ação necessária
+Exemplo de atribuição sugerida:
 
-**Este arquivo é um placeholder.** O mantenedor deve escolher explicitamente entre CC BY 4.0 e CC BY-SA 4.0 (ou outra opção), atualizar este arquivo com o texto legal completo da licença escolhida, e refletir a escolha no README.
+> Conteúdo adaptado de "Entender IA" (github.com/samg17/entender-ia), licenciado sob CC BY-NC 4.0.
+
+## Por que Não Comercial
+
+O objetivo do projeto é permanecer uma base de conhecimento aberta e gratuita. Uso comercial de terceiros (ex.: revender o conteúdo, usá-lo para treinar ou alimentar um produto pago) exige acordo direto com o mantenedor.
+
+O site pessoal do mantenedor (samarghattas.com.br/ai) consumindo este mesmo conteúdo não é considerado uso de terceiro e não está restrito por esta cláusula.
+
+## Scripts e código
+
+Arquivos em `scripts/` (ferramentas de validação, não conteúdo editorial) não estão cobertos por esta licença de conteúdo. Caso cresçam a ponto de merecer licenciamento próprio, receberão uma licença de software separada (ex.: MIT), a ser definida pelo mantenedor.
