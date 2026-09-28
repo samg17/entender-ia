@@ -35,18 +35,19 @@ O conteúdo vive em [`content/`](content/), organizado por categoria:
 | [`fundamentals/`](content/fundamentals/) | Como IA e modelos funcionam |
 | [`thinking/`](content/thinking/) | Modelos mentais e critérios de julgamento |
 | [`systems/`](content/systems/) | Como sistemas baseados em IA são construídos |
-| [`business/`](content/business/) | Avaliação econômica e estratégica de IA |
+| [`business/`](content/business/) | Mercado, economia, estratégia e modelos de negócio de IA — com subcategorias em `market/`, `economics/`, `strategy/`, `business-models/` e `perspectives/` |
 | [`organization/`](content/organization/) | Como organizações trabalham melhor com IA |
 | [`playbooks/`](content/playbooks/) | Frameworks orientados a decisões |
 | [`glossary/`](content/glossary/) | Definições curtas de conceitos |
 
-Cada conteúdo é um dos três tipos: **concept** (o que é isso?), **guide** (como devo pensar sobre isso?) ou **playbook** (como devo decidir?). Veja os [templates](templates/).
+Cada conteúdo é um dos quatro tipos: **concept** (o que é isso?), **guide** (como devo pensar sobre isso?), **playbook** (como devo decidir?) ou **perspective** (análises de afirmações populares sobre IA, software e mercado que merecem mais contexto — não é uma seção de "mitos" ou debunking). Veja os [templates](templates/).
 
 ## Princípios editoriais
 
 - [`principles/editorial-principles.md`](principles/editorial-principles.md) — os critérios que guiam o que entra e como é escrito.
 - [`principles/evidence-policy.md`](principles/evidence-policy.md) — como tratamos fontes e evidências.
 - [`principles/ai-assisted-content.md`](principles/ai-assisted-content.md) — como IA pode e não pode ser usada na criação deste conteúdo.
+- [`principles/content-workflow.md`](principles/content-workflow.md) — o fluxo recomendado de fontes brutas até conteúdo publicado.
 
 ## Como contribuir
 
