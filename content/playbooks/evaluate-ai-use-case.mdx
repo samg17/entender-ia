@@ -1,0 +1,78 @@
+---
+id: "evaluate-ai-use-case"
+
+title: "Avaliar um caso de uso de IA"
+slug: "avaliar-caso-de-uso"
+description: "Um framework de perguntas para decidir se um caso de uso de IA está pronto para ser perseguido, e com que nível de risco."
+
+locale: "pt-BR"
+
+type: "playbook"
+category: "playbooks"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - playbook
+  - avaliacao
+  - decisao
+
+prerequisites:
+  - problem-framing
+  - when-not-to-use-ai
+  - ai-opportunity-assessment
+
+related: []
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references: []
+---
+
+## Objetivo
+
+Ajudar a decidir se um caso de uso de IA proposto deve avançar, ser ajustado, ou ser descartado — antes de investir em implementação.
+
+## Quando usar
+
+Use este playbook sempre que alguém propuser "usar IA para X", antes de escolher uma ferramenta, arquitetura ou fornecedor. Não é necessário para experimentos de baixo custo e reversíveis, puramente exploratórios.
+
+## Perguntas
+
+1. **Problema**: qual problema específico este caso de uso resolve, e para quem? (veja [`enquadrar-o-problema`](../thinking/problem-framing.mdx))
+2. **Necessidade de IA**: este problema exige especificamente IA generativa, ou uma solução determinística já resolveria melhor? (veja [`quando-nao-usar-ia`](../thinking/when-not-to-use-ai.mdx))
+3. **Custo de erro**: o que acontece quando o sistema erra, e quem detecta o erro?
+4. **Verificação**: existe um jeito viável de verificar a saída antes que ela cause impacto real?
+5. **Métrica**: como saberíamos, de forma concreta, se isso funcionou — e essa métrica existiria mesmo sem IA?
+6. **Estágio**: isso é uma prova de conceito para aprender, ou já está sendo tratado como produção?
+
+## Framework de decisão
+
+- Se as respostas a **Problema** e **Necessidade de IA** não forem claras, o caso de uso não está pronto — volte para o enquadramento do problema.
+- Se o **custo de erro** for alto e a **verificação** for inviável ou cara, restrinja o caso de uso a um papel de apoio à decisão humana, não a decisor autônomo.
+- Se não houver uma **métrica** clara de sucesso, defina uma antes de avançar — mesmo que seja simples.
+- Se o caso de uso ainda está em fase de aprendizado, trate-o explicitamente como prova de conceito, com escopo e recursos proporcionais a isso.
+
+## Riscos
+
+- Avançar sem métrica leva a projetos que nunca se sabe se funcionaram.
+- Ignorar custo de erro em áreas sensíveis pode gerar dano real antes que alguém perceba o problema.
+- Tratar uma prova de conceito como se já fosse produção acumula dívida técnica e de confiança.
+
+## Sinais de alerta
+
+- A justificativa do projeto é "todo mundo está fazendo isso" em vez de um problema específico.
+- Ninguém no time consegue explicar o que aconteceria se o sistema errasse.
+- A métrica de sucesso só existe depois que o projeto já foi lançado.
+
+## Output esperado
+
+Uma decisão registrada: avançar (com escopo e métrica definidos), ajustar (com o que precisa mudar antes de avançar), ou descartar (com a razão específica).
+
+## Referências
+
+Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.

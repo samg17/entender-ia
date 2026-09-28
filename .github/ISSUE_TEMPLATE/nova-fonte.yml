@@ -1,0 +1,47 @@
+name: "Nova fonte"
+description: "Sugerir uma referência para adicionar a references/sources.yaml."
+title: "[Fonte] "
+labels: ["source"]
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: "Título da fonte"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: "URL"
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: "Tipo"
+      options:
+        - paper
+        - official-documentation
+        - research
+        - book
+        - dataset
+        - standard
+        - article
+    validations:
+      required: true
+  - type: textarea
+    id: relevancia
+    attributes:
+      label: "Por que essa fonte é relevante"
+      description: "A quais conteúdos existentes ou futuros ela se conecta?"
+    validations:
+      required: true
+  - type: checkboxes
+    id: verificacao
+    attributes:
+      label: "Verificação"
+      options:
+        - label: "Verifiquei que esta fonte existe e o link funciona"
+          required: true
+        - label: "Esta é preferencialmente uma fonte primária ou documentação oficial"
+          required: false

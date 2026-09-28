@@ -1,0 +1,81 @@
+---
+id: "context-windows"
+
+title: "Janela de contexto"
+slug: "janela-de-contexto"
+description: "A quantidade de texto que um modelo consegue considerar de uma vez — e por que mais contexto nem sempre significa melhores respostas."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "fundamentals"
+level: "beginner"
+status: "draft"
+
+tags:
+  - llm
+  - contexto
+
+prerequisites:
+  - what-is-an-llm
+
+related:
+  - rag
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references:
+  - openai-context-windows-docs
+  - anthropic-context-windows-docs
+---
+
+## Em uma frase
+
+A janela de contexto é a quantidade máxima de texto (medida em *tokens*) que um modelo consegue "ver" e considerar ao gerar uma resposta em uma única interação.
+
+## Por que isso importa
+
+Toda a informação relevante para uma tarefa — a pergunta, instruções, documentos anexados, histórico da conversa — precisa caber dentro dessa janela. Se não couber, o modelo simplesmente não tem acesso a ela, mesmo que ela exista em algum lugar do sistema.
+
+## Modelo mental
+
+Pense na janela de contexto como a mesa de trabalho de alguém: só o que está em cima da mesa pode ser usado no momento. Aumentar o tamanho da mesa não aumenta a capacidade da pessoa de prestar atenção igualmente em tudo o que está nela.
+
+## Como funciona
+
+Cada modelo tem um limite técnico de tokens que consegue processar em uma chamada, somando entrada e saída. Modelos diferentes têm janelas de tamanhos diferentes, e esse limite tem evoluído rapidamente. Mas o tamanho da janela é apenas parte da história.
+
+## Exemplo
+
+Colocar o manual inteiro de uma empresa dentro da janela de contexto não garante que o modelo vai "lembrar" e aplicar corretamente cada regra dele ao responder uma pergunta específica — a atenção do modelo não é uniformemente distribuída sobre tudo que está no contexto, especialmente quando o texto é muito longo.
+
+## Implicações para negócios
+
+Decisões como "vamos colocar toda a nossa documentação dentro do contexto do modelo" parecem simples, mas não substituem um bom projeto de recuperação de informação (veja [`rag`](../systems/rag.mdx)). Mais contexto tem custo — em tempo de resposta, em custo computacional, e potencialmente em qualidade, se a informação relevante for "diluída" em meio a muito texto irrelevante.
+
+## Equívocos comuns
+
+- "Janela de contexto maior resolve o problema de memória do sistema" — janela de contexto é por interação, não é memória persistente.
+- "Quanto mais informação eu colocar no contexto, melhor a resposta" — informação irrelevante ou mal organizada pode piorar a resposta, não melhorá-la.
+
+## O que pode dar errado
+
+Informação relevante pode ser "perdida" ou sub-priorizada quando está em meio a um contexto muito longo, mesmo estando tecnicamente dentro do limite.
+
+## Perguntas para fazer
+
+- A informação que estou colocando no contexto é realmente necessária para esta tarefa específica?
+- Eu preciso de mais contexto, ou preciso de um sistema melhor para selecionar o que é relevante antes de colocar no contexto?
+
+## Conceitos relacionados
+
+- [O que realmente é um LLM](../fundamentals/what-is-an-llm.mdx)
+- [RAG](../systems/rag.mdx)
+
+## Referências
+
+- Ver `references/sources.yaml` (`openai-context-windows-docs`, `anthropic-context-windows-docs`).

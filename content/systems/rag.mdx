@@ -1,0 +1,80 @@
+---
+id: "rag"
+
+title: "O que RAG faz (e o que ele não faz)"
+slug: "rag"
+description: "Retrieval-Augmented Generation busca informação relevante para colocar no contexto de um modelo — mas não significa que o sistema 'entende' os documentos que consultou."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "systems"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - rag
+  - retrieval
+  - sistemas
+
+prerequisites:
+  - context-windows
+
+related:
+  - agents
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references: []
+---
+
+## Em uma frase
+
+RAG (*Retrieval-Augmented Generation*) é uma técnica que busca trechos relevantes de uma base de documentos e os insere no contexto de um modelo antes de gerar uma resposta, em vez de depender apenas do que o modelo "aprendeu" durante o treinamento.
+
+## Por que isso importa
+
+RAG é frequentemente vendido como a solução para "fazer a IA conhecer os dados da empresa". Entender o que ele realmente faz — e onde ele pode falhar silenciosamente — é essencial para avaliar se um projeto de RAG vai entregar o que promete.
+
+## Modelo mental
+
+RAG não ensina o modelo, não é uma forma de "gravar" conhecimento no modelo permanentemente. É melhor pensado como uma busca (semelhante a uma pesquisa) que seleciona documentos relevantes e os entrega ao modelo naquele momento, dentro da janela de contexto daquela interação específica.
+
+## Como funciona
+
+Em um esquema típico, os documentos são divididos em trechos e transformados em representações numéricas (*embeddings*). Quando uma pergunta chega, o sistema busca os trechos com representação mais próxima da pergunta, e insere esses trechos no contexto enviado ao modelo, que então gera a resposta considerando esse material.
+
+## Exemplo
+
+Colocar todos os documentos internos de uma empresa em um sistema de RAG não significa que o sistema "entende a empresa" — significa que, para cada pergunta, ele tenta recuperar os trechos de texto mais parecidos com a pergunta e pedir ao modelo para responder com base neles. Se a busca recuperar os trechos errados, ou se a pergunta não tiver uma boa correspondência textual com os documentos certos, a resposta pode ser incompleta ou incorreta mesmo que a informação correta exista na base.
+
+## Implicações para negócios
+
+A qualidade de um sistema de RAG depende tanto da qualidade da busca (retrieval) quanto da geração — investir apenas no modelo generativo sem cuidar de como os documentos são organizados, divididos e indexados costuma produzir resultados decepcionantes.
+
+## Equívocos comuns
+
+- "RAG faz o modelo aprender nossos dados" — RAG não treina o modelo; é uma injeção de contexto por consulta.
+- "Se o documento está na base, o sistema vai encontrá-lo" — a recuperação pode falhar por razões de similaridade textual, fragmentação do documento, ou ambiguidade da pergunta.
+
+## O que pode dar errado
+
+Recuperação de trechos irrelevantes, fragmentação que corta informação importante ao meio, ou perguntas ambíguas que levam a buscas mal direcionadas — todos esses problemas ocorrem "silenciosamente": o sistema ainda produz uma resposta com aparência de confiança.
+
+## Perguntas para fazer
+
+- Como sabemos se o sistema está recuperando os trechos certos, e não apenas gerando uma resposta plausível a partir de trechos errados?
+- Precisamos de RAG, ou o volume de informação relevante já caberia diretamente no contexto? (veja [`janela-de-contexto`](../fundamentals/context-windows.mdx))
+
+## Conceitos relacionados
+
+- [Janela de contexto](../fundamentals/context-windows.mdx)
+- [Agentes](../systems/agents.mdx)
+
+## Referências
+
+Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.

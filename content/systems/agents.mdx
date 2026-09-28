@@ -1,0 +1,82 @@
+---
+id: "agents"
+
+title: "O que são agentes"
+slug: "agentes"
+description: "Um agente é um sistema que usa um modelo para decidir e executar uma sequência de ações — não apenas gerar uma resposta única de texto."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "systems"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - agentes
+  - sistemas
+
+prerequisites:
+  - rag
+
+related:
+  - ai-literacy
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references: []
+---
+
+## Em uma frase
+
+Um agente, no contexto de sistemas de IA, é um sistema em que um modelo decide quais ações tomar (como usar uma ferramenta, consultar uma fonte, ou chamar outro sistema) e repete esse ciclo de decisão até completar uma tarefa, em vez de apenas produzir uma resposta de texto única.
+
+## Por que isso importa
+
+"Agente" tornou-se um termo usado para descrever coisas muito diferentes, de assistentes simples a sistemas complexos com múltiplas etapas autônomas. Entender o que caracteriza um agente ajuda a avaliar se ele é a solução certa para um problema, ou se um fluxo mais simples e previsível resolveria melhor.
+
+## Modelo mental
+
+A diferença central entre um workflow tradicional e um agente é onde está o controle da sequência de passos: em um workflow, a sequência é definida por quem construiu o sistema; em um agente, o próprio modelo decide, a cada etapa, qual é o próximo passo, dentro de um conjunto de ferramentas e instruções disponíveis.
+
+## Como funciona
+
+Um agente tipicamente opera em um ciclo: recebe um objetivo, decide uma ação (por exemplo, buscar uma informação ou chamar uma ferramenta), observa o resultado dessa ação, e decide a próxima ação com base nisso — repetindo até considerar a tarefa concluída ou atingir um limite definido.
+
+## Exemplo
+
+Um assistente que responde uma pergunta com um único texto não é um agente nesse sentido. Um sistema que, para responder a mesma pergunta, decide sozinho buscar informação em uma base de dados, depois consultar uma API externa, e só então compor uma resposta final, está operando como agente.
+
+## Implicações para negócios
+
+Agentes trazem flexibilidade para lidar com tarefas que não seguem um caminho fixo, mas ao custo de menor previsibilidade: como o próprio modelo decide a sequência de ações, erros de decisão podem se propagar ou se acumular ao longo de várias etapas. Isso muda a forma como se avalia risco e a necessidade de supervisão humana — veja [`quando-um-workflow-e-melhor-que-um-agente`](#quando-um-workflow-e-melhor-que-um-agente) abaixo.
+
+## Quando um workflow é melhor que um agente
+
+Quando a sequência de passos necessária já é conhecida e estável, um workflow (onde os passos são definidos explicitamente por quem constrói o sistema, e o modelo é usado apenas dentro de etapas específicas) tende a ser mais previsível, mais fácil de testar e mais fácil de depurar do que um agente que decide sozinho o que fazer a cada passo. Reservar agentes para tarefas onde a sequência de ações realmente não pode ser conhecida de antemão é geralmente uma escolha mais segura.
+
+## Equívocos comuns
+
+- "Um agente é sempre mais avançado ou melhor do que um workflow" — a escolha depende do problema, não do quão sofisticado o termo parece.
+- "Adicionar um agente automaticamente torna um processo mais eficiente" — mais autonomia de decisão também significa mais superfície para erro.
+
+## O que pode dar errado
+
+Agentes podem entrar em ciclos improdutivos, tomar ações irreversíveis sem supervisão adequada, ou acumular pequenos erros de decisão ao longo de múltiplas etapas até produzir um resultado final claramente errado.
+
+## Perguntas para fazer
+
+- A sequência de ações necessária para esta tarefa já é conhecida, ou realmente precisa ser decidida dinamicamente?
+- O que acontece se o sistema tomar uma ação errada no meio do processo — isso é reversível e detectável?
+
+## Conceitos relacionados
+
+- [RAG](../systems/rag.mdx)
+
+## Referências
+
+Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.

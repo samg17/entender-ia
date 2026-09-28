@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://samarghattas.com.br/ai/schemas/reference.schema.json",
+  "title": "Reference entry",
+  "description": "Schema de cada item em references/sources.yaml.",
+  "type": "object",
+  "required": ["id", "title", "type", "url"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador estável, referenciado pelo frontmatter de conteúdos.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": { "type": "string" },
+    "organization": {
+      "type": "string",
+      "description": "Organização responsável pela fonte, quando aplicável."
+    },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "type": {
+      "type": "string",
+      "enum": ["paper", "official-documentation", "research", "book", "dataset", "standard", "article"]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "published": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de publicação original, quando conhecida."
+    },
+    "accessed": {
+      "type": "string",
+      "format": "date",
+      "description": "Data em que a fonte foi verificada pela última vez pelo contribuidor."
+    }
+  }
+}

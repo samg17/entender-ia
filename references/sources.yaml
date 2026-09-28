@@ -1,0 +1,39 @@
+# Fontes e referências
+#
+# Cada item precisa de um `id` estável, referenciado pelo campo `references`
+# no frontmatter dos conteúdos em content/. Veja schemas/reference.schema.json
+# e principles/evidence-policy.md antes de adicionar uma nova entrada.
+#
+# Prefira fontes primárias e documentação oficial. Nunca adicione uma
+# referência que você não verificou pessoalmente.
+
+- id: attention-is-all-you-need
+  title: "Attention Is All You Need"
+  organization: "Google Brain / Google Research"
+  authors:
+    - "Ashish Vaswani"
+    - "Noam Shazeer"
+    - "Niki Parmar"
+    - "Jakob Uszkoreit"
+    - "Llion Jones"
+    - "Aidan N. Gomez"
+    - "Łukasz Kaiser"
+    - "Illia Polosukhin"
+  type: "paper"
+  url: "https://arxiv.org/abs/1706.03762"
+  published: "2017-06-12"
+  accessed: "2026-09-28"
+
+- id: openai-context-windows-docs
+  title: "Models overview — context window documentation"
+  organization: "OpenAI"
+  type: "official-documentation"
+  url: "https://platform.openai.com/docs/models"
+  accessed: "2026-09-28"
+
+- id: anthropic-context-windows-docs
+  title: "Context windows"
+  organization: "Anthropic"
+  type: "official-documentation"
+  url: "https://docs.claude.com/en/docs/build-with-claude/context-windows"
+  accessed: "2026-09-28"

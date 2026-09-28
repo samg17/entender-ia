@@ -1,0 +1,69 @@
+---
+id: "when-not-to-use-ai"
+
+title: "Quando não usar IA"
+slug: "quando-nao-usar-ia"
+description: "Nem todo problema melhora com IA — reconhecer isso é parte essencial de usar IA com critério."
+
+locale: "pt-BR"
+
+type: "guide"
+category: "thinking"
+level: "beginner"
+status: "draft"
+
+tags:
+  - julgamento
+  - risco
+
+prerequisites:
+  - problem-framing
+
+related:
+  - ai-opportunity-assessment
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references: []
+---
+
+## Contexto
+
+A pressão para "usar IA em tudo" pode levar a aplicá-la em situações onde ela adiciona complexidade, custo ou risco sem benefício correspondente. Saber reconhecer esses casos é tão importante quanto saber onde a IA ajuda.
+
+## Modelo mental
+
+IA generativa tende a ser mais adequada em problemas que envolvem ambiguidade, linguagem natural, síntese de grandes volumes de informação não estruturada, ou geração de rascunhos que serão revisados por humanos. Tende a ser mal adequada em problemas que exigem precisão determinística, auditabilidade estrita, ou onde o custo de um erro é alto e difícil de detectar.
+
+## Trade-offs
+
+Evitar IA em um caso legítimo pode significar deixar de ganhar eficiência real. Usar IA em um caso inadequado pode introduzir erros sutis, difíceis de auditar, em processos que antes eram previsíveis. A decisão depende de custo de erro, capacidade de verificação e reversibilidade.
+
+## Perguntas
+
+- O problema exige uma resposta exata e verificável, ou uma resposta plausível e revisável?
+- Qual é o custo de um erro não detectado nesta tarefa?
+- Existe um jeito barato e confiável de verificar a saída antes que ela cause impacto?
+- Uma solução determinística (regra, fórmula, sistema tradicional) já resolveria isso de forma mais simples e confiável?
+
+## Exemplos
+
+Cálculos financeiros exatos, decisões que exigem conformidade regulatória estrita, ou sistemas onde um erro raro mas grave (ex.: segurança física, diagnóstico crítico sem supervisão humana) tem custo desproporcional são candidatos a **não** depender de IA generativa como decisor final — mesmo que ela possa ajudar como ferramenta de apoio.
+
+## Erros comuns
+
+- Assumir que "não usar IA" é sempre a opção mais conservadora e segura — às vezes o processo manual atual já é a fonte do erro.
+- Usar IA como decisor final em vez de apoio a uma decisão humana, em contextos de alto custo de erro.
+- Justificar o uso de IA pela novidade, e não pelo problema.
+
+## Implicações
+
+Esse critério deve ser aplicado antes, não depois, de investir em uma solução — veja [`enquadrar-o-problema`](problem-framing.mdx) e [`avaliar-caso-de-uso`](../playbooks/evaluate-ai-use-case.mdx) para um processo mais estruturado.
+
+## Referências
+
+Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.

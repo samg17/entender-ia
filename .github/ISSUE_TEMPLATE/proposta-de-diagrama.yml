@@ -1,0 +1,41 @@
+name: "Proposta de diagrama"
+description: "Sugerir um diagrama novo ou uma melhoria em um diagrama existente."
+title: "[Diagrama] "
+labels: ["diagram-proposal"]
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: "Título do diagrama"
+    validations:
+      required: true
+  - type: textarea
+    id: conceito
+    attributes:
+      label: "Qual conceito este diagrama explica"
+      description: "Diagramas devem explicar conceitos, não ser apenas decorativos."
+    validations:
+      required: true
+  - type: input
+    id: conteudos
+    attributes:
+      label: "Conteúdos relacionados"
+      description: "IDs dos conteúdos em content/ que usariam este diagrama."
+    validations:
+      required: false
+  - type: dropdown
+    id: formato
+    attributes:
+      label: "Formato sugerido"
+      options:
+        - Mermaid
+        - SVG
+        - "Não sei / sugestão aberta"
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "Esboço ou descrição do diagrama"
+    validations:
+      required: false

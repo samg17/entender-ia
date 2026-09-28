@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://samarghattas.com.br/ai/schemas/content.schema.json",
+  "title": "Content frontmatter",
+  "description": "Schema do frontmatter YAML usado em todos os arquivos MDX dentro de content/.",
+  "type": "object",
+  "required": ["id", "title", "slug", "description", "locale", "type", "category", "level", "status", "created"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador estável e independente de idioma. Nunca muda mesmo se título ou slug mudarem.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Título legível, no idioma do conteúdo (locale)."
+    },
+    "slug": {
+      "type": "string",
+      "description": "Slug amigável para URL, no idioma do conteúdo.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Resumo curto de uma frase, usado em listagens e SEO futuro."
+    },
+    "locale": {
+      "type": "string",
+      "description": "Idioma deste arquivo. Apenas pt-BR é usado atualmente.",
+      "enum": ["pt-BR", "en"]
+    },
+    "translation_of": {
+      "type": "string",
+      "description": "Preenchido apenas em traduções futuras: o locale original de onde este conteúdo foi traduzido (ex: 'pt-BR')."
+    },
+    "type": {
+      "type": "string",
+      "description": "Tipo editorial do conteúdo.",
+      "enum": ["concept", "guide", "playbook"]
+    },
+    "category": {
+      "type": "string",
+      "description": "Categoria/pasta em content/.",
+      "enum": ["fundamentals", "thinking", "systems", "business", "organization", "playbooks", "glossary"]
+    },
+    "level": {
+      "type": "string",
+      "description": "Nível de profundidade esperado do leitor.",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+    "status": {
+      "type": "string",
+      "description": "Status editorial do conteúdo.",
+      "enum": ["draft", "in-review", "reviewed"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Palavras-chave livres para busca e agrupamento."
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs de outros conteúdos recomendados antes deste."
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs de conteúdos relacionados."
+    },
+    "next": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs de conteúdos sugeridos como próximo passo."
+    },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Identificadores dos autores/contribuidores principais."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "Data de criação no formato YYYY-MM-DD."
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Data da última revisão editorial no formato YYYY-MM-DD."
+    },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs de referências definidas em references/sources.yaml."
+    }
+  }
+}

@@ -1,0 +1,34 @@
+name: "Correção factual"
+description: "Reportar uma informação incorreta, desatualizada ou imprecisa em um conteúdo existente."
+title: "[Correção] "
+labels: ["correction"]
+body:
+  - type: input
+    id: arquivo
+    attributes:
+      label: "Arquivo afetado"
+      description: "Caminho do arquivo em content/ onde o problema está."
+      placeholder: "content/fundamentals/context-windows.mdx"
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: "O que está incorreto"
+      description: "Descreva a informação incorreta e por que ela está errada."
+    validations:
+      required: true
+  - type: textarea
+    id: correcao
+    attributes:
+      label: "Correção sugerida"
+      description: "Se souber, sugira o texto ou a informação correta."
+    validations:
+      required: false
+  - type: textarea
+    id: fonte
+    attributes:
+      label: "Fonte de apoio"
+      description: "Link ou referência que sustenta a correção (veja principles/evidence-policy.md)."
+    validations:
+      required: false

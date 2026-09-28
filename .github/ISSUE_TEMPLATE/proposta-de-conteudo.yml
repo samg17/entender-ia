@@ -1,0 +1,56 @@
+name: "Proposta de conteúdo"
+description: "Propor um novo conceito, guia ou playbook antes de escrever o Pull Request."
+title: "[Proposta] "
+labels: ["content-proposal"]
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: "Título proposto"
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: "Tipo de conteúdo"
+      options:
+        - concept
+        - guide
+        - playbook
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: "Categoria"
+      options:
+        - fundamentals
+        - thinking
+        - systems
+        - business
+        - organization
+        - playbooks
+        - glossary
+    validations:
+      required: true
+  - type: textarea
+    id: resumo
+    attributes:
+      label: "Do que trata este conteúdo"
+      description: "Uma ou duas frases resumindo o escopo."
+    validations:
+      required: true
+  - type: textarea
+    id: justificativa
+    attributes:
+      label: "Por que este conteúdo é necessário"
+      description: "Que lacuna ele preenche? A quais conteúdos existentes ele se relaciona?"
+    validations:
+      required: true
+  - type: textarea
+    id: relacionados
+    attributes:
+      label: "Conceitos relacionados"
+      description: "IDs de conteúdos existentes que seriam prerequisites, related ou next."
+    validations:
+      required: false

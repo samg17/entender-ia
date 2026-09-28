@@ -1,0 +1,24 @@
+# Licença
+
+Este repositório ainda não tem uma licença definitiva escolhida. Esta é uma decisão do mantenedor e deve ser confirmada antes do primeiro release público.
+
+## Opções consideradas para o conteúdo editorial
+
+Para uma base aberta de conhecimento (texto, diagramas, explicações), as opções mais adequadas geralmente são:
+
+### Creative Commons Attribution 4.0 (CC BY 4.0)
+Permite que qualquer pessoa use, adapte e redistribua o conteúdo, inclusive comercialmente, desde que dê crédito. É a opção mais permissiva e mais comum para bases de conhecimento abertas que querem maximizar alcance e reuso (ex.: Wikipedia usa uma variante ShareAlike; muitos cursos e livros abertos usam BY puro).
+
+### Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
+Mesma permissividade, mas exige que qualquer trabalho derivado seja compartilhado sob a mesma licença. Protege contra forks fechados/proprietários do conteúdo, ao custo de ser mais restritiva para quem quer reaproveitar o material em contextos comerciais fechados.
+
+### Recomendação preliminar
+Para um projeto que quer circular amplamente (inclusive alimentando um site comercial do próprio autor) mas também quer que eventuais forks continuem abertos, **CC BY-SA 4.0** tende a ser o equilíbrio mais comum. Se o objetivo é maximizar adoção e citação sem restrição de reuso, **CC BY 4.0** é mais simples.
+
+## Código vs. conteúdo
+
+Uma licença de software (MIT, Apache 2.0, etc.) **não é adequada** para o conteúdo editorial (textos, diagramas, manifesto). Se scripts em `scripts/` crescerem e fizerem sentido como projeto de software independente, eles podem futuramente receber uma licença de código separada (ex.: MIT), diferente da licença do conteúdo em `content/`.
+
+## Ação necessária
+
+**Este arquivo é um placeholder.** O mantenedor deve escolher explicitamente entre CC BY 4.0 e CC BY-SA 4.0 (ou outra opção), atualizar este arquivo com o texto legal completo da licença escolhida, e refletir a escolha no README.

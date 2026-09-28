@@ -1,0 +1,79 @@
+---
+id: "what-is-an-llm"
+
+title: "O que realmente é um LLM"
+slug: "o-que-e-um-llm"
+description: "Um modelo de linguagem grande é um sistema estatístico que prevê a próxima unidade de texto — não um sistema que entende ou raciocina como um ser humano."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "fundamentals"
+level: "beginner"
+status: "draft"
+
+tags:
+  - llm
+  - fundamentos
+
+prerequisites: []
+
+related:
+  - context-windows
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references:
+  - attention-is-all-you-need
+---
+
+## Em uma frase
+
+Um LLM (*large language model*, modelo de linguagem grande) é um sistema treinado para prever, com base em um texto de entrada, qual é a unidade de texto mais provável de vir em seguida — repetidamente, até formar uma resposta completa.
+
+## Por que isso importa
+
+Muita confusão sobre o que a IA "sabe" ou "entende" vem de tratar um LLM como se fosse um agente com crenças e intenções, quando na prática ele é um mecanismo de previsão estatística treinado sobre grandes quantidades de texto. Entender essa diferença muda como avaliamos o que o sistema pode e não pode fazer de forma confiável.
+
+## Modelo mental
+
+Pense em um LLM como um sistema extremamente sofisticado de "completar frases", treinado em uma escala tão grande que a previsão de texto plausível passa a parecer raciocínio, explicação, tradução ou código funcional — sem que exista, por trás disso, um modelo do mundo garantido como verdadeiro.
+
+## Como funciona
+
+O modelo é treinado em duas fases: primeiro em uma quantidade massiva de texto, aprendendo padrões estatísticos de linguagem (pré-treinamento); depois, ajustado com técnicas adicionais para seguir instruções e se comportar de forma mais útil e segura. Internamente, a arquitetura predominante hoje é o *transformer*, que usa um mecanismo chamado atenção para relacionar diferentes partes do texto de entrada entre si.
+
+## Exemplo
+
+Ao receber a entrada "A capital da França é", um LLM não "sabe" a resposta no sentido de ter verificado um fato — ele calcula que, dado o padrão estatístico visto durante o treinamento, a palavra "Paris" é a continuação mais provável. Na maioria dos casos isso coincide com o fato correto, mas o mecanismo é de previsão, não de consulta a uma base de verdades.
+
+## Implicações para negócios
+
+Um LLM não é um banco de dados nem um motor de regras determinístico. Aplicações que dependem de precisão factual garantida (cálculos exatos, políticas internas, dados proprietários atualizados) precisam de mecanismos adicionais — não apenas confiar na previsão do modelo. Isso afeta diretamente como se avalia custo de erro e onde IA generativa é ou não a ferramenta certa (veja [`when-not-to-use-ai`](../thinking/when-not-to-use-ai.mdx)).
+
+## Equívocos comuns
+
+- "O modelo entende o que está dizendo" — o modelo produz texto estatisticamente plausível; entendimento no sentido humano não é o mecanismo subjacente.
+- "Se a resposta soa confiante, ela é confiável" — confiança na escrita não é correlacionada com correção factual.
+- "Modelos maiores eliminam esse problema" — a arquitetura de previsão estatística permanece a mesma independentemente da escala.
+
+## O que pode dar errado
+
+Modelos podem gerar informação plausível, mas incorreta (frequentemente chamada de "alucinação"), especialmente para fatos específicos, raros, recentes ou fora do que foi visto no treinamento.
+
+## Perguntas para fazer
+
+- Esta tarefa depende de precisão factual garantida, ou de fluência e síntese de linguagem?
+- Como eu verificaria se a resposta do modelo está correta antes de agir sobre ela?
+
+## Conceitos relacionados
+
+- [Janela de contexto](../fundamentals/context-windows.mdx)
+
+## Referências
+
+- Vaswani et al., "Attention Is All You Need" — ver `references/sources.yaml` (`attention-is-all-you-need`).
