@@ -37,3 +37,50 @@
   type: "official-documentation"
   url: "https://docs.claude.com/en/docs/build-with-claude/context-windows"
   accessed: "2026-09-28"
+
+# NOTA DE VERIFICAÇÃO (from-cloud-to-ai.mdx):
+# As cinco entradas abaixo foram citadas com dados e números específicos de
+# relatórios financeiros de 2025/2026 (Capex da Alphabet, margem da NVIDIA,
+# receita do Azure, capacidade de data center da Microsoft). O contribuidor
+# que redigiu o conteúdo original afirma ter esses números das fontes
+# primárias das próprias empresas. Como isso está além do que pôde ser
+# verificado neste momento, os `url` abaixo apontam para as páginas oficiais
+# gerais de cada fonte (não para o filing/press release específico). Antes de
+# promover from-cloud-to-ai.mdx de "draft" para revisado, o contribuidor
+# responsável deve substituir os `url` pelo link exato do relatório/press
+# release consultado, conforme principles/evidence-policy.md.
+
+- id: google-cloud-what-is-cloud-computing
+  title: "What is Cloud Computing?"
+  organization: "Google Cloud"
+  type: "official-documentation"
+  url: "https://cloud.google.com/learn/what-is-cloud-computing"
+  accessed: "2026-09-28"
+
+- id: aws-cloud-economics
+  title: "Cloud Economics"
+  organization: "Amazon Web Services"
+  type: "official-documentation"
+  url: "https://aws.amazon.com/economics/"
+  accessed: "2026-09-28"
+
+- id: alphabet-2025-q4-earnings
+  title: "Alphabet Q4 2025 Earnings Release (Capex e composição de investimento em infraestrutura)"
+  organization: "Alphabet Inc."
+  type: "official-documentation"
+  url: "https://abc.xyz/investor/"
+  accessed: "2026-09-28"
+
+- id: microsoft-fy2025-annual-report
+  title: "Microsoft Annual Report / FY2025 Earnings (Azure, investimento em infraestrutura de IA, capacidade de data center)"
+  organization: "Microsoft"
+  type: "official-documentation"
+  url: "https://www.microsoft.com/en-us/investor/annual-reports.aspx"
+  accessed: "2026-09-28"
+
+- id: nvidia-fiscal-2026-results
+  title: "NVIDIA Fiscal 2026 Financial Results (margem bruta GAAP)"
+  organization: "NVIDIA"
+  type: "official-documentation"
+  url: "https://investor.nvidia.com/financial-info/financial-reports/"
+  accessed: "2026-09-28"

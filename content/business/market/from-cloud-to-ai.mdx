@@ -1,0 +1,360 @@
+---
+id: "from-cloud-to-ai"
+
+title: "Como chegamos até aqui: da computação em nuvem à era da IA"
+slug: "da-cloud-a-ia"
+description: "Como internet, cloud, SaaS, APIs, dados e infraestrutura prepararam o terreno para a atual economia da inteligência artificial."
+
+locale: "pt-BR"
+
+type: "guide"
+category: "business"
+subcategory: "market"
+level: "beginner"
+status: "draft"
+
+tags:
+  - cloud
+  - saas
+  - ai-economics
+  - infrastructure
+  - business
+
+prerequisites: []
+
+related:
+  - ai-economics-fundamentals
+  - where-value-moves
+  - saas-is-dead
+
+authors:
+  - sam
+
+created: "2026-09-28"
+last_reviewed: "2026-09-28"
+
+references:
+  - google-cloud-what-is-cloud-computing
+  - aws-cloud-economics
+  - alphabet-2025-q4-earnings
+  - microsoft-fy2025-annual-report
+  - nvidia-fiscal-2026-results
+---
+
+A atual onda de inteligência artificial não apareceu isoladamente. Ela se apoia em décadas de evolução de infraestrutura, distribuição de software, computação em nuvem, dados e modelos de negócio. Entender essa história ajuda a entender também por que a economia da IA não funciona exatamente como a economia do software que veio antes.
+
+Antes de falar sobre agentes, modelos ou aplicações AI-native, vale entender algumas ideias econômicas que aparecem o tempo todo nessa discussão.
+
+## 💡 Dicionário rápido: o que significam esses termos?
+
+**Capex** — *Capital Expenditure*, ou investimento em bens de longo prazo. É o dinheiro usado para adquirir ou construir ativos que serão utilizados por vários anos. No contexto da IA, isso pode incluir terrenos, data centers, infraestrutura de energia, redes e chips especializados.
+
+**Opex** — *Operational Expenditure*, ou custo operacional. São os gastos recorrentes necessários para manter uma operação funcionando, como energia, serviços de infraestrutura, pessoas, manutenção e consumo de serviços em nuvem.
+
+**Custo marginal.** É o custo adicional necessário para atender mais uma unidade de demanda. Em software tradicional, reproduzir e distribuir uma cópia adicional da lógica do software tende a ter custo marginal relativamente baixo, embora infraestrutura, armazenamento, suporte e outras operações continuem gerando custos.
+
+Em sistemas de IA, cada nova interação normalmente exige inferência: o modelo precisa executar computação novamente para gerar aquela resposta. Isso reintroduz um componente variável importante no custo do produto.
+
+**Treinamento.** É o processo em que os parâmetros de um modelo são ajustados a partir de grandes volumes de dados e computação. Modelos de grande escala podem exigir infraestrutura computacional significativa nessa fase.
+
+**Inferência.** É o momento em que um modelo já treinado é executado para produzir uma resposta, classificação, imagem ou outro resultado a partir de uma entrada.
+
+Essas distinções ajudam a entender uma mudança econômica importante: construir software sempre teve custo, mas sistemas baseados em IA podem adicionar um custo computacional diretamente associado a cada uso.
+
+## 📜 A evolução passo a passo: como chegamos até aqui?
+
+A atual expansão da IA é resultado da combinação de diversas camadas que amadureceram ao longo do tempo. Não existe uma sequência perfeitamente linear em que uma tecnologia simplesmente causa a seguinte. Internet, cloud, SaaS, APIs, infraestrutura de dados, machine learning e modelos fundacionais evoluíram de formas diferentes e frequentemente em paralelo.
+
+Ainda assim, observar esses movimentos juntos ajuda a entender o cenário atual.
+
+### Internet: distribuição deixou de depender de mídia física
+
+A internet mudou radicalmente a maneira como software e informação podiam ser distribuídos. Produtos deixaram de depender exclusivamente de CDs, caixas e instalações locais, enquanto atualizações e serviços passaram a ser entregues continuamente pela rede.
+
+A consequência para negócios foi importante: distribuição digital podia alcançar muito mais pessoas sem exigir uma infraestrutura física equivalente para cada nova cópia entregue.
+
+### ☁️ Cloud: infraestrutura passou a ser consumida como serviço
+
+Antes da computação em nuvem, uma empresa que precisasse de mais capacidade frequentemente tinha que comprar, instalar e manter servidores próprios.
+
+Cloud tornou possível consumir capacidade computacional, armazenamento e outros recursos sob demanda. O Google Cloud define cloud computing justamente como a disponibilidade de recursos computacionais sob demanda como serviços pela internet, enquanto a AWS também descreve a transição como uma forma de reduzir a necessidade de aquisição direta de infraestrutura física.
+
+Isso mudou a relação de muitas empresas com Capex e Opex.
+
+Em vez de:
+
+```
+comprar servidores
+        ↓
+instalar
+        ↓
+dimensionar capacidade antecipadamente
+        ↓
+manter infraestrutura própria
+```
+
+passou a ser possível:
+
+```
+consumir infraestrutura
+        ↓
+sob demanda
+        ↓
+aumentar ou reduzir capacidade
+        ↓
+pagar conforme o modelo contratado
+```
+
+É importante fazer uma distinção: cloud não eliminou Capex. Em grande parte, ele mudou de lugar.
+
+Empresas que usam cloud podem deixar de construir determinadas infraestruturas diretamente, enquanto provedores de cloud concentram investimentos enormes em servidores, redes e data centers. A Alphabet, por exemplo, informou Capex de US$ 91,4 bilhões em 2025, com a maior parte direcionada à infraestrutura técnica; aproximadamente 60% desse investimento foi para servidores e 40% para data centers e equipamentos de rede.
+
+### SaaS: software virou uma relação contínua
+
+Software as a Service não significou apenas trocar uma licença por uma assinatura mensal.
+
+SaaS também consolidou uma mudança na própria relação entre empresa e software. Produtos passaram a ser continuamente atualizados, hospedados remotamente e integrados ao trabalho cotidiano das organizações.
+
+O software deixou de ser apenas algo que uma empresa comprava, instalava e eventualmente atualizava para se tornar um serviço continuamente operado.
+
+Isso produziu uma economia particularmente interessante: depois de desenvolver o produto e sua infraestrutura, atender usuários adicionais podia ter um custo incremental relativamente baixo em comparação com negócios fortemente dependentes de produção física.
+
+### 🔌 APIs: software passou a ser composto por capacidades
+
+APIs permitiram que sistemas diferentes utilizassem funcionalidades uns dos outros sem que cada empresa precisasse reconstruir todas essas capacidades.
+
+Pagamento, mapas, comunicação, autenticação, infraestrutura e inúmeras outras funções passaram a poder ser combinadas dentro de novos produtos.
+
+Essa lógica se torna particularmente importante na era da IA. Uma empresa não precisa necessariamente treinar seu próprio foundation model para construir um produto baseado em IA. Ela pode consumir capacidades de modelos através de APIs da mesma maneira que aplicações já consomem outros serviços de software.
+
+Isso diminui a barreira para experimentar, mas também cria novas dependências econômicas: parte relevante do custo do produto pode passar a estar ligada ao consumo dessas capacidades externas.
+
+### 🗄️ Dados: empresas construíram uma enorme camada de informação
+
+Ao longo dessas mesmas décadas, organizações passaram a armazenar quantidades crescentes de dados em bancos, warehouses, sistemas empresariais e infraestrutura em nuvem.
+
+Esse movimento importa para IA, mas uma distinção é necessária: **ter dados não significa automaticamente ter contexto útil.**
+
+Um modelo não passa a compreender uma organização apenas porque recebeu acesso a milhares de documentos (veja [`janela-de-contexto`](../../fundamentals/context-windows.mdx) e [`rag`](../../systems/rag.mdx)). Para que informação se transforme em contexto útil, continuam existindo problemas de qualidade, relevância, atualização, estrutura, acesso e seleção.
+
+A infraestrutura de dados criou condições importantes. Ela não resolveu automaticamente o problema do conhecimento organizacional.
+
+### 🧠 Machine learning, compute e modelos fundacionais
+
+Paralelamente, o avanço do machine learning, da capacidade computacional e dos modelos permitiu sistemas capazes de trabalhar com problemas cada vez mais amplos.
+
+Uma mudança particularmente importante aconteceu com modelos capazes de oferecer capacidades reutilizáveis para muitas tarefas diferentes. Em vez de construir necessariamente um modelo independente para cada pequena função, tornou-se possível utilizar um modelo geral como base para resumo, classificação, geração, extração, análise e diversas outras aplicações.
+
+Essa capacidade também passou a poder ser consumida através de APIs. O resultado é que inteligência computacional passou a funcionar, em certa medida, como uma nova camada programável da infraestrutura de software.
+
+### 🤖 De interfaces de botões para interfaces de intenção
+
+Historicamente, boa parte do uso de software seguiu uma lógica semelhante a esta:
+
+```
+Pessoa
+  ↓
+Interface
+  ↓
+Menus e botões
+  ↓
+Ação do software
+```
+
+Com modelos de linguagem e sistemas capazes de utilizar ferramentas, surge outra possibilidade:
+
+```
+Pessoa
+  ↓
+Intenção em linguagem natural
+  ↓
+Modelo / agente
+  ↓
+APIs + sistemas + dados
+  ↓
+Ação
+```
+
+Isso não significa que o software desaparece. Significa que parte da interface pode mudar. O sistema que antes precisava ser diretamente operado pelo usuário pode, em alguns contextos, continuar existindo por trás de uma camada capaz de interpretar intenção e acionar suas funcionalidades.
+
+Por isso, a pergunta mais útil talvez não seja: "O software vai desaparecer?"
+
+Mas: "O que acontece com o software quando a interface deixa de ser necessariamente o lugar onde todo o trabalho acontece?"
+
+## 🔺 Por que a economia da IA pode ser diferente?
+
+No software tradicional, existe uma característica econômica especialmente poderosa: depois de construir a lógica do produto, reproduzi-la para mais usuários pode ser relativamente barato.
+
+Não significa custo zero. Existem servidores, suporte, armazenamento, segurança, distribuição e muitas outras despesas. Mas o software possui uma propriedade que produtos físicos normalmente não possuem: copiar sua lógica custa muito pouco.
+
+A IA adiciona outra dinâmica. Cada vez que uma pessoa utiliza um modelo, existe processamento associado àquela interação.
+
+```
+mais uso
+   ↓
+mais inferência
+   ↓
+mais compute
+   ↓
+mais custo variável
+```
+
+O tamanho desse custo depende de vários fatores: modelo utilizado, quantidade de processamento, tamanho da entrada e saída, arquitetura do sistema e infraestrutura envolvida.
+
+Essa diferença parece simples, mas possui implicações importantes para pricing, margem e modelos de negócio.
+
+## 🔺 Dois triângulos econômicos
+
+*Os diagramas abaixo são representações conceituais, não estão em escala e não representam participação de mercado ou margens exatas. A largura representa apenas a ênfase econômica relativa discutida nesta seção — não deve ser interpretada como dado quantitativo.*
+
+### Era Cloud / SaaS
+
+Na economia de software e SaaS, uma parte importante do valor econômico podia ser capturada pela camada de aplicação, enquanto a infraestrutura era compartilhada e utilizada como base para muitos produtos.
+
+```
+                    /\
+                   /  \
+                  /    \
+                 / APPS \
+                /        \
+               /----------\
+              /            \
+             /    SAAS      \
+            /                \
+           /------------------\
+          /                    \
+         /    CLOUD / INFRA     \
+        /                        \
+       /--------------------------\
+      /                            \
+     /      HARDWARE / COMPUTE      \
+    /________________________________\
+```
+
+O tamanho representa a estrutura de dependência da stack, não margens financeiras. A base é maior porque todas as demais camadas dependem dela. O diagrama não afirma que hardware capturava mais ou menos lucro que aplicações.
+
+Essa distinção é necessária porque dados de margem de uma única companhia não permitem inferir automaticamente a distribuição de lucro de uma indústria inteira.
+
+### 🔻 Era da IA
+
+Sistemas de IA adicionam uma camada de compute intensivo e modelos que podem ser utilizados por diversas aplicações. Uma maneira de visualizar a dependência econômica é:
+
+```
+     __________________________________
+      \                                /
+       \     APLICAÇÕES E AGENTES     /
+        \                            /
+         \--------------------------/
+          \                        /
+           \       MODELOS        /
+            \                    /
+             \------------------/
+              \                /
+               \ CLOUD / INFRA/
+                \            /
+                 \----------/
+                  \        /
+                   \ GPUs /
+                    \____/
+```
+
+Aqui, novamente, o tamanho não representa participação real nos lucros da indústria. A forma invertida serve apenas para destacar uma característica da economia atual: muitas aplicações podem estar apoiadas sobre uma quantidade relativamente pequena de fornecedores de infraestrutura, chips e modelos fundamentais.
+
+Há evidência de que essa camada de infraestrutura possui peso econômico elevado. A NVIDIA reportou margem bruta GAAP de 71,1% no exercício fiscal de 2026, enquanto a Microsoft afirmou que a expansão de infraestrutura de IA pressionou a margem percentual de Microsoft Cloud. Esses números mostram economics relevantes em empresas específicas, mas não permitem concluir que "chips ficam com todo o lucro" ou que aplicações de IA possuem necessariamente margens baixas.
+
+Essa diferença é importante. Um número de uma empresa não é automaticamente uma característica universal de uma camada inteira do mercado.
+
+## ⚡ Custo marginal: por que mais uso pode significar mais custo?
+
+Em aplicações tradicionais, atender um usuário adicional pode acrescentar muito pouco custo diretamente relacionado à execução da lógica do software.
+
+Na IA, cada interação normalmente exige uma nova inferência. Uma forma simplificada de visualizar:
+
+```
+Usuário envia uma solicitação
+            ↓
+Modelo recebe o contexto
+            ↓
+Compute executa a inferência
+            ↓
+Modelo gera a resposta
+            ↓
+Recursos foram consumidos
+```
+
+Portanto, mais uso pode significar maior consumo computacional. Isso cria uma questão econômica importante: se uma empresa cobra uma mensalidade fixa, mas alguns usuários utilizam uma quantidade muito maior de compute que outros, o custo de servir esses clientes também pode variar significativamente.
+
+É uma das razões pelas quais empresas de IA experimentam combinações diferentes de assinatura, limites de uso, consumo e outros modelos de pricing.
+
+## 🏗️ O Capex voltou ao centro da conversa
+
+A cloud permitiu que muitas empresas utilizassem infraestrutura sem precisar construí-la diretamente. Mas os provedores dessa infraestrutura continuaram precisando investir. A expansão da IA tornou essa realidade ainda mais visível.
+
+A Microsoft afirmou em seu relatório anual de 2025 que continuará investindo em capital para atender à demanda de cloud e produtos de IA, e informou que Azure ultrapassou US$ 75 bilhões de receita anual naquele exercício. A empresa também declarou ter adicionado mais de dois gigawatts de capacidade de data center ao longo dos 12 meses anteriores ao seu resultado fiscal de 2025.
+
+O movimento ajuda a visualizar uma característica da economia digital:
+
+```
+Empresa de aplicação
+        ↓
+consome cloud / modelos
+        ↓
+provedor de infraestrutura
+        ↓
+investe em servidores, chips,
+redes, energia e data centers
+```
+
+Cloud não fez a infraestrutura desaparecer. Ela tornou possível abstraí-la para quem consome o serviço enquanto a concentra em quem fornece a infraestrutura.
+
+## 🐢 Tecnologia disponível não significa produtividade imediata
+
+Existe uma diferença entre uma tecnologia estar disponível e uma organização conseguir transformar essa tecnologia em produtividade.
+
+Dar acesso a uma ferramenta não significa necessariamente mudar um processo. Uma empresa pode adicionar IA ao mesmo workflow antigo e continuar fazendo praticamente as mesmas coisas de maneira apenas um pouco diferente.
+
+Essa é uma distinção importante porque parte do valor econômico da IA provavelmente depende menos de adicionar uma interface nova e mais de repensar como trabalho, informação, decisão e software se conectam.
+
+O mesmo princípio vale para contexto. Dar acesso a documentos não significa automaticamente criar conhecimento operacional. Dar acesso a um modelo não significa automaticamente melhorar uma decisão. E automatizar uma tarefa não significa automaticamente melhorar um negócio.
+
+## ⚠️ O que esta narrativa não explica
+
+Esta história ajuda a entender como chegamos ao momento atual, mas não deve ser confundida com uma explicação completa do futuro da IA.
+
+**Tecnologia não garante adoção.** Uma capability pode existir por anos antes de encontrar uma aplicação economicamente relevante.
+
+**Infraestrutura não garante produtividade.** Empresas precisam adaptar processos, dados, pessoas e sistemas para capturar valor de uma nova tecnologia.
+
+**Criação mais barata não significa negócio mais fácil.** Se código, texto, imagens ou outras formas de produção ficam mais acessíveis, isso pode reduzir determinadas barreiras, mas distribuição, confiança, relacionamento com clientes, integração e execução continuam sendo problemas distintos.
+
+**Uma camada ficar commodity não significa que todo o mercado perde valor.** O valor pode migrar para outras partes da cadeia.
+
+## ❓ O que ainda não sabemos
+
+Existem perguntas importantes que permanecem abertas.
+
+A primeira é até onde os custos de inferência continuarão caindo e como isso afetará as margens das aplicações de IA.
+
+Também não sabemos qual combinação de assinatura, consumo, publicidade, preço por resultado ou outros modelos será dominante em diferentes categorias.
+
+Outra questão é como o valor econômico será distribuído entre chips, infraestrutura, provedores de modelos e aplicações conforme essas camadas amadurecem.
+
+E existe uma pergunta maior por trás de todas elas: se determinadas capacidades intelectuais e produtivas estão ficando mais acessíveis, o que passa a ser realmente escasso?
+
+Essa é a pergunta que leva ao próximo conteúdo desta trilha: quando tecnologia fica mais barata, onde o valor se move?
+
+## Referências
+
+1. Google Cloud — *What is Cloud Computing?* Definição de cloud computing como disponibilidade sob demanda de recursos computacionais como serviços pela internet.
+2. Amazon Web Services — *Cloud Economics*. Discussão sobre consumo de infraestrutura em cloud e mudança entre aquisição de infraestrutura própria e serviços.
+3. Alphabet — *2025 Q4 Earnings*. Dados sobre Capex de 2025 e composição dos investimentos em servidores, data centers e networking.
+4. Microsoft — *Annual Report 2025* e *FY2025 Earnings*. Dados sobre Azure, investimento em infraestrutura de IA, expansão de data centers e impacto da infraestrutura de IA sobre margens de cloud.
+5. NVIDIA — *Fiscal 2026 Financial Results*. Dados financeiros e margem bruta reportada pela companhia.
+
+## Nota editorial
+
+Os diagramas deste texto são modelos mentais, não representações quantitativas da participação de mercado ou da distribuição de lucros entre as camadas.
+
+Quando um conteúdo futuro utilizar proporções financeiras, participação de mercado, margem ou profit pools, esses valores deverão ser acompanhados de fonte primária, período, definição da métrica e escopo analisado (veja [`principles/evidence-policy.md`](../../../principles/evidence-policy.md)).
+
+**Nota de verificação:** os números específicos citados acima (Capex da Alphabet, margem bruta da NVIDIA, receita do Azure, capacidade de data center da Microsoft) ainda não tiveram seus links de fonte primária exata confirmados neste repositório — veja o comentário em [`references/sources.yaml`](../../../references/sources.yaml). Este conteúdo permanece em `status: "draft"` até essa verificação ser concluída.
