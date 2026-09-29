@@ -56,6 +56,8 @@ Antes de falar sobre agentes, modelos ou aplicações AI-native, vale entender a
 
 **Opex** — *Operational Expenditure*, ou custo operacional. São os gastos recorrentes necessários para manter uma operação funcionando, como energia, serviços de infraestrutura, pessoas, manutenção e consumo de serviços em nuvem.
 
+> 💬 **Em outras palavras:** pense em Capex como comprar um carro — um gasto grande, de uma vez, que vai durar anos. Opex é mais como pagar por corridas de aplicativo de transporte todo mês: um gasto recorrente, proporcional ao uso, sem precisar comprar o carro. Cloud, como veremos a seguir, permitiu que muitas empresas trocassem parte do "comprar o carro" pelo "pagar por corrida".
+
 **Custo marginal.** É o custo adicional necessário para atender mais uma unidade de demanda. Em software tradicional, reproduzir e distribuir uma cópia adicional da lógica do software tende a ter custo marginal relativamente baixo, embora infraestrutura, armazenamento, suporte e outras operações continuem gerando custos.
 
 Em sistemas de IA, cada nova interação normalmente exige inferência: o modelo precisa executar computação novamente para gerar aquela resposta. Isso reintroduz um componente variável importante no custo do produto.
@@ -63,6 +65,8 @@ Em sistemas de IA, cada nova interação normalmente exige inferência: o modelo
 **Treinamento.** É o processo em que os parâmetros de um modelo são ajustados a partir de grandes volumes de dados e computação. Modelos de grande escala podem exigir infraestrutura computacional significativa nessa fase.
 
 **Inferência.** É o momento em que um modelo já treinado é executado para produzir uma resposta, classificação, imagem ou outro resultado a partir de uma entrada.
+
+**Machine learning (aprendizado de máquina).** É a abordagem em que um sistema aprende padrões a partir de dados, em vez de seguir regras escritas manualmente por uma pessoa para cada situação possível. Um exemplo de uso comum: o filtro de spam de um e-mail. Em vez de alguém escrever manualmente milhares de regras do tipo "se a mensagem contém a palavra X, é spam", o sistema aprende, a partir de exemplos de e-mails já marcados como spam ou não spam, quais padrões tendem a indicar spam — e aplica esse aprendizado a mensagens novas que nunca viu antes. Modelos de linguagem como os usados em IA generativa são um tipo de sistema de machine learning, mas o termo é mais amplo e inclui também sistemas de recomendação, detecção de fraude, previsão de demanda, entre outros.
 
 Essas distinções ajudam a entender uma mudança econômica importante: construir software sempre teve custo, mas sistemas baseados em IA podem adicionar um custo computacional diretamente associado a cada uso.
 
@@ -110,6 +114,8 @@ aumentar ou reduzir capacidade
 pagar conforme o modelo contratado
 ```
 
+> 💬 **Em outras palavras:** é a diferença entre comprar um apartamento (grande investimento inicial, você é responsável pela manutenção, mas é seu) e alugar um apartamento mobiliado (você paga uma mensalidade e usa, mas quem construiu e mantém o prédio é outra empresa). A maioria das empresas que "foi para a cloud" trocou construir seus próprios data centers por alugar capacidade de quem já os construiu — como a Amazon (com a AWS), o Google ou a Microsoft.
+
 É importante fazer uma distinção: cloud não eliminou Capex. Em grande parte, ele mudou de lugar.
 
 Empresas que usam cloud podem deixar de construir determinadas infraestruturas diretamente, enquanto provedores de cloud concentram investimentos enormes em servidores, redes e data centers. A Alphabet, por exemplo, informou Capex de US$ 91,4 bilhões em 2025, com a maior parte direcionada à infraestrutura técnica; aproximadamente 60% desse investimento foi para servidores e 40% para data centers e equipamentos de rede.
@@ -121,6 +127,8 @@ Software as a Service não significou apenas trocar uma licença por uma assinat
 SaaS também consolidou uma mudança na própria relação entre empresa e software. Produtos passaram a ser continuamente atualizados, hospedados remotamente e integrados ao trabalho cotidiano das organizações.
 
 O software deixou de ser apenas algo que uma empresa comprava, instalava e eventualmente atualizava para se tornar um serviço continuamente operado.
+
+> 💬 **Em outras palavras:** é a diferença entre comprar um DVD (você paga uma vez, leva a mídia física para casa, e o filme nunca muda) e assinar Netflix (você paga todo mês, o catálogo é atualizado continuamente, e você nunca "possui" nada fisicamente). Excel vendido em caixa é o DVD; Google Workspace ou Salesforce, cobrados por assinatura mensal, são o Netflix do software empresarial.
 
 Isso produziu uma economia particularmente interessante: depois de desenvolver o produto e sua infraestrutura, atender usuários adicionais podia ter um custo incremental relativamente baixo em comparação com negócios fortemente dependentes de produção física.
 
@@ -244,7 +252,7 @@ Essa distinção é necessária porque dados de margem de uma única companhia n
 
 Uma forma de entender o momento atual da IA é olhar para onde a receita e o investimento estão se concentrando dentro da cadeia.
 
-Na aula *Economics of the AI Supercycle*, Apur usa um triângulo para comparar a estrutura econômica da IA com ciclos tecnológicos anteriores. A ideia central é simples: hoje, uma parte desproporcional do valor econômico gerado pelo ciclo ainda está concentrada perto da infraestrutura necessária para fazer a IA funcionar, especialmente semicondutores e hardware.
+Na aula *Economics of the AI Supercycle*, Apur usa um triângulo para comparar a estrutura econômica da IA com ciclos tecnológicos anteriores. A ideia central é simples, parecida com uma corrida do ouro: no começo, quem mais ganha dinheiro não é necessariamente quem encontra o ouro, mas quem vende as picaretas e ferramentas de garimpo. Hoje, uma parte desproporcional do valor econômico gerado pelo ciclo de IA ainda está concentrada perto da infraestrutura necessária para fazer a IA funcionar — as "picaretas" da IA são, especialmente, semicondutores e hardware.
 
 Segundo a análise apresentada na aula, aproximadamente 75% da nova receita gerada pelo ecossistema de IA nos dois anos analisados foi direcionada à camada de semicondutores. A camada intermediária reúne infraestrutura de cloud e provedores de modelos, enquanto as aplicações ficam no topo e, neste momento do ciclo, representam uma parcela proporcionalmente menor da receita em relação ao investimento realizado na base.
 
@@ -312,9 +320,9 @@ Isso cria um problema econômico interessante: a empresa precisa construir capac
 
 ## ⚡ Custo marginal: por que mais uso pode significar mais custo?
 
-Em aplicações tradicionais, atender um usuário adicional pode acrescentar muito pouco custo diretamente relacionado à execução da lógica do software.
+Em aplicações tradicionais, atender um usuário adicional pode acrescentar muito pouco custo diretamente relacionado à execução da lógica do software — é como o Spotify tocar mais uma música para um assinante: a música já existe gravada, então repetir a reprodução custa muito pouco à empresa.
 
-Na IA, cada interação normalmente exige uma nova inferência. Uma forma simplificada de visualizar:
+Na IA, é diferente: cada interação normalmente exige uma nova inferência, ou seja, o modelo precisa "pensar de novo" a cada pergunta, gastando processamento a cada vez — mais parecido com pedir a um funcionário para refazer um cálculo do zero toda vez que alguém pergunta algo, mesmo que a pergunta seja parecida com a anterior. Uma forma simplificada de visualizar:
 
 ```
 Usuário envia uma solicitação
@@ -355,7 +363,7 @@ Cloud não fez a infraestrutura desaparecer. Ela tornou possível abstraí-la pa
 
 ## 🏗️ Como ler o Capex guidance das grandes empresas?
 
-Existe um descompasso importante entre o momento em que uma empresa investe em infraestrutura e o momento em que essa infraestrutura começa a gerar receita.
+Existe um descompasso importante entre o momento em que uma empresa investe em infraestrutura e o momento em que essa infraestrutura começa a gerar receita — parecido com construir um estádio antes de começar a vender ingressos: o dinheiro para construir sai primeiro, e só depois é que os jogos passam a gerar receita.
 
 Construir data centers, garantir energia, adquirir chips e expandir infraestrutura exige decisões tomadas anos antes da receita final aparecer. Na visão apresentada na aula, investimentos em semicondutores e infraestrutura podem ser planejados dentro de ciclos de aproximadamente cinco a seis anos. Já a receita das aplicações acontece progressivamente, conforme empresas e consumidores começam a utilizar os produtos.
 
