@@ -76,9 +76,10 @@
   url: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/default.aspx"
   accessed: "2026-09-28"
 
-# Fontes adicionais de from-cloud-to-ai.mdx — URL ainda pendente de
-# confirmação pelo contribuidor. Não usar em novos conteúdos até a URL
-# ser adicionada (ver principles/evidence-policy.md).
+# Fontes adicionais de from-cloud-to-ai.mdx — URLs confirmadas pelo
+# contribuidor em 2026-09-29. David (1990): sem DOI confiável associado
+# ao artigo; usado o identificador estável do JSTOR em vez de inventar
+# um DOI. Helmer (2016): livro, identificado por ISBN (edição hardcover).
 
 - id: david-1990-dynamo-and-computer
   title: "The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox"
@@ -86,19 +87,20 @@
     - "Paul A. David"
   organization: "The American Economic Review"
   type: "paper"
-  url: "PENDENTE — aguardando link (DOI/JSTOR) do contribuidor"
+  url: "https://www.jstor.org/stable/2006600"
   published: "1990-05-01"
-  accessed: "2026-09-28"
+  accessed: "2026-09-29"
 
 - id: helmer-2016-seven-powers
   title: "7 Powers: The Foundations of Business Strategy"
   authors:
     - "Hamilton Helmer"
-  organization: "Deep Strategy"
+  organization: "Deep Strategy LLC"
   type: "book"
-  url: "PENDENTE — aguardando link do contribuidor"
+  isbn: "9780998116303"
+  url: "https://books.google.com/books/about/7_Powers.html?id=9p1evgAACAAJ"
   published: "2016-01-01"
-  accessed: "2026-09-28"
+  accessed: "2026-09-29"
 
 # Aulas específicas de Stanford MS&E 435 "Economics of the AI Supercycle"
 # (Spring 2026) — URLs de vídeo exatas confirmadas pelo contribuidor em

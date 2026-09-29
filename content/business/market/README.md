@@ -20,4 +20,4 @@ Uma narrativa histórica útil aqui conecta camadas — infraestrutura, distribu
 
 ## Conteúdo existente
 
-- [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx) — a evolução de internet, cloud, SaaS, APIs e dados até a economia atual de IA, e por que a economia da IA introduz um custo variável (inferência) que o software tradicional não tinha da mesma forma. Ainda em `draft`: os números financeiros citados aguardam confirmação de fonte primária exata (veja a nota de verificação no próprio arquivo e em `references/sources.yaml`).
+- [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx) — a evolução de internet, cloud, SaaS, APIs e dados até a economia atual de IA; o triângulo econômico da cadeia de IA (infraestrutura, modelos, aplicações); Capex guidance, integração vertical; e o paradoxo da produtividade. Todas as fontes citadas foram verificadas — `status: "in-review"`, aguardando revisão editorial final.
