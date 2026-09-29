@@ -49,17 +49,60 @@ Pense na janela de contexto como a mesa de trabalho de alguém: só o que está 
 
 Cada modelo tem um limite técnico de tokens que consegue processar em uma chamada, somando entrada e saída. Modelos diferentes têm janelas de tamanhos diferentes, e esse limite tem evoluído rapidamente. Mas o tamanho da janela é apenas parte da história.
 
-## Exemplo
+## Janela de contexto não é memória
 
-Colocar o manual inteiro de uma empresa dentro da janela de contexto não garante que o modelo vai "lembrar" e aplicar corretamente cada regra dele ao responder uma pergunta específica — a atenção do modelo não é uniformemente distribuída sobre tudo que está no contexto, especialmente quando o texto é muito longo.
+Uma confusão comum é imaginar que uma janela de contexto maior resolve o problema de memória de um sistema de IA. Não resolve, pelo menos não sozinha.
+
+Uma forma simples de separar os dois conceitos:
+
+```text
+CONTEXTO
+O que o modelo consegue considerar agora.
+
+MEMÓRIA
+O que o sistema consegue preservar e recuperar depois.
+```
+
+A diferença fica mais clara com uma situação real dentro de uma empresa.
+
+### Exemplo: um time de Marketing
+
+Imagine um time de Marketing usando um assistente de IA para planejar uma campanha. Durante uma conversa, o time envia o posicionamento da marca, o público-alvo, campanhas anteriores, resultados do último trimestre, exemplos de tom de voz e as decisões tomadas na reunião.
+
+Se tudo isso estiver dentro da janela de contexto, o modelo consegue usar essas informações para sugerir uma campanha coerente com o material recebido:
+
+```text
+Brand guidelines + campanhas anteriores +
+resultados + brief + decisões da reunião
+                ↓
+      JANELA DE CONTEXTO
+                ↓
+Modelo consegue usar essas informações agora
+```
+
+Uma semana depois, porém, o time abre uma nova conversa e pede: "monte a próxima campanha seguindo tudo que decidimos na semana passada". Se o sistema não armazenou essas decisões em algum lugar e não tem um mecanismo para recuperá-las, uma janela de contexto enorme não resolve o problema — a informação simplesmente não está disponível para o modelo nessa nova interação, porque cada interação tem sua própria janela de contexto:
+
+```text
+Semana 1: brief + decisões → modelo responde
+Semana 2: nova conversa → decisões da semana 1 não foram
+          recuperadas → modelo não tem esse contexto
+```
+
+Com algum mecanismo de armazenamento e recuperação (memória, em sentido amplo), o fluxo pode ser diferente: as informações relevantes da semana 1 são guardadas, e a nova solicitação da semana 2 aciona uma busca por esse histórico, que é então inserido na janela de contexto daquela interação antes do modelo responder. A memória não substitui o contexto — ela ajuda o sistema a decidir o que deve voltar para o contexto quando aquilo se tornar relevante de novo.
+
+## Mais contexto também não significa contexto melhor
+
+Ter espaço para mais informação não significa que toda essa informação será útil. Um time de Marketing pode ter milhares de campanhas antigas, centenas de documentos, apresentações, pesquisas e transcrições de reuniões. Enviar tudo isso para o modelo não garante uma resposta melhor.
+
+O problema deixa de ser apenas "quanto cabe?" e passa a ser "qual informação é relevante para esta tarefa?". É por isso que sistemas de IA frequentemente precisam combinar contexto com mecanismos de seleção e recuperação de informação (veja [`rag`](../systems/rag.mdx)).
 
 ## Implicações para negócios
 
-Decisões como "vamos colocar toda a nossa documentação dentro do contexto do modelo" parecem simples, mas não substituem um bom projeto de recuperação de informação (veja [`rag`](../systems/rag.mdx)). Mais contexto tem custo — em tempo de resposta, em custo computacional, e potencialmente em qualidade, se a informação relevante for "diluída" em meio a muito texto irrelevante.
+Decisões como "vamos colocar toda a nossa documentação dentro do contexto do modelo" parecem simples, mas não substituem um bom projeto de recuperação de informação. Mais contexto tem custo — em tempo de resposta, em custo computacional, e potencialmente em qualidade, se a informação relevante for "diluída" em meio a muito texto irrelevante.
 
 ## Equívocos comuns
 
-- "Janela de contexto maior resolve o problema de memória do sistema" — janela de contexto é por interação, não é memória persistente.
+- "Janela de contexto maior resolve o problema de memória do sistema" — janela de contexto é por interação; memória é o que o sistema preserva e recupera entre interações diferentes.
 - "Quanto mais informação eu colocar no contexto, melhor a resposta" — informação irrelevante ou mal organizada pode piorar a resposta, não melhorá-la.
 
 ## O que pode dar errado
