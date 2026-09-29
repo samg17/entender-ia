@@ -2,17 +2,25 @@
 
 Trata da evolução de mercados e infraestrutura tecnológica — o contexto histórico e estrutural que ajuda a entender onde a atual onda de IA se encaixa.
 
-## Temas futuros (não escritos ainda)
+## Temas já cobertos (condensados em um único conteúdo)
 
-- Ciclos tecnológicos e o que costuma se repetir entre eles
+O conteúdo [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx) trata, de forma condensada, dos seguintes temas que antes apareciam aqui como "futuros":
+
 - Evolução da internet, cloud computing, SaaS e APIs
-- Mobile e data infrastructure como camadas anteriores
+- Data infrastructure como camada anterior à IA
 - Evolução da cloud para IA
 - Movimentos que antecederam a atual onda de IA
-- Infraestrutura vs. camada de aplicação
-- Commoditização e mudança de distribuição
+- Infraestrutura vs. camada de aplicação (os dois triângulos econômicos)
+- Mudanças na interface entre pessoas e software (de botões para intenção)
+
+Como é um conteúdo único cobrindo vários tópicos, cada um deles foi tratado em profundidade moderada, não exaustiva. Um tema entre esses pode ainda originar um conteúdo próprio e mais aprofundado (ver [`content-workflow.md`](../../../principles/content-workflow.md#princípios-importantes-deste-fluxo)) se houver evidência e escopo suficientes para justificá-lo separadamente.
+
+## Temas futuros (não escritos ainda)
+
+- Ciclos tecnológicos e o que costuma se repetir entre eles (tratado de forma pontual no `from-cloud-to-ai.mdx`, mas sem tratamento comparativo mais profundo entre ciclos)
+- Mobile como camada anterior à IA (mencionado apenas de passagem, não desenvolvido)
+- Commoditização e mudança de distribuição (mencionado brevemente; ainda sem tratamento dedicado)
 - Evolução de categorias de software
-- Mudanças na interface entre pessoas e software
 
 ## Nota editorial
 
