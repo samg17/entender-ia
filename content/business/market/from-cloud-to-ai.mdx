@@ -41,7 +41,9 @@ references:
   - nvidia-fiscal-2026-results
   - david-1990-dynamo-and-computer
   - helmer-2016-seven-powers
-  - stanford-mse435-ai-supercycle
+  - stanford-mse435-ai-supercycle-overview
+  - stanford-mse435-tuhin-srivastava-baseten
+  - stanford-mse435-ali-ghodsi-databricks
 ---
 
 A atual onda de inteligência artificial não apareceu isoladamente. Ela se apoia em décadas de evolução de infraestrutura, distribuição de software, computação em nuvem, dados e modelos de negócio. Entender essa história ajuda a entender também por que a economia da IA não funciona exatamente como a economia do software que veio antes.
@@ -310,13 +312,77 @@ redes, energia e data centers
 
 Cloud não fez a infraestrutura desaparecer. Ela tornou possível abstraí-la para quem consome o serviço enquanto a concentra em quem fornece a infraestrutura.
 
-## 🐢 Tecnologia disponível não significa produtividade imediata
+## 🏗️ Como ler os comunicados dos CEOs (*Capex guidance*)?
 
-Existe uma diferença entre uma tecnologia estar disponível e uma organização conseguir transformar essa tecnologia em produtividade.
+Existe um descompasso importante entre o tempo necessário para construir infraestrutura e o tempo em que a receita das aplicações aparece.
+
+Data centers, energia, networking e chips exigem planejamento e investimento antecipado. Já a receita de produtos e serviços de IA é percebida de forma muito mais contínua, conforme clientes começam a utilizar e pagar pelos produtos.
+
+Por isso, *Capex guidance* das grandes empresas de tecnologia se tornou um sinal acompanhado de perto por investidores.
+
+Quando Microsoft, Alphabet, Amazon ou Meta anunciam aumentos relevantes de investimento em infraestrutura, isso pode indicar que essas empresas esperam demanda suficiente para justificar mais capacidade computacional. Também pode refletir restrições atuais de capacidade, decisões estratégicas de longo prazo ou necessidade de antecipar infraestrutura que leva anos para ser construída.
+
+O movimento contrário também exige contexto. Uma redução no ritmo de Capex não significa automaticamente que a demanda por IA desapareceu. Pode representar maior eficiência, mudança de prioridades, capacidade já contratada ou uma revisão das expectativas de retorno.
+
+A pergunta útil não é simplesmente:
+
+> "O Capex está subindo ou caindo?"
+
+Mas:
+
+> "O crescimento da demanda e da receita está acompanhando o capital necessário para construir a infraestrutura que sustenta essa demanda?"
+
+Essa diferença de timing é uma das razões pelas quais a economia da IA precisa ser observada em várias camadas ao mesmo tempo: chips, infraestrutura, modelos e aplicações.
+
+## 🐢 O paradoxo da produtividade: por que usar mais IA não significa produzir mais imediatamente?
+
+Existe uma diferença entre uma tecnologia estar disponível e uma organização conseguir transformar essa tecnologia em produtividade — e uma das discussões mais importantes sobre adoção de IA nas empresas é a diferença entre **capability** e **produtividade real**.
 
 Dar acesso a uma ferramenta não significa necessariamente mudar um processo. Uma empresa pode adicionar IA ao mesmo workflow antigo e continuar fazendo praticamente as mesmas coisas de maneira apenas um pouco diferente.
 
-Essa é uma distinção importante porque parte do valor econômico da IA provavelmente depende menos de adicionar uma interface nova e mais de repensar como trabalho, informação, decisão e software se conectam.
+Ali Ghodsi, CEO da Databricks, argumenta que os modelos atuais já possuem capacidades muito amplas, mas continuam enfrentando um problema fundamental dentro das organizações: contexto. Um modelo pode ter aprendido com uma quantidade enorme de informação pública e ainda não saber como uma empresa específica funciona. Ele não conhece automaticamente:
+
+- decisões tomadas anos atrás;
+- exceções de um processo;
+- relações entre clientes e equipes;
+- regras que nunca foram formalmente documentadas;
+- motivos pelos quais determinada arquitetura foi escolhida;
+- conhecimento acumulado por pessoas que trabalham há anos na organização.
+
+É por isso que simplesmente dar acesso a um modelo para cada funcionário não transforma automaticamente a produtividade da empresa. Existe uma diferença entre:
+
+```
+acesso à IA
+      ↓
+uso da IA
+      ↓
+integração ao trabalho
+      ↓
+redesenho de processos
+      ↓
+ganho estrutural de produtividade
+```
+
+Essas etapas não acontecem automaticamente.
+
+### A lição histórica da eletricidade
+
+Paul David explorou um paralelo semelhante ao estudar a adoção da eletricidade nas fábricas. Quando motores elétricos começaram a substituir máquinas movidas por sistemas anteriores de energia, as empresas inicialmente mantiveram boa parte da organização das fábricas praticamente igual — a nova tecnologia estava presente, mas a arquitetura do trabalho continuava antiga.
+
+Os ganhos mais relevantes apareceram quando as empresas começaram a redesenhar a própria fábrica em torno das características da eletricidade, reorganizando máquinas, fluxos e processos.
+
+A analogia com IA é útil, mas não deve ser tratada como previsão de que a IA seguirá exatamente o mesmo ritmo histórico. Ela serve para mostrar algo mais simples: uma tecnologia de uso geral pode exigir mudanças organizacionais complementares antes que todo o seu impacto apareça nas métricas de produtividade.
+
+Com IA, isso pode significar repensar:
+
+- como informação circula;
+- onde decisões são tomadas;
+- quais tarefas precisam de julgamento;
+- quais processos podem ser redesenhados;
+- como contexto chega aos modelos;
+- onde humanos continuam responsáveis.
+
+A questão, portanto, não é apenas "quantas pessoas estão usando IA?", mas "o trabalho foi redesenhado para aproveitar o que essa tecnologia permite?".
 
 O mesmo princípio vale para contexto. Dar acesso a documentos não significa automaticamente criar conhecimento operacional. Dar acesso a um modelo não significa automaticamente melhorar uma decisão. E automatizar uma tarefa não significa automaticamente melhorar um negócio.
 
@@ -353,9 +419,11 @@ Essa é a pergunta que leva ao próximo conteúdo desta trilha: quando tecnologi
 3. Alphabet — *2025 Q4 Earnings Call*. Dados sobre Capex de 2025 e composição dos investimentos em servidores, data centers e networking.
 4. Microsoft — *Annual Report 2025*. Dados sobre Azure, investimento em infraestrutura de IA, expansão de data centers e impacto da infraestrutura de IA sobre margens de cloud.
 5. NVIDIA — *Fiscal 2026 Financial Results*. Dados financeiros e margem bruta reportada pela companhia.
-6. David, Paul A. (1990). *The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox.* The American Economic Review. Base para a seção sobre tecnologia disponível não significar produtividade imediata.
+6. David, Paul A. (1990). *The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox.* The American Economic Review. Base para a seção sobre o paradoxo da produtividade e a analogia histórica com a eletricidade.
 7. Helmer, Hamilton (2016). *7 Powers: The Foundations of Business Strategy.* Deep Strategy.
-8. Stanford MS&E 435 (Spring 2026). *Economics of the AI Supercycle.* Aulas e transcrições, incluindo Apur (Altimeter Capital) sobre economics of generative AI, Guillermo Rauch (Vercel) sobre coding AI, e Tuhin Srivastava (Base10) sobre applied AI.
+8. Stanford MS&E 435 (Spring 2026). *Economics of the AI Supercycle* — visão geral da cadeia de infraestrutura, aplicações e captura de valor. Base para a seção sobre Capex guidance.
+9. Stanford MS&E 435, Class 7 — Tuhin Srivastava (Baseten), economia de inferência e infraestrutura de compute.
+10. Stanford MS&E 435 — Ali Ghodsi (Databricks), enterprise AI, contexto organizacional e redesenho de trabalho. Base para a seção sobre o paradoxo da produtividade.
 
 ## Nota editorial
 
@@ -363,4 +431,6 @@ Os diagramas deste texto são modelos mentais, não representações quantitativ
 
 Quando um conteúdo futuro utilizar proporções financeiras, participação de mercado, margem ou profit pools, esses valores deverão ser acompanhados de fonte primária, período, definição da métrica e escopo analisado (veja [`principles/evidence-policy.md`](../../../principles/evidence-policy.md)).
 
-**Nota de verificação:** as URLs exatas dos relatórios/press releases das referências 1–5 foram confirmadas pelo contribuidor responsável em 2026-09-28. As referências 6 e 7 (David 1990; Helmer 2016) ainda aguardam URL/DOI a ser confirmado antes deste conteúdo sair de `status: "draft"`. A referência 8 (curso de Stanford) aponta, por ora, para o canal geral do Stanford Online no YouTube, não para a aula específica — veja o comentário em [`references/sources.yaml`](../../../references/sources.yaml).
+O bloco sobre *Capex guidance* evita deliberadamente frases deterministas (ex.: "se aumenta Capex, significa que falta infraestrutura"). Capex guidance é um sinal, não uma conclusão fechada — pode refletir demanda esperada, restrições de oferta, estratégia, eficiência, timing de construção ou disciplina de capital, isoladamente ou em combinação.
+
+**Nota de verificação:** as URLs exatas dos relatórios/press releases das referências 1–5, e dos três vídeos de Stanford (referências 8–10), foram confirmadas pelo contribuidor responsável em 2026-09-29. As referências 6 e 7 (David 1990; Helmer 2016) ainda aguardam URL/DOI a ser confirmado antes deste conteúdo sair de `status: "draft"` — veja o comentário em [`references/sources.yaml`](../../../references/sources.yaml).

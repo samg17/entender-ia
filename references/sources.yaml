@@ -100,13 +100,31 @@
   published: "2016-01-01"
   accessed: "2026-09-28"
 
-# NOTA: url abaixo é o canal geral do Stanford Online no YouTube, não a
-# aula/vídeo específico do curso. Substituir pelo link exato da aula/palestra
-# quando disponível — uma fonte para um claim específico deve apontar para o
-# conteúdo específico, não para o canal como um todo (ver evidence-policy.md).
-- id: stanford-mse435-ai-supercycle
-  title: "Economics of the AI Supercycle (MS&E 435, Spring 2026) — inclui palestras de Apur/Altimeter Capital, Guillermo Rauch/Vercel, Tuhin Srivastava/Base10"
-  organization: "Stanford University"
+# Aulas específicas de Stanford MS&E 435 "Economics of the AI Supercycle"
+# (Spring 2026) — URLs de vídeo exatas confirmadas pelo contribuidor em
+# 2026-09-29, substituindo o link genérico do canal usado anteriormente.
+
+- id: stanford-mse435-ai-supercycle-overview
+  title: "Economics of the AI Supercycle — visão geral da cadeia de infraestrutura, aplicações e captura de valor"
+  organization: "Stanford University (MS&E 435)"
   type: "research"
-  url: "https://www.youtube.com/@stanfordonline"
-  accessed: "2026-09-28"
+  url: "https://www.youtube.com/watch?v=LNSvp-9b-J0"
+  accessed: "2026-09-29"
+
+- id: stanford-mse435-tuhin-srivastava-baseten
+  title: "Economics of the AI Supercycle, Class 7 — Tuhin Srivastava (Baseten), economia de inferência e infraestrutura de compute"
+  authors:
+    - "Tuhin Srivastava"
+  organization: "Stanford University (MS&E 435) / Baseten"
+  type: "research"
+  url: "https://www.youtube.com/watch?v=Qh7Oxvo5sJI"
+  accessed: "2026-09-29"
+
+- id: stanford-mse435-ali-ghodsi-databricks
+  title: "Economics of the AI Supercycle — Ali Ghodsi (Databricks), enterprise AI, contexto organizacional e redesenho de trabalho"
+  authors:
+    - "Ali Ghodsi"
+  organization: "Stanford University (MS&E 435) / Databricks"
+  type: "research"
+  url: "https://www.youtube.com/watch?v=sRvrXL83N-c"
+  accessed: "2026-09-29"
