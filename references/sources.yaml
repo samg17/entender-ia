@@ -131,11 +131,19 @@
   url: "https://www.youtube.com/watch?v=sRvrXL83N-c"
   accessed: "2026-09-29"
 
-# Fontes de content/business/competitive-advantage/ — URLs confirmadas
-# pessoalmente pelo contribuidor (samg17) em 2026-09-29. O acesso à rede
-# desta sessão do assistente estava bloqueado para os domínios abaixo, então
-# a verificação de conteúdo (título, autoria, dados citados) foi feita pelo
-# contribuidor responsável, não pelo assistente de IA que redigiu o texto.
+# Fontes de content/business/competitive-advantage/. O acesso à rede desta
+# sessão do assistente de IA está bloqueado para os domínios abaixo (HBR,
+# ScienceDirect, Pew, Stanford HAI, McKinsey, Adobe, Artificial Analysis,
+# Menlo Ventures); a checagem de que cada URL existe e diz o que a entrada
+# afirma foi feita pela pessoa que pesquisou e trouxe a fonte, não pelo
+# assistente. Quem alterar uma entrada é quem assume essa responsabilidade —
+# o histórico do Git registra isso, sem necessidade de um campo separado
+# do tipo "verified_by".
+#
+# `evidence_type` indica o papel epistemológico de cada fonte (o que ela
+# permite afirmar), distinto do `type` bibliográfico — um framework, um
+# benchmark independente, um survey e um case de uma empresa sobre si mesma
+# não sustentam o mesmo tipo de afirmação. Ver schemas/reference.schema.json.
 
 - id: porter-1996-what-is-strategy
   title: "What Is Strategy?"
@@ -143,8 +151,20 @@
     - "Michael E. Porter"
   organization: "Harvard Business Review"
   type: "article"
+  evidence_type: "primary-framework"
   url: "https://hbr.org/1996/11/what-is-strategy"
   published: "1996-11-01"
+  accessed: "2026-09-29"
+
+- id: porter-2008-five-competitive-forces
+  title: "The Five Competitive Forces That Shape Strategy"
+  authors:
+    - "Michael E. Porter"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "primary-framework"
+  url: "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy"
+  published: "2008-01-01"
   accessed: "2026-09-29"
 
 - id: teece-1986-profiting-from-technological-innovation
@@ -153,6 +173,7 @@
     - "David J. Teece"
   organization: "Research Policy / Elsevier"
   type: "paper"
+  evidence_type: "primary-framework"
   url: "https://www.sciencedirect.com/science/article/pii/0048733386900272"
   published: "1986-12-01"
   accessed: "2026-09-29"
@@ -163,6 +184,7 @@
     - "Rita Gunther McGrath"
   organization: "Harvard Business Review"
   type: "article"
+  evidence_type: "primary-framework"
   url: "https://hbr.org/2013/06/transient-advantage"
   published: "2013-06-01"
   accessed: "2026-09-29"
@@ -174,6 +196,11 @@
     - "Anna Lieb"
   organization: "Pew Research Center"
   type: "research"
+  evidence_type: "survey"
+  notes: >
+    Painel representativo de adultos dos EUA, n≈900, buscas observadas em
+    março de 2025. Não generalizar para outros buscadores, países ou
+    períodos sem fonte adicional.
   url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
   published: "2025-07-22"
   accessed: "2026-09-29"
@@ -182,6 +209,136 @@
   title: "The 2026 AI Index Report — Technical Performance"
   organization: "Stanford Institute for Human-Centered Artificial Intelligence (HAI)"
   type: "research"
+  evidence_type: "independent-benchmark"
   url: "https://hai.stanford.edu/ai-index/2026-ai-index-report/technical-performance"
   published: "2026-01-01"
+  accessed: "2026-09-29"
+
+- id: hbr-2026-job-choudary-pidun-sprong-new-value-genai
+  title: "Look for New Ways to Create Value When Deploying Gen AI"
+  authors:
+    - "Adam Job"
+    - "Sangeet Paul Choudary"
+    - "Ulrich Pidun"
+    - "Jeffrey Sprong"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "author-analysis"
+  notes: >
+    Argumenta, com análise de cerca de 800 empresas públicas segundo a
+    HBR, que ganhos de produtividade de GenAI podem ser disputados pela
+    concorrência em vez de se converterem automaticamente em maior
+    rentabilidade. Usar como interpretação dos autores, não como fato
+    estabelecido sobre todo o mercado.
+  url: "https://hbr.org/2026/02/look-for-new-ways-to-create-value-when-deploying-gen-ai"
+  published: "2026-02-27"
+  accessed: "2026-09-29"
+
+- id: hbr-2026-murty-kumar-context-competitive-advantage
+  title: "When Every Company Can Use the Same AI Models, Context Becomes a Competitive Advantage"
+  authors:
+    - "Rohan Narayana Murty"
+    - "Ravi Kumar S"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "author-analysis"
+  notes: >
+    Tese dos autores, não fato estabelecido — usar como uma perspectiva a
+    ser testada criticamente sobre quando contexto organizacional
+    realmente se converte em vantagem, não como conclusão adotada.
+  url: "https://hbr.org/2026/02/when-every-company-can-use-the-same-ai-models-context-becomes-a-competitive-advantage"
+  published: "2026-02-18"
+  accessed: "2026-09-29"
+
+- id: hbr-2026-choudary-ai-coordination-not-automation
+  title: "AI's Big Payoff Is Coordination, Not Automation"
+  authors:
+    - "Sangeet Paul Choudary"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "author-analysis"
+  url: "https://hbr.org/2026/02/ais-big-payoff-is-coordination-not-automation"
+  published: "2026-02-25"
+  accessed: "2026-09-29"
+
+- id: hbr-2026-choudary-why-new-technologies-dont-transform-incumbents
+  title: "Why New Technologies Don't Transform Incumbents"
+  authors:
+    - "Sangeet Paul Choudary"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "author-analysis"
+  url: "https://hbr.org/2026/02/why-new-technologies-dont-transform-incumbents"
+  published: "2026-02-09"
+  accessed: "2026-09-29"
+
+- id: hbr-2026-puntoni-ai-upending-marketing
+  title: "AI Is Upending Marketing on Two Fronts"
+  authors:
+    - "Stefano Puntoni"
+  organization: "Harvard Business Review"
+  type: "article"
+  evidence_type: "author-analysis"
+  notes: >
+    Separa duas mudanças: como consumidores encontram informação (mais
+    consolidada) e quem participa da decisão de compra via agentes (mais
+    prospectiva) — a segunda deve ser tratada como mudança emergente, não
+    mercado já consolidado.
+  url: "https://hbr.org/2026/02/ai-is-upending-marketing-on-two-fronts"
+  published: "2026-02-23"
+  accessed: "2026-09-29"
+
+- id: mckinsey-2025-new-front-door-ai-search
+  title: "New front door to the internet: Winning in the age of AI search"
+  organization: "McKinsey & Company"
+  type: "research"
+  evidence_type: "survey"
+  notes: >
+    Inclui o McKinsey AI Discovery Survey, painel representativo de
+    consumidores dos EUA, agosto de 2025, n=1.927. O dado de 44% dos
+    usuários de AI search apontando-o como fonte primária/preferida de
+    insight vem desse survey e deve sempre citar essa população e n.
+  url: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/new-front-door-to-the-internet-winning-in-the-age-of-ai-search"
+  published: "2025-10-16"
+  accessed: "2026-09-29"
+
+- id: adobe-2025-customer-zero-llm-discoverability
+  title: "Adobe.com is 'customer zero' for LLM discoverability"
+  authors:
+    - "Nathan Etter"
+  organization: "Adobe"
+  type: "article"
+  evidence_type: "company-case"
+  notes: >
+    Case reportado pela própria Adobe sobre suas páginas de Firefly e
+    Acrobat. Útil como exemplo de implementação (company case), não como
+    evidência independente de efeito de mercado mais amplo.
+  url: "https://blog.adobe.com/en/publish/2025/10/14/adobecom-is-customer-zero-for-llm-discoverability"
+  published: "2025-10-14"
+  accessed: "2026-09-29"
+
+- id: adobe-experience-league-referral-traffic
+  title: "Referral Traffic (Brand Visibility)"
+  organization: "Adobe Experience League"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documentação de produto descrevendo métricas de tráfego originado de
+    citações de IA e fontes como OpenAI, Microsoft, Google e Perplexity.
+    Evidência de instrumentação de mercado (empresas já medindo isso),
+    não prova de que AI search substituiu a busca tradicional.
+  url: "https://experienceleague.adobe.com/en/docs/brand-visibility/using/dashboards/referral-traffic"
+  accessed: "2026-09-29"
+
+- id: artificial-analysis-2025-state-of-ai-highlights
+  title: "2025 Year-End State of AI Highlights Report"
+  organization: "Artificial Analysis"
+  type: "research"
+  evidence_type: "independent-benchmark"
+  notes: >
+    Benchmarking independente de preço/performance de inferência, não
+    pesquisa acadêmica — indicar metodologia ao citar números específicos
+    e não misturar com benchmarks de qualidade de outras instituições.
+  url: "https://artificialanalysis.ai/downloads/state-of-ai/2025/2025-Year-End-Artificial-Analysis-State-of-AI-Highlights-Report.pdf"
+  published: "2025-12-01"
   accessed: "2026-09-29"
