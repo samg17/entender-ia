@@ -342,3 +342,39 @@
   url: "https://artificialanalysis.ai/downloads/state-of-ai/2025/2025-Year-End-Artificial-Analysis-State-of-AI-Highlights-Report.pdf"
   published: "2025-12-01"
   accessed: "2026-09-29"
+
+# Fontes de content/thinking/understanding-is-the-bottleneck.mdx. Acesso à
+# rede desta sessão bloqueado para os domínios abaixo (blogs pessoais dos
+# autores); URLs trazidas e checadas por quem pesquisou o tema.
+
+- id: litt-2026-understanding-is-the-new-bottleneck
+  title: "Understanding is the new bottleneck"
+  authors:
+    - "Geoffrey Litt"
+  type: "article"
+  evidence_type: "author-analysis"
+  notes: >
+    Ensaio pessoal do autor a partir de sua experiência com agentes de IA
+    escrevendo código; usar como interpretação do autor, não fato
+    estabelecido. Também atribui a popularização do termo "cognitive debt"
+    a Margaret-Anne Storey e Simon Willison, sem afirmar autoria exclusiva
+    de nenhum dos dois.
+  url: "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck"
+  published: "2026-07-02"
+  accessed: "2026-09-29"
+
+- id: storey-2026-cognitive-debt
+  title: "Cognitive Debt"
+  authors:
+    - "Margaret-Anne Storey"
+  type: "article"
+  evidence_type: "author-analysis"
+  notes: >
+    A própria autora trata "dívida cognitiva" como um termo em circulação
+    crescente, não como algo que ela reivindica ter cunhado sozinha. Define
+    o conceito como erosão do entendimento compartilhado e da capacidade de
+    explicar e modificar um sistema — distinto de dívida técnica, que é
+    sobre o sistema, não sobre o entendimento das pessoas envolvidas.
+  url: "https://margaretstorey.com/blog/2026/02/09/cognitive-debt/"
+  published: "2026-02-09"
+  accessed: "2026-09-29"
