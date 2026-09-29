@@ -10,6 +10,7 @@ Está organizada em subcategorias para acomodar dimensões diferentes dessa tran
 | [`economics/`](economics/) | Estrutura de custos, unit economics e economia de sistemas de IA |
 | [`strategy/`](strategy/) | Onde valor se desloca, vantagem competitiva, build vs. buy |
 | [`business-models/`](business-models/) | Transformação de modelos de negócio, AI-native, AI-enabled, serviços |
+| [`competitive-advantage/`](competitive-advantage/) | Vantagem competitiva, commoditização, captura de valor e mudança de distribuição na era da IA |
 | [`perspectives/`](perspectives/) | Análise de afirmações populares sobre IA, software e mercado que merecem mais contexto |
 
 Conteúdos usam `category: "business"` e um campo opcional `subcategory` apontando para uma destas pastas (veja [`schemas/content.schema.json`](../../schemas/content.schema.json)). Nem todo conteúdo de negócios precisa de subcategoria — use quando ajudar a navegação, não como obrigação burocrática.

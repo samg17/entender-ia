@@ -130,3 +130,58 @@
   type: "research"
   url: "https://www.youtube.com/watch?v=sRvrXL83N-c"
   accessed: "2026-09-29"
+
+# Fontes de content/business/competitive-advantage/ — URLs confirmadas
+# pessoalmente pelo contribuidor (samg17) em 2026-09-29. O acesso à rede
+# desta sessão do assistente estava bloqueado para os domínios abaixo, então
+# a verificação de conteúdo (título, autoria, dados citados) foi feita pelo
+# contribuidor responsável, não pelo assistente de IA que redigiu o texto.
+
+- id: porter-1996-what-is-strategy
+  title: "What Is Strategy?"
+  authors:
+    - "Michael E. Porter"
+  organization: "Harvard Business Review"
+  type: "article"
+  url: "https://hbr.org/1996/11/what-is-strategy"
+  published: "1996-11-01"
+  accessed: "2026-09-29"
+
+- id: teece-1986-profiting-from-technological-innovation
+  title: "Profiting from Technological Innovation: Implications for Integration, Collaboration, Licensing and Public Policy"
+  authors:
+    - "David J. Teece"
+  organization: "Research Policy / Elsevier"
+  type: "paper"
+  url: "https://www.sciencedirect.com/science/article/pii/0048733386900272"
+  published: "1986-12-01"
+  accessed: "2026-09-29"
+
+- id: mcgrath-2013-transient-advantage
+  title: "Transient Advantage"
+  authors:
+    - "Rita Gunther McGrath"
+  organization: "Harvard Business Review"
+  type: "article"
+  url: "https://hbr.org/2013/06/transient-advantage"
+  published: "2013-06-01"
+  accessed: "2026-09-29"
+
+- id: pew-2025-google-ai-overview-clicks
+  title: "Google users are less likely to click on links when an AI summary appears in the results"
+  authors:
+    - "Athena Chapekis"
+    - "Anna Lieb"
+  organization: "Pew Research Center"
+  type: "research"
+  url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"
+  published: "2025-07-22"
+  accessed: "2026-09-29"
+
+- id: stanford-hai-2026-ai-index-technical-performance
+  title: "The 2026 AI Index Report — Technical Performance"
+  organization: "Stanford Institute for Human-Centered Artificial Intelligence (HAI)"
+  type: "research"
+  url: "https://hai.stanford.edu/ai-index/2026-ai-index-report/technical-performance"
+  published: "2026-01-01"
+  accessed: "2026-09-29"

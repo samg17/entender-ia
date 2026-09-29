@@ -1,0 +1,104 @@
+---
+id: "capabilities-not-model-dependencies"
+
+title: "Se o modelo pode mudar amanhã, o que realmente pertence ao seu produto?"
+slug: "capabilities-nao-dependencias-de-modelo"
+description: "Organizar o produto ao redor de uma capability do cliente, em vez de uma feature específica de um fornecedor, permite trocar a implementação sem destruir o que o produto realmente entrega."
+
+locale: "pt-BR"
+
+type: "guide"
+category: "business"
+subcategory: "competitive-advantage"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - arquitetura
+  - estrategia
+  - capabilities
+
+prerequisites:
+  - barriers-switching-costs-and-moats
+
+related:
+  - context-data-workflows-and-learning-loops
+
+authors:
+  - sam
+
+created: "2026-09-29"
+last_reviewed: "2026-09-29"
+
+references: []
+---
+
+## Em uma frase
+
+Uma capability é o que o cliente precisa que o produto entregue; um modelo é apenas uma das formas possíveis de entregar isso hoje — confundir as duas coisas cria uma dependência estratégica desnecessária.
+
+## Capability não é modelo
+
+```
+Capability
+        ≠
+Modelo
+```
+
+Uma capability pode envolver bem mais do que um único modelo de IA: modelo, contexto, workflow, agente, serviços de apoio, dados, avaliações (*evals*), interface e lógica de negócio específica da empresa. O modelo é um componente dentro desse sistema — importante, mas substituível — não o sistema inteiro.
+
+Organizar o produto ao redor do nome de um fornecedor específico cria um risco estrutural. Um exemplo do tipo de escolha que gera essa dependência:
+
+Não:
+```
+"OpenAI Image Generation"
+```
+
+Mas:
+```
+"Creative Generation"
+```
+
+No primeiro caso, o produto está nomeado e, frequentemente, arquitetado em torno de uma tecnologia de um fornecedor específico. No segundo, o produto está organizado em torno de uma capacidade que o cliente reconhece e valoriza — a geração criativa em si — independentemente de qual modelo específico está rodando por baixo naquele momento.
+
+## Por que isso importa quando o ecossistema muda rápido
+
+O ritmo de evolução dos foundation models é alto: novos modelos são lançados com frequência, preços mudam, e o modelo líder em uma tarefa específica pode não ser o mesmo daqui a seis meses. Uma arquitetura construída para ser **reversível** — capaz de trocar de fornecedor sem retrabalho estrutural — permite que a empresa migre continuamente para a melhor opção disponível, em vez de ficar presa a uma escolha feita em um momento específico do mercado.
+
+```
+Hoje
+Model A
+
+        ↓
+
+Amanhã
+Model B
+
+        ↓
+
+Depois
+Modelo próprio
+```
+
+A capability — a coisa que o cliente efetivamente usa e valoriza — permanece a mesma ao longo dessa transição. Isso só é possível se a experiência do cliente, a lógica de negócio, o workflow e o sistema de avaliação não estiverem entrelaçados de forma indissociável com a API específica de um único fornecedor.
+
+## A distinção estratégica central
+
+Uma dependência tecnológica não é automaticamente uma vantagem competitiva. Se trocar de fornecedor destrói aquilo que a empresa considerava seu diferencial, isso é um sinal de que ela construiu uma capability própria apenas na aparência — na prática, ela empacotou uma capability externa e chamou isso de produto.
+
+A pergunta central deste conteúdo, que deveria ser feita periodicamente por qualquer empresa que constrói produtos com IA:
+
+> O que continua existindo no nosso produto se substituirmos o modelo por outro amanhã?
+
+Se a resposta for "praticamente nada — a experiência do cliente, a qualidade percebida e o valor entregue dependem inteiramente daquele modelo específico", isso não significa necessariamente que a decisão de usar aquele modelo foi errada. Significa que o produto ainda não construiu uma capability própria — ele está, por enquanto, revendendo acesso a uma capability de terceiros. Isso pode ser um estágio inicial legítimo, mas não deveria ser confundido com uma vantagem competitiva durável.
+
+## Conectando estratégia de produto e estratégia empresarial
+
+Essa discussão não é apenas técnica. Ela conecta diretamente com os temas anteriores desta trilha: se um modelo comoditiza (veja [`commoditization-in-ai`](03-commoditization-in-ai.mdx)) e a empresa depende inteiramente dele, o valor que ela criou pode não ser capturável de forma durável (veja [`value-creation-vs-value-capture`](04-value-creation-vs-value-capture.mdx)). Construir capabilities em vez de features amarradas a um fornecedor é uma forma prática de se posicionar deliberadamente para não depender de uma camada que pode comoditizar a qualquer momento.
+
+## Perguntas para fazer
+
+- Se substituíssemos hoje o principal fornecedor de modelo por outro, o que exatamente do nosso produto se manteria intacto?
+- Nossa arquitetura separa claramente a capability entregue ao cliente da implementação específica que a sustenta hoje?
+- Estamos nomeando e comunicando nosso produto em torno de uma capability reconhecível pelo cliente, ou em torno do nome de um fornecedor de tecnologia?
+- Quanto esforço de engenharia seria necessário para trocar de modelo sem impactar a experiência do cliente?
