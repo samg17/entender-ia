@@ -38,6 +38,22 @@
       "type": "string",
       "format": "date",
       "description": "Data em que a fonte foi verificada pela última vez pelo contribuidor."
+    },
+    "evidence_type": {
+      "type": "string",
+      "description": "Papel epistemológico da fonte: o que ela permite afirmar, distinto do seu `type` bibliográfico. Um framework, um benchmark independente, um survey e um case de uma empresa sobre si mesma não sustentam o mesmo tipo de afirmação.",
+      "enum": [
+        "primary-source",
+        "primary-framework",
+        "independent-benchmark",
+        "survey",
+        "company-case",
+        "author-analysis"
+      ]
+    },
+    "notes": {
+      "type": "string",
+      "description": "Contexto curto sobre metodologia, amostra, população ou limitações da fonte, quando relevante para não generalizar um número além do que ele sustenta."
     }
   }
 }
