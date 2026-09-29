@@ -5,14 +5,14 @@ Trata da evolução de mercados e infraestrutura tecnológica — o contexto his
 ## Temas futuros (não escritos ainda)
 
 - Ciclos tecnológicos e o que costuma se repetir entre eles
-- Evolução da internet, cloud computing, SaaS e APIs (já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx))
-- Mobile e data infrastructure como camadas anteriores (data infrastructure já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx); mobile ainda não)
-- Evolução da cloud para IA (já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx))
-- Movimentos que antecederam a atual onda de IA (já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx))
-- Infraestrutura vs. camada de aplicação (já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx))
+- Evolução da internet, cloud computing, SaaS e APIs
+- Mobile e data infrastructure como camadas anteriores
+- Evolução da cloud para IA
+- Movimentos que antecederam a atual onda de IA
+- Infraestrutura vs. camada de aplicação
 - Commoditização e mudança de distribuição
 - Evolução de categorias de software
-- Mudanças na interface entre pessoas e software (já coberto, de forma condensada, em [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx))
+- Mudanças na interface entre pessoas e software
 
 ## Nota editorial
 
