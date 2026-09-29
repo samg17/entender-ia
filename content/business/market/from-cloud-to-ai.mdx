@@ -240,34 +240,75 @@ O tamanho representa a estrutura de dependência da stack, não margens financei
 
 Essa distinção é necessária porque dados de margem de uma única companhia não permitem inferir automaticamente a distribuição de lucro de uma indústria inteira.
 
-### 🔻 Era da IA
+### 🔺 O triângulo econômico da IA
 
-Sistemas de IA adicionam uma camada de compute intensivo e modelos que podem ser utilizados por diversas aplicações. Uma maneira de visualizar a dependência econômica é:
+Uma forma de entender o momento atual da IA é olhar para onde a receita e o investimento estão se concentrando dentro da cadeia.
+
+Na aula *Economics of the AI Supercycle*, Apur usa um triângulo para comparar a estrutura econômica da IA com ciclos tecnológicos anteriores. A ideia central é simples: hoje, uma parte desproporcional do valor econômico gerado pelo ciclo ainda está concentrada perto da infraestrutura necessária para fazer a IA funcionar, especialmente semicondutores e hardware.
+
+Segundo a análise apresentada na aula, aproximadamente 75% da nova receita gerada pelo ecossistema de IA nos dois anos analisados foi direcionada à camada de semicondutores. A camada intermediária reúne infraestrutura de cloud e provedores de modelos, enquanto as aplicações ficam no topo e, neste momento do ciclo, representam uma parcela proporcionalmente menor da receita em relação ao investimento realizado na base.
+
+> **Importante:** este triângulo representa a leitura apresentada na aula sobre a distribuição econômica atual do ecossistema. Ele não deve ser tratado como uma estrutura permanente da indústria.
+
+O desenho a seguir reflete essa diferença de tamanho — diferente de um triângulo com três camadas de largura parecida, a base aqui precisa ser claramente maior que as demais, porque essa é justamente a característica que a aula está tentando mostrar:
 
 ```
-     __________________________________
-      \                                /
-       \     APLICAÇÕES E AGENTES     /
-        \                            /
-         \--------------------------/
-          \                        /
-           \       MODELOS        /
-            \                    /
-             \------------------/
-              \                /
-               \ CLOUD / INFRA/
-                \            /
-                 \----------/
-                  \        /
-                   \ GPUs /
-                    \____/
+                    /\
+                   /  \
+                  /APPS\
+                 /      \
+                /--------\
+               /          \
+              / MODELOS +  \
+             /    CLOUD     \
+            /                \
+           /------------------\
+          /                    \
+         /   SEMICONDUTORES     \
+        /      + HARDWARE        \
+       /                          \
+      /____________________________\
 ```
 
-Aqui, novamente, o tamanho não representa participação real nos lucros da indústria. A forma invertida serve apenas para destacar uma característica da economia atual: muitas aplicações podem estar apoiadas sobre uma quantidade relativamente pequena de fornecedores de infraestrutura, chips e modelos fundamentais.
+O tamanho das camadas representa a concentração relativa de nova receita apresentada na análise da aula — não quantidade de empresas, número de usuários ou tamanho físico da infraestrutura.
 
-Há evidência de que essa camada de infraestrutura possui peso econômico elevado. A NVIDIA reportou margem bruta GAAP de 71,1% no exercício fiscal de 2026, enquanto a Microsoft afirmou que a expansão de infraestrutura de IA pressionou a margem percentual de Microsoft Cloud. Esses números mostram economics relevantes em empresas específicas, mas não permitem concluir que "chips ficam com todo o lucro" ou que aplicações de IA possuem necessariamente margens baixas.
+Há também evidência complementar de peso econômico elevado nessa camada em empresas específicas: a NVIDIA reportou margem bruta GAAP de 71,1% no exercício fiscal de 2026, enquanto a Microsoft afirmou que a expansão de infraestrutura de IA pressionou a margem percentual de Microsoft Cloud. Esses números mostram economics relevantes em empresas específicas, mas não permitem concluir que "chips ficam com todo o lucro" ou que aplicações de IA possuem necessariamente margens baixas — um número de uma empresa não é automaticamente uma característica universal de uma camada inteira do mercado.
 
-Essa diferença é importante. Um número de uma empresa não é automaticamente uma característica universal de uma camada inteira do mercado.
+### Por que isso é diferente da cloud?
+
+A comparação com cloud ajuda a entender por que esse desenho importa.
+
+Na leitura apresentada por Apur, cloud também começou com grandes investimentos em infraestrutura. Com o amadurecimento do mercado, porém, uma parcela muito maior do valor passou a ser capturada pelas aplicações construídas sobre essa infraestrutura.
+
+Esse processo não aconteceu imediatamente. Na aula, ele cita um período de aproximadamente oito a dez anos para que o ecossistema de cloud amadurecesse e o investimento em infraestrutura ajudasse a sustentar uma camada muito maior de aplicações.
+
+Na IA, existe uma diferença econômica importante: executar software tradicional e executar um modelo de IA não têm exatamente a mesma estrutura de custos. Em software, depois que a lógica do produto foi construída, reproduzir essa lógica para mais usuários pode ter um custo marginal relativamente baixo. Com IA, cada interação continua exigindo processamento.
+
+```
+Usuário
+   ↓
+Solicitação
+   ↓
+Inferência
+   ↓
+GPU / compute
+   ↓
+Resposta
+```
+
+Isso significa que crescimento de uso também pode significar crescimento do custo de execução. É uma das razões pelas quais ainda não podemos simplesmente assumir que a economia das aplicações de IA será igual à economia do SaaS tradicional.
+
+### ⚡ Treinamento e inferência têm economias diferentes
+
+Treinamento e inferência usam a mesma infraestrutura de computação de formas diferentes.
+
+**Treinamento** é a etapa em que o modelo é criado ou ajustado. É um processo pesado, mas relativamente previsível: grandes volumes de GPUs podem operar de forma contínua durante um período determinado.
+
+**Inferência** acontece depois, quando pessoas ou sistemas usam o modelo. Cada pergunta, geração ou tarefa exige que o modelo seja executado novamente. A demanda de inferência também tende a ser menos previsível porque acompanha o comportamento de quem utiliza o sistema — pessoas trabalham mais em determinados horários, menos durante a noite e de forma diferente em fins de semana e feriados.
+
+Na aula, Apur observa que essa dinâmica poderá mudar caso agentes passem a executar tarefas continuamente, inclusive quando humanos não estiverem trabalhando.
+
+Isso cria um problema econômico interessante: a empresa precisa construir capacidade suficiente para atender picos de utilização, mesmo que essa capacidade não seja usada com a mesma intensidade durante todo o tempo.
 
 ## ⚡ Custo marginal: por que mais uso pode significar mais custo?
 
@@ -312,79 +353,131 @@ redes, energia e data centers
 
 Cloud não fez a infraestrutura desaparecer. Ela tornou possível abstraí-la para quem consome o serviço enquanto a concentra em quem fornece a infraestrutura.
 
-## 🏗️ Como ler os comunicados dos CEOs (*Capex guidance*)?
+## 🏗️ Como ler o Capex guidance das grandes empresas?
 
-Existe um descompasso importante entre o tempo necessário para construir infraestrutura e o tempo em que a receita das aplicações aparece.
+Existe um descompasso importante entre o momento em que uma empresa investe em infraestrutura e o momento em que essa infraestrutura começa a gerar receita.
 
-Data centers, energia, networking e chips exigem planejamento e investimento antecipado. Já a receita de produtos e serviços de IA é percebida de forma muito mais contínua, conforme clientes começam a utilizar e pagar pelos produtos.
+Construir data centers, garantir energia, adquirir chips e expandir infraestrutura exige decisões tomadas anos antes da receita final aparecer. Na visão apresentada na aula, investimentos em semicondutores e infraestrutura podem ser planejados dentro de ciclos de aproximadamente cinco a seis anos. Já a receita das aplicações acontece progressivamente, conforme empresas e consumidores começam a utilizar os produtos.
 
-Por isso, *Capex guidance* das grandes empresas de tecnologia se tornou um sinal acompanhado de perto por investidores.
-
-Quando Microsoft, Alphabet, Amazon ou Meta anunciam aumentos relevantes de investimento em infraestrutura, isso pode indicar que essas empresas esperam demanda suficiente para justificar mais capacidade computacional. Também pode refletir restrições atuais de capacidade, decisões estratégicas de longo prazo ou necessidade de antecipar infraestrutura que leva anos para ser construída.
-
-O movimento contrário também exige contexto. Uma redução no ritmo de Capex não significa automaticamente que a demanda por IA desapareceu. Pode representar maior eficiência, mudança de prioridades, capacidade já contratada ou uma revisão das expectativas de retorno.
-
-A pergunta útil não é simplesmente:
-
-> "O Capex está subindo ou caindo?"
-
-Mas:
-
-> "O crescimento da demanda e da receita está acompanhando o capital necessário para construir a infraestrutura que sustenta essa demanda?"
-
-Essa diferença de timing é uma das razões pelas quais a economia da IA precisa ser observada em várias camadas ao mesmo tempo: chips, infraestrutura, modelos e aplicações.
-
-## 🐢 O paradoxo da produtividade: por que usar mais IA não significa produzir mais imediatamente?
-
-Existe uma diferença entre uma tecnologia estar disponível e uma organização conseguir transformar essa tecnologia em produtividade — e uma das discussões mais importantes sobre adoção de IA nas empresas é a diferença entre **capability** e **produtividade real**.
-
-Dar acesso a uma ferramenta não significa necessariamente mudar um processo. Uma empresa pode adicionar IA ao mesmo workflow antigo e continuar fazendo praticamente as mesmas coisas de maneira apenas um pouco diferente.
-
-Ali Ghodsi, CEO da Databricks, argumenta que os modelos atuais já possuem capacidades muito amplas, mas continuam enfrentando um problema fundamental dentro das organizações: contexto. Um modelo pode ter aprendido com uma quantidade enorme de informação pública e ainda não saber como uma empresa específica funciona. Ele não conhece automaticamente:
-
-- decisões tomadas anos atrás;
-- exceções de um processo;
-- relações entre clientes e equipes;
-- regras que nunca foram formalmente documentadas;
-- motivos pelos quais determinada arquitetura foi escolhida;
-- conhecimento acumulado por pessoas que trabalham há anos na organização.
-
-É por isso que simplesmente dar acesso a um modelo para cada funcionário não transforma automaticamente a produtividade da empresa. Existe uma diferença entre:
+Isso cria um *timing mismatch*:
 
 ```
-acesso à IA
-      ↓
-uso da IA
-      ↓
-integração ao trabalho
-      ↓
-redesenho de processos
-      ↓
-ganho estrutural de produtividade
+HOJE
+grandes investimentos
+em infraestrutura
+        ↓
+capacidade futura
+        ↓
+mais aplicações
+        ↓
+mais utilização
+        ↓
+receita futura
 ```
 
-Essas etapas não acontecem automaticamente.
+Por isso, investidores acompanham com atenção o Capex guidance de empresas como Microsoft, Alphabet, Amazon e Meta — e não é coincidência: a Microsoft afirmou em seu relatório anual de 2025 que continuará investindo em capital para atender à demanda de cloud e produtos de IA, e informou que Azure ultrapassou US$ 75 bilhões de receita anual naquele exercício, com mais de dois gigawatts de capacidade de data center adicionados nos 12 meses anteriores ao resultado fiscal de 2025.
 
-### A lição histórica da eletricidade
+Mas é importante interpretar esses números com cuidado.
 
-Paul David explorou um paralelo semelhante ao estudar a adoção da eletricidade nas fábricas. Quando motores elétricos começaram a substituir máquinas movidas por sistemas anteriores de energia, as empresas inicialmente mantiveram boa parte da organização das fábricas praticamente igual — a nova tecnologia estava presente, mas a arquitetura do trabalho continuava antiga.
+**Capex aumentando.** Quando uma empresa aumenta suas projeções de investimento em data centers e infraestrutura de IA, isso pode indicar que ela espera precisar de mais capacidade no futuro. Não significa automaticamente que toda essa demanda já existe ou que o retorno sobre o investimento está garantido — a empresa está fazendo uma aposta sobre demanda futura.
 
-Os ganhos mais relevantes apareceram quando as empresas começaram a redesenhar a própria fábrica em torno das características da eletricidade, reorganizando máquinas, fluxos e processos.
+**Capex diminuindo.** Da mesma forma, reduzir Capex não significa automaticamente que a IA "fracassou". Pode haver diferentes razões para isso. Mas, na lógica apresentada por Apur, uma mudança forte e generalizada na orientação de Capex dos grandes hyperscalers seria um sinal importante para acompanhar, porque colocaria em dúvida a expectativa de que o crescimento futuro justifique o nível atual de investimento em infraestrutura.
 
-A analogia com IA é útil, mas não deve ser tratada como previsão de que a IA seguirá exatamente o mesmo ritmo histórico. Ela serve para mostrar algo mais simples: uma tecnologia de uso geral pode exigir mudanças organizacionais complementares antes que todo o seu impacto apareça nas métricas de produtividade.
+Por isso, a pergunta mais útil não é simplesmente:
 
-Com IA, isso pode significar repensar:
+> "O Capex aumentou ou diminuiu?"
 
-- como informação circula;
-- onde decisões são tomadas;
-- quais tarefas precisam de julgamento;
-- quais processos podem ser redesenhados;
-- como contexto chega aos modelos;
-- onde humanos continuam responsáveis.
+É:
 
-A questão, portanto, não é apenas "quantas pessoas estão usando IA?", mas "o trabalho foi redesenhado para aproveitar o que essa tecnologia permite?".
+> "A demanda e a receita que estão surgindo no topo da cadeia serão suficientes para justificar o capital investido na infraestrutura que está sendo construída hoje?"
 
-O mesmo princípio vale para contexto. Dar acesso a documentos não significa automaticamente criar conhecimento operacional. Dar acesso a um modelo não significa automaticamente melhorar uma decisão. E automatizar uma tarefa não significa automaticamente melhorar um negócio.
+Essa pergunta ajuda a entender melhor a economia da IA do que simplesmente observar crescimento de usuários ou popularidade das ferramentas.
+
+### 🔄 O triângulo vai permanecer assim?
+
+Não necessariamente. Na interpretação apresentada na aula, o formato atual pode refletir justamente o estágio inicial do ciclo: a infraestrutura está sendo construída primeiro, e o mercado ainda precisa descobrir quais aplicações conseguirão transformar essa capacidade em negócios economicamente sustentáveis.
+
+Apur chama atenção para dois movimentos que poderiam alterar o equilíbrio atual.
+
+O primeiro é o avanço de chips próprios desenvolvidos pelos grandes provedores de cloud. Google, Meta, Amazon, Microsoft e outras empresas estão investindo em alternativas aos chips tradicionais usados hoje. Se essas iniciativas ganharem escala, a economia da camada de semicondutores pode mudar de forma relevante.
+
+O segundo é justamente o Capex guidance discutido acima. Se os grandes compradores de infraestrutura começarem a reduzir de maneira significativa seus planos de investimento, isso pode indicar uma mudança nas expectativas sobre a quantidade de compute que será necessária no futuro.
+
+Isso não permite prever exatamente como o mercado ficará. Serve para entender quais sinais econômicos ajudam a acompanhar sua evolução.
+
+### 🧩 Integração vertical: por que algumas empresas querem estar em várias camadas?
+
+Outra questão importante levantada na aula é a integração vertical. Uma empresa integrada verticalmente participa de várias partes da cadeia em vez de depender completamente de fornecedores externos.
+
+O Google é um exemplo fácil de visualizar:
+
+```
+CHIPS
+TPUs
+   ↓
+INFRAESTRUTURA
+Google Cloud
+   ↓
+MODELOS E SERVIÇOS
+   ↓
+APLICAÇÕES
+Gemini
+```
+
+Isso significa que uma mesma empresa pode participar da infraestrutura física, da cloud e da aplicação que chega ao usuário.
+
+Na leitura apresentada por Apur, integração vertical também apareceu em ciclos tecnológicos anteriores. Ele cita Google na internet e Apple no mobile como exemplos de empresas que controlaram várias partes importantes de seus respectivos ecossistemas; a cloud foi mais heterogênea, distribuída principalmente entre grandes provedores.
+
+Na IA, essa discussão volta a ganhar importância porque controlar mais partes da cadeia pode ajudar uma empresa a administrar custo, distribuição e dependências. Isso não significa que toda empresa precise construir seus próprios chips, modelos e data centers — significa apenas que, para entender competição em IA, não basta observar quem possui o melhor aplicativo. Também importa entender quem controla as camadas das quais esse aplicativo depende.
+
+## 🐢 O paradoxo da produtividade: usar IA não significa automaticamente produzir mais
+
+Existe outra diferença importante entre disponibilidade tecnológica e resultado econômico: uma empresa pode aumentar muito o uso de IA sem perceber imediatamente um aumento equivalente de produtividade.
+
+Ali Ghodsi, CEO da Databricks, chama atenção para um problema particularmente importante: contexto organizacional. Um modelo pode ter aprendido com enormes quantidades de informação pública e ainda não saber como uma empresa específica funciona. Ele não conhece automaticamente por que uma decisão foi tomada três anos atrás, quais exceções existem em um processo, quem normalmente aprova determinada atividade ou que informação nunca chegou a ser documentada.
+
+Muito desse conhecimento pode estar distribuído entre:
+
+- documentos;
+- sistemas;
+- conversas;
+- processos;
+- decisões antigas;
+- pessoas que trabalham há anos na organização.
+
+Dar acesso a um modelo não resolve automaticamente esse problema. E colocar todos os documentos da empresa dentro de uma máquina também não significa que ela passou a compreender a empresa (veja [`janela-de-contexto`](../../fundamentals/context-windows.mdx) e [`rag`](../../systems/rag.mdx)).
+
+Existe um caminho entre acesso e produtividade:
+
+```
+Acesso à IA
+      ↓
+Uso da IA
+      ↓
+Contexto relevante
+      ↓
+Integração ao trabalho
+      ↓
+Redesenho dos processos
+      ↓
+Mudança de produtividade
+```
+
+Cada etapa exige coisas diferentes.
+
+### ⚡ A lição do motor elétrico
+
+O economista Paul David estudou um fenômeno semelhante ao analisar o impacto da eletricidade sobre a produtividade. Quando motores elétricos começaram a substituir sistemas anteriores nas fábricas, muitas empresas simplesmente trocaram a fonte de energia sem mudar a maneira como a fábrica estava organizada. A tecnologia havia mudado. O processo, não.
+
+Os ganhos mais importantes vieram depois, quando empresas começaram a reorganizar máquinas, fluxos e processos considerando as características da nova tecnologia.
+
+A analogia é útil para IA porque mostra uma diferença entre adotar uma tecnologia e redesenhar uma organização em torno das novas possibilidades dessa tecnologia. Não sabemos se IA seguirá o mesmo ritmo histórico da eletricidade, e a analogia não deve ser usada como previsão. O princípio é mais simples: tecnologias de uso geral podem precisar de mudanças complementares na organização antes que todo o ganho de produtividade apareça.
+
+Dar acesso a um assistente de IA para todos os funcionários pode aumentar produtividade em determinadas tarefas. Mas transformação organizacional exige uma pergunta diferente:
+
+> "Se essa tecnologia permite fazer o trabalho de outra maneira, por que estamos mantendo exatamente o mesmo processo?"
+
+É nessa diferença entre usar IA e redesenhar trabalho com IA que provavelmente está uma das discussões mais importantes sobre produtividade.
 
 ## ⚠️ O que esta narrativa não explica
 
@@ -421,7 +514,7 @@ Essa é a pergunta que leva ao próximo conteúdo desta trilha: quando tecnologi
 5. NVIDIA — *Fiscal 2026 Financial Results*. Dados financeiros e margem bruta reportada pela companhia.
 6. David, Paul A. (1990). *The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox.* The American Economic Review. Base para a seção sobre o paradoxo da produtividade e a analogia histórica com a eletricidade.
 7. Helmer, Hamilton (2016). *7 Powers: The Foundations of Business Strategy.* Deep Strategy.
-8. Stanford MS&E 435 (Spring 2026). *Economics of the AI Supercycle* — visão geral da cadeia de infraestrutura, aplicações e captura de valor. Base para a seção sobre Capex guidance.
+8. Stanford MS&E 435 (Spring 2026). *Economics of the AI Supercycle*, aula de Apur (Altimeter Capital) — visão geral da cadeia de infraestrutura, aplicações e captura de valor. Base para o triângulo econômico da IA, a comparação com cloud, e as seções sobre Capex guidance e integração vertical.
 9. Stanford MS&E 435, Class 7 — Tuhin Srivastava (Baseten), economia de inferência e infraestrutura de compute.
 10. Stanford MS&E 435 — Ali Ghodsi (Databricks), enterprise AI, contexto organizacional e redesenho de trabalho. Base para a seção sobre o paradoxo da produtividade.
 
@@ -432,5 +525,7 @@ Os diagramas deste texto são modelos mentais, não representações quantitativ
 Quando um conteúdo futuro utilizar proporções financeiras, participação de mercado, margem ou profit pools, esses valores deverão ser acompanhados de fonte primária, período, definição da métrica e escopo analisado (veja [`principles/evidence-policy.md`](../../../principles/evidence-policy.md)).
 
 O bloco sobre *Capex guidance* evita deliberadamente frases deterministas (ex.: "se aumenta Capex, significa que falta infraestrutura"). Capex guidance é um sinal, não uma conclusão fechada — pode refletir demanda esperada, restrições de oferta, estratégia, eficiência, timing de construção ou disciplina de capital, isoladamente ou em combinação.
+
+Números específicos como "75% da nova receita" (concentração na camada de semicondutores), "cinco a seis anos" (ciclo de planejamento de investimento em infraestrutura) e "oito a dez anos" (maturação do ecossistema de cloud) são apresentados explicitamente como a leitura de Apur na aula *Economics of the AI Supercycle* (Stanford MS&E 435) — não como fatos universais sobre toda a indústria ou previsões deste projeto. Um conteúdo futuro que queira tratar esses números como consenso mais amplo do mercado precisa de fontes adicionais e independentes que os corroborem.
 
 **Nota de verificação:** as URLs exatas dos relatórios/press releases das referências 1–5, e dos três vídeos de Stanford (referências 8–10), foram confirmadas pelo contribuidor responsável em 2026-09-29. As referências 6 e 7 (David 1990; Helmer 2016) ainda aguardam URL/DOI a ser confirmado antes deste conteúdo sair de `status: "draft"` — veja o comentário em [`references/sources.yaml`](../../../references/sources.yaml).
