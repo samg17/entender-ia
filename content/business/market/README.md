@@ -18,4 +18,6 @@ Trata da evolução de mercados e infraestrutura tecnológica — o contexto his
 
 Uma narrativa histórica útil aqui conecta camadas — infraestrutura, distribuição, interface — sem apresentar a sequência como causalidade simples (ex.: "cloud causou SaaS que causou IA"). O objetivo é mostrar condições que se acumularam, não uma linha reta e inevitável. Veja [`principles/editorial-principles.md`](../../../principles/editorial-principles.md).
 
-Nenhum conteúdo foi escrito ainda nesta subcategoria.
+## Conteúdo existente
+
+- [`from-cloud-to-ai.mdx`](from-cloud-to-ai.mdx) — a evolução de internet, cloud, SaaS, APIs e dados até a economia atual de IA, e por que a economia da IA introduz um custo variável (inferência) que o software tradicional não tinha da mesma forma. Ainda em `draft`: os números financeiros citados aguardam confirmação de fonte primária exata (veja a nota de verificação no próprio arquivo e em `references/sources.yaml`).
