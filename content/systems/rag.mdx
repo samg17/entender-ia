@@ -1,9 +1,9 @@
 ---
 id: "rag"
 
-title: "O que RAG faz (e o que ele não faz)"
+title: "RAG: quando a IA precisa buscar antes de responder"
 slug: "rag"
-description: "Retrieval-Augmented Generation busca informação relevante para colocar no contexto de um modelo — mas não significa que o sistema 'entende' os documentos que consultou."
+description: "RAG busca informação relevante em uma fonte externa antes de gerar uma resposta — mas ter documentos disponíveis não significa que o sistema encontra, entende ou prioriza o trecho certo."
 
 locale: "pt-BR"
 
@@ -27,54 +27,79 @@ authors:
   - sam
 
 created: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-29"
 
-references: []
+references:
+  - lewis-2020-retrieval-augmented-generation
 ---
 
 ## Em uma frase
 
-RAG (*Retrieval-Augmented Generation*) é uma técnica que busca trechos relevantes de uma base de documentos e os insere no contexto de um modelo antes de gerar uma resposta, em vez de depender apenas do que o modelo "aprendeu" durante o treinamento.
+RAG (*Retrieval-Augmented Generation*, geração aumentada por recuperação) busca trechos relevantes em uma fonte externa e os insere no contexto de um modelo antes dele responder — em vez de depender só do que o modelo já sabe.
+
+```
+pergunta → busca → informação relevante → contexto do modelo → resposta
+```
 
 ## Por que isso importa
 
-RAG é frequentemente vendido como a solução para "fazer a IA conhecer os dados da empresa". Entender o que ele realmente faz — e onde ele pode falhar silenciosamente — é essencial para avaliar se um projeto de RAG vai entregar o que promete.
+O que um modelo aprendeu no treinamento é diferente do que está disponível para ele no momento de responder. Uma política interna, o histórico de um cliente específico ou um documento criado ontem não fazem parte desse conhecimento — só entram se alguém os colocar no contexto daquela interação. RAG automatiza essa busca: em vez de esperar que o modelo "saiba tudo", o sistema recupera o que é relevante e só então pede a resposta.
+
+Isso é diferente de retreinar o modelo. O documento pode mudar amanhã sem que nada precise ser retreinado — só a fonte consultada muda.
 
 ## Modelo mental
 
-RAG não ensina o modelo, não é uma forma de "gravar" conhecimento no modelo permanentemente. É melhor pensado como uma busca (semelhante a uma pesquisa) que seleciona documentos relevantes e os entrega ao modelo naquele momento, dentro da janela de contexto daquela interação específica.
+Não é "ensinar tudo para a IA". É "dar acesso à informação certa no momento em que ela é necessária".
+
+```
+conhecimento geral do modelo + informação recuperada agora → resposta fundamentada nas fontes
+```
 
 ## Como funciona
 
-Em um esquema típico, os documentos são divididos em trechos e transformados em representações numéricas (*embeddings*). Quando uma pergunta chega, o sistema busca os trechos com representação mais próxima da pergunta, e insere esses trechos no contexto enviado ao modelo, que então gera a resposta considerando esse material.
+Documentos são divididos em trechos e convertidos em representações numéricas (*embeddings*). Uma pergunta é comparada a essas representações, e os trechos mais próximos entram no contexto enviado ao modelo, que gera a resposta com base neles (Lewis et al., 2020 — ver [`lewis-2020-retrieval-augmented-generation`](../../references/sources.yaml)).
 
 ## Exemplo
 
-Colocar todos os documentos internos de uma empresa em um sistema de RAG não significa que o sistema "entende a empresa" — significa que, para cada pergunta, ele tenta recuperar os trechos de texto mais parecidos com a pergunta e pedir ao modelo para responder com base neles. Se a busca recuperar os trechos errados, ou se a pergunta não tiver uma boa correspondência textual com os documentos certos, a resposta pode ser incompleta ou incorreta mesmo que a informação correta exista na base.
+Um cliente pergunta se pode devolver um produto após 45 dias. O sistema busca a política de devolução vigente, insere a regra relevante no contexto e gera a resposta a partir dela. Se a política mudar na semana seguinte, a próxima busca já traz a versão atualizada — sem qualquer retreinamento.
 
-## Implicações para negócios
-
-A qualidade de um sistema de RAG depende tanto da qualidade da busca (retrieval) quanto da geração — investir apenas no modelo generativo sem cuidar de como os documentos são organizados, divididos e indexados costuma produzir resultados decepcionantes.
+O mesmo vale para histórico de atendimento: em vez de carregar todas as interações de todos os clientes o tempo todo, o sistema recupera só os chamados, produtos e decisões relevantes para aquele atendimento específico.
 
 ## Equívocos comuns
 
-- "RAG faz o modelo aprender nossos dados" — RAG não treina o modelo; é uma injeção de contexto por consulta.
-- "Se o documento está na base, o sistema vai encontrá-lo" — a recuperação pode falhar por razões de similaridade textual, fragmentação do documento, ou ambiguidade da pergunta.
+- **"RAG é colocar todos os documentos da empresa na IA."** Ter os documentos disponíveis não garante que o sistema sabe qual deles importa, encontra o trecho certo, distingue versão atual de desatualizada, ou respeita permissões de acesso. Mais documentos não é o mesmo que melhor contexto.
+- **"Se o documento está na base, o sistema vai encontrá-lo."** A busca pode falhar por similaridade textual fraca, fragmentação que corta a informação ao meio, ou ambiguidade da pergunta — recuperar não é o mesmo que entender.
+- **"RAG faz o modelo aprender nossos dados."** Não treina nada; é uma injeção de contexto por consulta.
 
-## O que pode dar errado
+## Quando costuma fazer sentido
 
-Recuperação de trechos irrelevantes, fragmentação que corta informação importante ao meio, ou perguntas ambíguas que levam a buscas mal direcionadas — todos esses problemas ocorrem "silenciosamente": o sistema ainda produz uma resposta com aparência de confiança.
+RAG ajuda quando a resposta depende de informação privada, específica da organização, atualizada com frequência, extensa demais para caber sempre no contexto, ou espalhada por vários documentos — por exemplo, consultar políticas de suporte, materiais de venda associados a um cliente, ou uma base de conhecimento interna.
+
+Quando você já sabe exatamente qual dado quer ("qual o saldo da conta 8472?", "pedidos entre 10 e 20 de setembro"), uma consulta direta a um banco de dados ou API tende a resolver melhor do que RAG. RAG ganha relevância quando a pergunta exige encontrar informação por significado, não por identificador exato — por exemplo, "quais conversas anteriores deste cliente ajudam a entender esse problema?". Na prática, sistemas bons costumam combinar as duas abordagens.
+
+## RAG não é memória
+
+RAG responde "que informação externa buscar agora?". Memória responde "que informação de interações passadas deveria continuar disponível no futuro?". Um sistema pode ter um sem o outro — são mecanismos distintos que às vezes aparecem juntos.
+
+## Implicações para negócios
+
+A qualidade de um sistema de RAG depende tanto da busca quanto da geração. Investir só no modelo, sem cuidar de como os documentos são organizados, divididos, indexados e controlados por permissão, tende a produzir resultados decepcionantes — e as falhas (trecho errado, desatualizado, ou fora do que o usuário deveria acessar) costumam ser silenciosas: o sistema ainda responde com aparência de confiança.
 
 ## Perguntas para fazer
 
-- Como sabemos se o sistema está recuperando os trechos certos, e não apenas gerando uma resposta plausível a partir de trechos errados?
-- Precisamos de RAG, ou o volume de informação relevante já caberia diretamente no contexto? (veja [`janela-de-contexto`](../fundamentals/context-windows.mdx))
+- Que informação o modelo precisa acessar que ele não tem de forma confiável agora — e onde ela vive?
+- Como sabemos se a recuperação está trazendo o trecho certo, e não só gerando algo plausível a partir do trecho errado?
+- A informação muda com frequência o suficiente para exigir busca a cada consulta?
+- Uma consulta estruturada (SQL, API) resolveria melhor do que busca por significado?
+- Quem pode acessar cada conteúdo recuperado, e o sistema respeita isso?
+- O que acontece quando duas fontes recuperadas se contradizem?
+- Precisamos de RAG, ou o volume de informação relevante já caberia direto no contexto? (veja [`janela-de-contexto`](../fundamentals/context-windows.mdx))
 
 ## Conceitos relacionados
 
 - [Janela de contexto](../fundamentals/context-windows.mdx)
 - [Agentes](../systems/agents.mdx)
 
-## Referências
+## Fontes principais
 
-Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.
+- Patrick Lewis et al. — "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", 2020. Utilizado para a arquitetura retrieve → augment → generate que fundamenta a definição de RAG neste conteúdo.

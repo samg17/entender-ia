@@ -378,3 +378,21 @@
   url: "https://margaretstorey.com/blog/2026/02/09/cognitive-debt/"
   published: "2026-02-09"
   accessed: "2026-09-29"
+
+# Fonte de content/systems/rag.mdx.
+
+- id: lewis-2020-retrieval-augmented-generation
+  title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+  authors:
+    - "Patrick Lewis"
+  organization: "Facebook AI Research / arXiv"
+  type: "paper"
+  evidence_type: "primary-source"
+  notes: >
+    Artigo que introduziu a arquitetura RAG (retrieve → augment →
+    generate) no contexto moderno de modelos de linguagem. Acesso à rede
+    desta sessão bloqueado para arxiv.org; URL trazida e checada por quem
+    pesquisou o tema.
+  url: "https://arxiv.org/abs/2005.11401"
+  published: "2020-05-22"
+  accessed: "2026-09-29"
