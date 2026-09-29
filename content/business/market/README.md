@@ -5,14 +5,9 @@ Trata da evolução de mercados e infraestrutura tecnológica — o contexto his
 ## Temas futuros (não escritos ainda)
 
 - Ciclos tecnológicos e o que costuma se repetir entre eles
-- Evolução da internet, cloud computing, SaaS e APIs
-- Mobile e data infrastructure como camadas anteriores
-- Evolução da cloud para IA
-- Movimentos que antecederam a atual onda de IA
-- Infraestrutura vs. camada de aplicação
+- Mobile como camada anterior à IA
 - Commoditização e mudança de distribuição
 - Evolução de categorias de software
-- Mudanças na interface entre pessoas e software
 
 ## Nota editorial
 
