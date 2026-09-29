@@ -1,4 +1,4 @@
-# Business / Mercado e Infraestrutura Tecnológica
+# Business / Market
 
 Trata da evolução de mercados e infraestrutura tecnológica — o contexto histórico e estrutural que ajuda a entender onde a atual onda de IA se encaixa.
 
