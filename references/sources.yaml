@@ -396,3 +396,60 @@
   url: "https://arxiv.org/abs/2005.11401"
   published: "2020-05-22"
   accessed: "2026-09-29"
+
+# Fontes de content/systems/agents.mdx.
+
+- id: anthropic-2024-building-effective-agents
+  title: "Building Effective Agents"
+  organization: "Anthropic"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Distingue workflows (caminhos de código predefinidos) de agents
+    (o modelo direciona dinamicamente seu processo e uso de ferramentas)
+    e recomenda começar pela solução mais simples, aumentando autonomia
+    só quando ela gerar valor suficiente. Confirmado por fetch direto
+    nesta sessão.
+  url: "https://www.anthropic.com/engineering/building-effective-agents"
+  published: "2024-12-01"
+  accessed: "2026-09-29"
+
+- id: openai-2025-practical-guide-ai-agents
+  title: "A Practical Guide to Building AI Agents"
+  organization: "OpenAI"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Guia sobre componentes de um agente (model, tools, instructions,
+    guardrails) e sobre intervenção humana concentrada em ações de alto
+    risco. Acesso à rede desta sessão bloqueado para openai.com; URL
+    trazida e checada por quem pesquisou o tema.
+  url: "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/"
+  accessed: "2026-09-29"
+
+- id: google-cloud-vertex-ai-grounding-overview
+  title: "Grounding overview (Vertex AI Generative AI docs)"
+  organization: "Google Cloud"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documentação oficial sobre grounding/RAG na Vertex AI — aplicação
+    prática do padrão retrieve → augment → generate. Acesso à rede desta
+    sessão bloqueado (redireciona para docs.cloud.google.com, também
+    bloqueado); URL trazida e checada por quem pesquisou o tema.
+  url: "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview"
+  accessed: "2026-09-29"
+
+- id: openai-developers-agents-learn
+  title: "Agents"
+  organization: "OpenAI Developers"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Recursos de implementação para agentes e RAG/file search — usado
+    como camada de "implementação contemporânea", depois da definição
+    conceitual (Anthropic/OpenAI guide) e do paper original (Lewis et
+    al.). Acesso à rede desta sessão bloqueado para developers.openai.com;
+    URL trazida e checada por quem pesquisou o tema.
+  url: "https://developers.openai.com/learn/agents"
+  accessed: "2026-09-29"

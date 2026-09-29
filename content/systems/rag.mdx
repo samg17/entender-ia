@@ -31,6 +31,8 @@ last_reviewed: "2026-09-29"
 
 references:
   - lewis-2020-retrieval-augmented-generation
+  - google-cloud-vertex-ai-grounding-overview
+  - openai-developers-agents-learn
 ---
 
 ## Em uma frase
@@ -57,7 +59,7 @@ conhecimento geral do modelo + informação recuperada agora → resposta fundam
 
 ## Como funciona
 
-Documentos são divididos em trechos e convertidos em representações numéricas (*embeddings*). Uma pergunta é comparada a essas representações, e os trechos mais próximos entram no contexto enviado ao modelo, que gera a resposta com base neles (Lewis et al., 2020 — ver [`lewis-2020-retrieval-augmented-generation`](../../references/sources.yaml)).
+Documentos são divididos em trechos e convertidos em representações numéricas (*embeddings*). Uma pergunta é comparada a essas representações, e os trechos mais próximos entram no contexto enviado ao modelo, que gera a resposta com base neles. Essa é a arquitetura descrita por Lewis et al. (2020 — ver [`lewis-2020-retrieval-augmented-generation`](../../references/sources.yaml)); provedores de nuvem chamam essa mesma ideia de "grounding" em suas próprias implementações práticas (Google Cloud — ver [`google-cloud-vertex-ai-grounding-overview`](../../references/sources.yaml)).
 
 ## Exemplo
 
@@ -102,4 +104,6 @@ A qualidade de um sistema de RAG depende tanto da busca quanto da geração. Inv
 
 ## Fontes principais
 
-- Patrick Lewis et al. — "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", 2020. Utilizado para a arquitetura retrieve → augment → generate que fundamenta a definição de RAG neste conteúdo.
+- Patrick Lewis et al. — "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", 2020. Origem acadêmica da arquitetura retrieve → augment → generate que fundamenta a definição de RAG neste conteúdo.
+- Google Cloud — documentação de grounding (Vertex AI). Aplicação prática do mesmo padrão em um provedor de nuvem.
+- OpenAI Developers — recursos sobre agentes e RAG/file search. Implementação contemporânea, usada como camada de exemplo além da definição conceitual.

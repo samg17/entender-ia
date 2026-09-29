@@ -1,9 +1,9 @@
 ---
 id: "agents"
 
-title: "O que são agentes"
+title: "Agentes: quando a IA deixa de só responder e passa a agir"
 slug: "agentes"
-description: "Um agente é um sistema que usa um modelo para decidir e executar uma sequência de ações — não apenas gerar uma resposta única de texto."
+description: "Um agente decide sozinho os próximos passos de uma tarefa, usa ferramentas e observa resultados — em vez de seguir um caminho já definido por quem construiu o sistema."
 
 locale: "pt-BR"
 
@@ -20,63 +20,87 @@ prerequisites:
   - rag
 
 related:
+  - understanding-is-the-bottleneck
+  - when-not-to-use-ai
   - ai-literacy
 
 authors:
   - sam
 
 created: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-29"
 
-references: []
+references:
+  - anthropic-2024-building-effective-agents
+  - openai-2025-practical-guide-ai-agents
+  - openai-developers-agents-learn
 ---
 
 ## Em uma frase
 
-Um agente, no contexto de sistemas de IA, é um sistema em que um modelo decide quais ações tomar (como usar uma ferramenta, consultar uma fonte, ou chamar outro sistema) e repete esse ciclo de decisão até completar uma tarefa, em vez de apenas produzir uma resposta de texto única.
+Um agente é um sistema em que o modelo decide sozinho o próximo passo de uma tarefa — qual ferramenta usar, o que consultar, quando parar — em vez de seguir um caminho fixo definido de antemão.
+
+```
+objetivo → decidir ação → usar ferramenta → observar resultado → reavaliar → repetir
+```
 
 ## Por que isso importa
 
-"Agente" tornou-se um termo usado para descrever coisas muito diferentes, de assistentes simples a sistemas complexos com múltiplas etapas autônomas. Entender o que caracteriza um agente ajuda a avaliar se ele é a solução certa para um problema, ou se um fluxo mais simples e previsível resolveria melhor.
+A diferença não é que o agente "conversa melhor". É que ele pode agir sobre um processo, não só descrevê-lo. Um chatbot tradicional explica como pedir um reembolso; um agente pode consultar o pedido, checar a política, pedir aprovação quando necessário e executar o cancelamento.
 
-## Modelo mental
+## Workflow ou agent?
 
-A diferença central entre um workflow tradicional e um agente é onde está o controle da sequência de passos: em um workflow, a sequência é definida por quem construiu o sistema; em um agente, o próprio modelo decide, a cada etapa, qual é o próximo passo, dentro de um conjunto de ferramentas e instruções disponíveis.
+A Anthropic separa os dois pela pergunta "quem decide o próximo passo": em um **workflow**, o caminho já foi definido no código; em um **agent**, o modelo direciona dinamicamente o processo e o uso de ferramentas (Anthropic, 2024 — ver [`anthropic-2024-building-effective-agents`](../../references/sources.yaml)).
 
-## Como funciona
+```
+Workflow: passo A → passo B → passo C   (caminho fixo)
+Agent:    objetivo → o modelo decide o caminho, etapa a etapa
+```
 
-Um agente tipicamente opera em um ciclo: recebe um objetivo, decide uma ação (por exemplo, buscar uma informação ou chamar uma ferramenta), observa o resultado dessa ação, e decide a próxima ação com base nisso — repetindo até considerar a tarefa concluída ou atingir um limite definido.
+Se a sequência de passos já é conhecida e estável, um workflow — ou mesmo uma regra determinística de código — tende a ser mais barato, previsível e fácil de auditar. Um agente ganha sentido quando o objetivo é claro mas o caminho varia: há exceções, informação incompleta, ou decisões que dependem do que aconteceu na etapa anterior.
 
-## Exemplo
+## Um agente não é só o modelo
 
-Um assistente que responde uma pergunta com um único texto não é um agente nesse sentido. Um sistema que, para responder a mesma pergunta, decide sozinho buscar informação em uma base de dados, depois consultar uma API externa, e só então compor uma resposta final, está operando como agente.
+O modelo decide; mas ele precisa de instruções (o que fazer), ferramentas (com o que agir), contexto (informação relevante) e limites — permissões, aprovações, formas de parar a execução. Sem essas peças, "dar autonomia" a um modelo tende a produzir ações imprevisíveis, não um sistema confiável (OpenAI, 2025 — ver [`openai-2025-practical-guide-ai-agents`](../../references/sources.yaml)).
 
-## Implicações para negócios
+## Autonomia é um espectro, não um interruptor
 
-Agentes trazem flexibilidade para lidar com tarefas que não seguem um caminho fixo, mas ao custo de menor previsibilidade: como o próprio modelo decide a sequência de ações, erros de decisão podem se propagar ou se acumular ao longo de várias etapas. Isso muda a forma como se avalia risco e a necessidade de supervisão humana — veja [`quando-um-workflow-e-melhor-que-um-agente`](#quando-um-workflow-e-melhor-que-um-agente) abaixo.
+Do lado mais contido, a IA só sugere e uma pessoa executa. Do lado mais autônomo, a IA conclui um fluxo inteiro sozinha. Entre os dois, há níveis intermediários: a IA prepara a ação para aprovação, ou executa a maior parte sozinha e escala só as exceções.
 
-## Quando um workflow é melhor que um agente
+Quanto maior o risco, a irreversibilidade ou o custo de um erro, mais vale manter aprovação humana antes de agir — não porque autonomia seja ruim, mas porque ela precisa ser dimensionada ao que está em jogo.
 
-Quando a sequência de passos necessária já é conhecida e estável, um workflow (onde os passos são definidos explicitamente por quem constrói o sistema, e o modelo é usado apenas dentro de etapas específicas) tende a ser mais previsível, mais fácil de testar e mais fácil de depurar do que um agente que decide sozinho o que fazer a cada passo. Reservar agentes para tarefas onde a sequência de ações realmente não pode ser conhecida de antemão é geralmente uma escolha mais segura.
+## RAG e agentes resolvem problemas diferentes
+
+RAG busca informação relevante. Um agente decide e executa passos. Um agente pode *usar* RAG como uma das suas ferramentas — junto de uma API, um banco de dados ou um sistema de e-mail — mas um não substitui o outro (veja [`rag`](rag.mdx)).
+
+## Mais agentes não é automaticamente melhor
+
+Vários agentes especializados coordenando entre si podem fazer sentido em alguns casos, mas também somam custo, latência e pontos de falha. Antes de dividir uma tarefa entre múltiplos agentes, vale perguntar se um único agente bem desenhado já resolveria.
+
+## Delegar execução não é delegar entendimento
+
+Quanto mais um agente executa sozinho, mais importa que as pessoas continuem entendendo objetivos, critérios e riscos por trás das decisões — não para revisar cada ação, mas para saber se o sistema ainda está fazendo a coisa certa (veja [`understanding-is-the-bottleneck`](../thinking/understanding-is-the-bottleneck.mdx)).
 
 ## Equívocos comuns
 
-- "Um agente é sempre mais avançado ou melhor do que um workflow" — a escolha depende do problema, não do quão sofisticado o termo parece.
-- "Adicionar um agente automaticamente torna um processo mais eficiente" — mais autonomia de decisão também significa mais superfície para erro.
-
-## O que pode dar errado
-
-Agentes podem entrar em ciclos improdutivos, tomar ações irreversíveis sem supervisão adequada, ou acumular pequenos erros de decisão ao longo de múltiplas etapas até produzir um resultado final claramente errado.
+- "Agente é sempre melhor que um processo fixo" — a escolha depende de o caminho ser previsível ou não, não do quão sofisticado o termo soa.
+- "Agente é só um LLM com mais liberdade" — sem instruções, ferramentas, contexto e limites claros, o que existe é um modelo sem direção, não um sistema confiável.
+- "Mais autonomia é sempre progresso" — autonomia sem controle correspondente ao risco tende a gerar erros difíceis de detectar a tempo.
 
 ## Perguntas para fazer
 
-- A sequência de ações necessária para esta tarefa já é conhecida, ou realmente precisa ser decidida dinamicamente?
-- O que acontece se o sistema tomar uma ação errada no meio do processo — isso é reversível e detectável?
+- O caminho desta tarefa já é conhecido, ou realmente precisa ser decidido a cada etapa?
+- Que ações o agente pode tomar sozinho, e quais exigem aprovação antes de executar?
+- Como interrompemos a execução se algo sair errado, e como saberíamos que saiu?
+- Um workflow ou uma regra de código simples resolveria isso com menos risco?
 
 ## Conceitos relacionados
 
-- [RAG](../systems/rag.mdx)
+- [RAG](rag.mdx)
+- [Entendimento é o novo gargalo](../thinking/understanding-is-the-bottleneck.mdx)
 
-## Referências
+## Fontes principais
 
-Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.
+- Anthropic — "Building Effective Agents", 2024. Distinção entre workflows e agents, e o princípio de começar pela solução mais simples antes de adicionar autonomia.
+- OpenAI — "A Practical Guide to Building AI Agents", 2025. Definição operacional dos componentes de um agente (instruções, ferramentas, contexto, guardrails) e intervenção humana concentrada em ações de maior risco.
+- OpenAI Developers — recursos sobre agentes. Implementação contemporânea e patterns atuais, usada como camada de exemplo além da definição conceitual.
