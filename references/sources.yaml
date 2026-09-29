@@ -38,17 +38,8 @@
   url: "https://docs.claude.com/en/docs/build-with-claude/context-windows"
   accessed: "2026-09-28"
 
-# NOTA DE VERIFICAÇÃO (from-cloud-to-ai.mdx):
-# As cinco entradas abaixo foram citadas com dados e números específicos de
-# relatórios financeiros de 2025/2026 (Capex da Alphabet, margem da NVIDIA,
-# receita do Azure, capacidade de data center da Microsoft). O contribuidor
-# que redigiu o conteúdo original afirma ter esses números das fontes
-# primárias das próprias empresas. Como isso está além do que pôde ser
-# verificado neste momento, os `url` abaixo apontam para as páginas oficiais
-# gerais de cada fonte (não para o filing/press release específico). Antes de
-# promover from-cloud-to-ai.mdx de "draft" para revisado, o contribuidor
-# responsável deve substituir os `url` pelo link exato do relatório/press
-# release consultado, conforme principles/evidence-policy.md.
+# Fontes de from-cloud-to-ai.mdx — URLs exatas confirmadas pelo contribuidor
+# responsável (samg17) em 2026-09-28.
 
 - id: google-cloud-what-is-cloud-computing
   title: "What is Cloud Computing?"
@@ -65,22 +56,57 @@
   accessed: "2026-09-28"
 
 - id: alphabet-2025-q4-earnings
-  title: "Alphabet Q4 2025 Earnings Release (Capex e composição de investimento em infraestrutura)"
+  title: "Alphabet 2025 Q4 Earnings Call"
   organization: "Alphabet Inc."
   type: "official-documentation"
-  url: "https://abc.xyz/investor/"
+  url: "https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx"
   accessed: "2026-09-28"
 
 - id: microsoft-fy2025-annual-report
-  title: "Microsoft Annual Report / FY2025 Earnings (Azure, investimento em infraestrutura de IA, capacidade de data center)"
+  title: "Microsoft Annual Report 2025"
   organization: "Microsoft"
   type: "official-documentation"
-  url: "https://www.microsoft.com/en-us/investor/annual-reports.aspx"
+  url: "https://www.microsoft.com/investor/reports/ar25/index.html"
   accessed: "2026-09-28"
 
 - id: nvidia-fiscal-2026-results
-  title: "NVIDIA Fiscal 2026 Financial Results (margem bruta GAAP)"
+  title: "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026"
   organization: "NVIDIA"
   type: "official-documentation"
-  url: "https://investor.nvidia.com/financial-info/financial-reports/"
+  url: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/default.aspx"
+  accessed: "2026-09-28"
+
+# Fontes adicionais de from-cloud-to-ai.mdx — URL ainda pendente de
+# confirmação pelo contribuidor. Não usar em novos conteúdos até a URL
+# ser adicionada (ver principles/evidence-policy.md).
+
+- id: david-1990-dynamo-and-computer
+  title: "The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox"
+  authors:
+    - "Paul A. David"
+  organization: "The American Economic Review"
+  type: "paper"
+  url: "PENDENTE — aguardando link (DOI/JSTOR) do contribuidor"
+  published: "1990-05-01"
+  accessed: "2026-09-28"
+
+- id: helmer-2016-seven-powers
+  title: "7 Powers: The Foundations of Business Strategy"
+  authors:
+    - "Hamilton Helmer"
+  organization: "Deep Strategy"
+  type: "book"
+  url: "PENDENTE — aguardando link do contribuidor"
+  published: "2016-01-01"
+  accessed: "2026-09-28"
+
+# NOTA: url abaixo é o canal geral do Stanford Online no YouTube, não a
+# aula/vídeo específico do curso. Substituir pelo link exato da aula/palestra
+# quando disponível — uma fonte para um claim específico deve apontar para o
+# conteúdo específico, não para o canal como um todo (ver evidence-policy.md).
+- id: stanford-mse435-ai-supercycle
+  title: "Economics of the AI Supercycle (MS&E 435, Spring 2026) — inclui palestras de Apur/Altimeter Capital, Guillermo Rauch/Vercel, Tuhin Srivastava/Base10"
+  organization: "Stanford University"
+  type: "research"
+  url: "https://www.youtube.com/@stanfordonline"
   accessed: "2026-09-28"
