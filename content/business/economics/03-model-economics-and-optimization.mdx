@@ -1,0 +1,83 @@
+---
+id: "model-economics-and-optimization"
+
+title: "Escolher a arquitetura certa: custo, qualidade, latência e otimização"
+slug: "menor-capacidade-que-resolve-o-problema"
+description: "Custo, qualidade e latência formam um único trade-off, não três decisões separadas — e existem várias formas de melhorar essa equação sem simplesmente piorar a qualidade."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - otimizacao
+  - modelos
+  - latencia
+
+prerequisites:
+  - cost-per-successful-task
+
+related:
+  - economics-of-reliability
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - aws-bedrock-provisioned-throughput
+  - openai-cost-optimization-guide
+  - openai-model-optimization-guide
+---
+
+## Em uma frase
+
+Escolher uma arquitetura de IA envolve equilibrar custo, qualidade e latência ao mesmo tempo — e existem várias formas de melhorar essa equação sem simplesmente reduzir qualidade, mas nenhuma delas, incluindo operar modelos próprios, é uma estratégia universal.
+
+```
+qualidade
+custo
+latência
+```
+
+## O trade-off, na prática
+
+Modelos menores tendem a ser mais rápidos e mais baratos, mas podem não atingir a qualidade necessária para tarefas mais exigentes. Modelos maiores podem ser necessários quando a tarefa exige capacidades adicionais, ao custo de mais tempo e mais gasto por execução. Processamento em lote (*batch*) pode reduzir custo em tarefas que não precisam de resposta imediata; aplicações sensíveis à latência podem exigir maior capacidade disponível (ver [`openai-cost-optimization-guide`](../../../references/sources.yaml)).
+
+A escolha certa depende do nível de qualidade necessário para aquela tarefa específica — não existe "o modelo mais barato" ou "o modelo mais poderoso" como resposta padrão. Otimizar só por custo tende a sacrificar qualidade ou latência sem que isso apareça imediatamente, até que a taxa de erro ou o tempo de resposta gere custo em outro lugar (mais retries, mais revisão humana, clientes insatisfeitos).
+
+## Latência tem seu próprio custo — mas não da forma que parece óbvia
+
+É tentador simplificar para "resposta em tempo real exige GPU dedicada". Essa formulação não é necessariamente verdadeira. O que é verdade: infraestruturas comerciais oferecem diferentes modelos de capacidade, e melhor latência ou maior previsibilidade de throughput podem exigir mais capacidade ou modalidades mais caras de inferência. O Amazon Bedrock, por exemplo, permite comprar *Provisioned Throughput* por hora para garantir maior capacidade, como alternativa ao modelo on-demand (ver [`aws-bedrock-provisioned-throughput`](../../../references/sources.yaml)) — uma estrutura de custo diferente, não uma exigência técnica única.
+
+## O menu de otimização
+
+Reduzir chamadas desnecessárias, diminuir o tamanho do contexto enviado, usar caching, processar tarefas em lote, e direcionar tarefas diferentes para modelos diferentes (*routing*) são estratégias documentadas de redução de custo. Modelos menores e especializados também podem ser suficientes para problemas bem definidos: fine-tuning pode permitir que um modelo menor, mais barato e mais rápido, tenha bom desempenho em uma tarefa específica (ver [`openai-model-optimization-guide`](../../../references/sources.yaml)). Distillation e outras formas de especialização seguem a mesma lógica.
+
+Nenhuma dessas técnicas deveria ser apresentada como obrigatória para todo sistema — cada uma resolve um tipo específico de ineficiência, e um sistema simples pode não precisar de nenhuma delas.
+
+## Open source não significa automaticamente mais barato
+
+Este é o ponto que mais merece cautela. Quando você usa uma API de um provedor, parte da operação já vem embutida: serving, infraestrutura, escalabilidade, atualização de modelo, disponibilidade. Ao operar um modelo diretamente (open source ou próprio), você pode ganhar mais controle sobre custo e dados, mas também assume capacidade computacional ociosa, GPUs, serving, observabilidade, deployment, engenharia de manutenção e atualização contínua.
+
+Por isso, a pergunta econômica correta não é "API ou open source?". É: **qual opção produz o nível de qualidade necessário pelo menor custo total para o nosso volume e contexto específicos?** A resposta muda conforme o volume de uso, a previsibilidade da demanda, e a capacidade da equipe de operar infraestrutura própria — não existe um vencedor universal entre as duas abordagens.
+
+## Perguntas para fazer
+
+- Qual das três variáveis (custo, qualidade, latência) é a restrição mais rígida para este caso de uso específico?
+- Esta tarefa realmente precisa de resposta em tempo real, ou processamento em lote resolveria com menos custo?
+- Já esgotamos otimizações mais simples (menos chamadas, contexto menor, caching, batching) antes de considerar trocar de modelo ou infraestrutura?
+- Se considerarmos operar um modelo próprio, incluímos no cálculo capacidade ociosa, engenharia e manutenção — ou só comparamos o custo por token?
+
+## Fontes principais
+
+- AWS (Amazon Bedrock) — "Provisioned Throughput". Evidência de que inferência pode ter diferentes estruturas de custo ligadas a capacidade e previsibilidade, não só ao modelo escolhido.
+- OpenAI — "Cost Optimization". Batching, caching e escolha de modelo como estratégias documentadas de redução de custo.
+- OpenAI — "Model Optimization". Fine-tuning como forma de viabilizar modelos menores e mais baratos para tarefas específicas, mantendo qualidade suficiente.

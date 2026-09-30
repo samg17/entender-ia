@@ -55,41 +55,12 @@
   url: "https://aws.amazon.com/economics/"
   accessed: "2026-09-28"
 
-- id: alphabet-2025-q4-earnings
-  title: "Alphabet 2025 Q4 Earnings Call"
-  organization: "Alphabet Inc."
-  type: "official-documentation"
-  url: "https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx"
-  accessed: "2026-09-28"
-
-- id: microsoft-fy2025-annual-report
-  title: "Microsoft Annual Report 2025"
-  organization: "Microsoft"
-  type: "official-documentation"
-  url: "https://www.microsoft.com/investor/reports/ar25/index.html"
-  accessed: "2026-09-28"
-
 - id: nvidia-fiscal-2026-results
   title: "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026"
   organization: "NVIDIA"
   type: "official-documentation"
   url: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/default.aspx"
   accessed: "2026-09-28"
-
-# Fontes adicionais de from-cloud-to-ai.mdx — URLs confirmadas pelo
-# contribuidor em 2026-09-29. David (1990): sem DOI confiável associado
-# ao artigo; usado o identificador estável do JSTOR em vez de inventar
-# um DOI. Helmer (2016): livro, identificado por ISBN (edição hardcover).
-
-- id: david-1990-dynamo-and-computer
-  title: "The Dynamo and the Computer: An Historical Perspective on the Modern Productivity Paradox"
-  authors:
-    - "Paul A. David"
-  organization: "The American Economic Review"
-  type: "paper"
-  url: "https://www.jstor.org/stable/2006600"
-  published: "1990-05-01"
-  accessed: "2026-09-29"
 
 - id: helmer-2016-seven-powers
   title: "7 Powers: The Foundations of Business Strategy"
@@ -100,35 +71,6 @@
   isbn: "9780998116303"
   url: "https://books.google.com/books/about/7_Powers.html?id=9p1evgAACAAJ"
   published: "2016-01-01"
-  accessed: "2026-09-29"
-
-# Aulas específicas de Stanford MS&E 435 "Economics of the AI Supercycle"
-# (Spring 2026) — URLs de vídeo exatas confirmadas pelo contribuidor em
-# 2026-09-29, substituindo o link genérico do canal usado anteriormente.
-
-- id: stanford-mse435-ai-supercycle-overview
-  title: "Economics of the AI Supercycle — visão geral da cadeia de infraestrutura, aplicações e captura de valor"
-  organization: "Stanford University (MS&E 435)"
-  type: "research"
-  url: "https://www.youtube.com/watch?v=LNSvp-9b-J0"
-  accessed: "2026-09-29"
-
-- id: stanford-mse435-tuhin-srivastava-baseten
-  title: "Economics of the AI Supercycle, Class 7 — Tuhin Srivastava (Baseten), economia de inferência e infraestrutura de compute"
-  authors:
-    - "Tuhin Srivastava"
-  organization: "Stanford University (MS&E 435) / Baseten"
-  type: "research"
-  url: "https://www.youtube.com/watch?v=Qh7Oxvo5sJI"
-  accessed: "2026-09-29"
-
-- id: stanford-mse435-ali-ghodsi-databricks
-  title: "Economics of the AI Supercycle — Ali Ghodsi (Databricks), enterprise AI, contexto organizacional e redesenho de trabalho"
-  authors:
-    - "Ali Ghodsi"
-  organization: "Stanford University (MS&E 435) / Databricks"
-  type: "research"
-  url: "https://www.youtube.com/watch?v=sRvrXL83N-c"
   accessed: "2026-09-29"
 
 # Fontes de content/business/competitive-advantage/. O acesso à rede desta

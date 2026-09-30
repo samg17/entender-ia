@@ -6,9 +6,8 @@ Responde a uma pergunta central: o que muda economicamente quando software passa
 
 1. [`01-economics-of-software-and-ai.mdx`](01-economics-of-software-and-ai.mdx) — do custo do software ao custo da execução; por que "SaaS tem margem de 80-90%" e "apps de IA têm margem de 0-30%" são afirmações fortes demais.
 2. [`02-cost-per-successful-task.mdx`](02-cost-per-successful-task.mdx) — o conceito central desta trilha: a unidade econômica que importa é o custo de produzir um resultado aceitável, não o preço por token.
-3. [`03-cost-quality-latency-tradeoffs.mdx`](03-cost-quality-latency-tradeoffs.mdx) — custo, qualidade e latência como três variáveis que precisam ser otimizadas juntas.
+3. [`03-model-economics-and-optimization.mdx`](03-model-economics-and-optimization.mdx) — custo, qualidade e latência como um único trade-off; o menu de otimização; por que open source não é automaticamente mais barato.
 4. [`04-economics-of-reliability.mdx`](04-economics-of-reliability.mdx) — por que confiabilidade é uma variável econômica, não só técnica; custo esperado do erro; revisão humana como parte do produto, não só custo residual.
-5. [`05-model-economics-and-optimization.mdx`](05-model-economics-and-optimization.mdx) — escolher a menor capacidade que resolve o problema; por que open source não é automaticamente mais barato.
 
 ## Temas futuros (não escritos ainda)
 

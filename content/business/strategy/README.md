@@ -2,19 +2,8 @@
 
 Trata de como empresas pensam estrategicamente sobre as mudanças provocadas por IA: para onde o valor se move, o que confere vantagem competitiva durável, e decisões como build vs. buy.
 
-## Temas futuros (não escritos ainda)
+## Nota editorial
 
-- Para onde o valor se move quando uma capacidade se torna abundante
-- Vantagem competitiva durável, commoditização, distribuição
-- Contexto proprietário, confiança, integração, workflow
-- Switching costs, build vs. buy
-- Estratégia de produto e transformação de negócio
-- O que se torna abundante e o que permanece escasso
+Os temas originalmente planejados para esta subcategoria — para onde o valor se move, vantagem competitiva durável, commoditização, distribuição, switching costs — já estão cobertos em profundidade por [`competitive-advantage/`](../competitive-advantage/). `ai-opportunity-assessment.mdx`, que vivia aqui, foi removido: seu framework de avaliação duplicava, de forma mais curta e menos desenvolvida, o que já está em [`playbooks/evaluate-ai-use-case.mdx`](../../playbooks/evaluate-ai-use-case.mdx).
 
-## Pergunta central a explorar
-
-Quando uma capacidade se torna abundante ou barata, para onde o valor econômico pode migrar? Nenhuma resposta a essa pergunta deve ser tratada como regra universal — veja a lente de abundância/escassez em [`principles/editorial-principles.md`](../../../principles/editorial-principles.md).
-
-## Conteúdo existente
-
-- [`ai-opportunity-assessment.mdx`](ai-opportunity-assessment.mdx) — como avaliar uma oportunidade de IA (movido para cá por tratar de decisão estratégica de investimento).
+Esta subcategoria fica sem conteúdo próprio por ora. Novos temas só devem entrar aqui se não couberem em `competitive-advantage/`.
