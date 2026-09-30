@@ -109,7 +109,7 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 
 ### Playbooks
 
-- [Avaliar um caso de uso de IA](content/playbooks/evaluate-ai-use-case.mdx)
+- [Como avaliar um caso de uso de IA](content/playbooks/evaluate-ai-use-case.mdx)
 
 ## Princípios editoriais
 
