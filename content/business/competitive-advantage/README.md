@@ -12,17 +12,15 @@ Por isso, a pergunta não deve ser apenas "o que conseguimos fazer com IA?", mas
 
 ## Sequência recomendada de leitura
 
-1. [`01-productivity-is-not-strategy.mdx`](01-productivity-is-not-strategy.mdx) — por que ganhos de produtividade com IA não são, por si só, vantagem competitiva.
-2. [`02-differentiation-vs-competitive-advantage.mdx`](02-differentiation-vs-competitive-advantage.mdx) — a diferença entre ser diferente e possuir uma vantagem.
-3. [`03-commoditization-in-ai.mdx`](03-commoditization-in-ai.mdx) — o que acontece quando uma capability deixa de ser rara.
-4. [`04-value-creation-vs-value-capture.mdx`](04-value-creation-vs-value-capture.mdx) — por que criar valor não significa capturá-lo.
-5. [`05-where-value-moves.mdx`](05-where-value-moves.mdx) — para onde o valor migra quando uma camada comoditiza.
-6. [`06-distribution-is-changing.mdx`](06-distribution-is-changing.mdx) — o que muda quando a descoberta de produtos passa por interfaces de IA.
-7. [`07-barriers-switching-costs-and-moats.mdx`](07-barriers-switching-costs-and-moats.mdx) — o que realmente torna uma vantagem difícil de reproduzir.
-8. [`08-capabilities-not-model-dependencies.mdx`](08-capabilities-not-model-dependencies.mdx) — por que depender de um modelo não é o mesmo que construir uma capability.
-9. [`09-context-data-workflows-and-learning-loops.mdx`](09-context-data-workflows-and-learning-loops.mdx) — quando contexto, dados e workflows criam vantagem real, e quando não criam.
-10. [`10-transient-advantage.mdx`](10-transient-advantage.mdx) — por que uma boa vantagem não precisa durar para sempre.
-11. [`11-durability-test.mdx`](11-durability-test.mdx) — playbook para testar a durabilidade de uma vantagem específica.
+1. [`01-productivity-is-not-strategy.mdx`](01-productivity-is-not-strategy.mdx) — por que produtividade e diferencial não são, por si só, vantagem competitiva.
+2. [`02-commoditization-in-ai.mdx`](02-commoditization-in-ai.mdx) — o que acontece quando uma capability deixa de ser rara, e para onde o valor migra quando isso acontece.
+3. [`03-value-creation-vs-value-capture.mdx`](03-value-creation-vs-value-capture.mdx) — por que criar valor não significa capturá-lo.
+4. [`04-distribution-is-changing.mdx`](04-distribution-is-changing.mdx) — o que muda quando a descoberta de produtos passa por interfaces de IA.
+5. [`05-barriers-switching-costs-and-moats.mdx`](05-barriers-switching-costs-and-moats.mdx) — o que realmente torna uma vantagem difícil de reproduzir.
+6. [`06-capabilities-not-model-dependencies.mdx`](06-capabilities-not-model-dependencies.mdx) — por que depender de um modelo não é o mesmo que construir uma capability.
+7. [`07-context-data-workflows-and-learning-loops.mdx`](07-context-data-workflows-and-learning-loops.mdx) — quando contexto, dados e workflows criam vantagem real, e quando não criam.
+8. [`08-transient-advantage.mdx`](08-transient-advantage.mdx) — por que uma boa vantagem não precisa durar para sempre.
+9. [`09-durability-test.mdx`](09-durability-test.mdx) — playbook para testar a durabilidade de uma vantagem específica.
 
 ## Nota editorial
 

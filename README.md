@@ -70,13 +70,8 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 
 - [A economia dos sistemas de IA](content/business/economics/01-economics-of-software-and-ai.mdx)
 - [Custo por tarefa concluída com sucesso](content/business/economics/02-cost-per-successful-task.mdx)
-- [Custo, qualidade e latência: três variáveis, não uma](content/business/economics/03-cost-quality-latency-tradeoffs.mdx)
+- [Escolher a arquitetura certa: custo, qualidade, latência e otimização](content/business/economics/03-model-economics-and-optimization.mdx)
 - [A economia da confiabilidade](content/business/economics/04-economics-of-reliability.mdx)
-- [Escolher a menor capacidade que resolve o problema](content/business/economics/05-model-economics-and-optimization.mdx)
-
-### Business / Strategy
-
-- [Como avaliar uma oportunidade de IA](content/business/strategy/ai-opportunity-assessment.mdx)
 
 ### Business / Business Models
 
@@ -87,17 +82,15 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 
 ### Business / Competitive Advantage
 
-- [Usar IA para ficar mais eficiente não significa construir vantagem competitiva](content/business/competitive-advantage/01-productivity-is-not-strategy.mdx)
-- [Ser diferente não significa possuir vantagem competitiva](content/business/competitive-advantage/02-differentiation-vs-competitive-advantage.mdx)
-- [O que acontece quando sua tecnologia deixa de ser rara?](content/business/competitive-advantage/03-commoditization-in-ai.mdx)
-- [Criar algo valioso não significa capturar o valor criado](content/business/competitive-advantage/04-value-creation-vs-value-capture.mdx)
-- [Quando uma camada comoditiza, a vantagem pode mudar de lugar](content/business/competitive-advantage/05-where-value-moves.mdx)
-- [Quando a interface muda, a distribuição também muda](content/business/competitive-advantage/06-distribution-is-changing.mdx)
-- [O que realmente torna uma vantagem difícil de reproduzir?](content/business/competitive-advantage/07-barriers-switching-costs-and-moats.mdx)
-- [Se o modelo pode mudar amanhã, o que realmente pertence ao seu produto?](content/business/competitive-advantage/08-capabilities-not-model-dependencies.mdx)
-- [Se todos acessam o mesmo modelo, o que pode continuar diferente?](content/business/competitive-advantage/09-context-data-workflows-and-learning-loops.mdx)
-- [Uma boa vantagem não precisa durar para sempre](content/business/competitive-advantage/10-transient-advantage.mdx)
-- [Teste a durabilidade da sua vantagem](content/business/competitive-advantage/11-durability-test.mdx)
+- [Produtividade e diferencial não são vantagem competitiva](content/business/competitive-advantage/01-productivity-is-not-strategy.mdx)
+- [O que acontece quando sua tecnologia deixa de ser rara?](content/business/competitive-advantage/02-commoditization-in-ai.mdx)
+- [Criar algo valioso não significa capturar o valor criado](content/business/competitive-advantage/03-value-creation-vs-value-capture.mdx)
+- [Quando a interface muda, a distribuição também muda](content/business/competitive-advantage/04-distribution-is-changing.mdx)
+- [O que realmente torna uma vantagem difícil de reproduzir?](content/business/competitive-advantage/05-barriers-switching-costs-and-moats.mdx)
+- [Se o modelo pode mudar amanhã, o que realmente pertence ao seu produto?](content/business/competitive-advantage/06-capabilities-not-model-dependencies.mdx)
+- [Se todos acessam o mesmo modelo, o que pode continuar diferente?](content/business/competitive-advantage/07-context-data-workflows-and-learning-loops.mdx)
+- [Uma boa vantagem não precisa durar para sempre](content/business/competitive-advantage/08-transient-advantage.mdx)
+- [Teste a durabilidade da sua vantagem](content/business/competitive-advantage/09-durability-test.mdx)
 
 ### Business / Perspectives
 
