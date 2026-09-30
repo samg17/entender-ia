@@ -565,35 +565,6 @@
   url: "https://www.gartner.com/en/articles/services-as-software"
   accessed: "2026-09-30"
 
-- id: anthropic-economic-index
-  title: "Anthropic Economic Index: Understanding AI's effects on the economy"
-  organization: "Anthropic"
-  type: "research"
-  evidence_type: "primary-source"
-  notes: >
-    Fetch parcial nesta sessão não confirmou o dado específico de 57%
-    augmentation / 43% automation citado em material de origem — não
-    citar esse número exato sem reconfirmação direta na página com os
-    dados. Usar apenas a afirmação mais geral, sustentável mesmo sem o
-    número: o uso observado de IA no trabalho combina augmentation e
-    automation, não é só substituição.
-  url: "https://www.anthropic.com/economic-index"
-  accessed: "2026-09-30"
-
-- id: ilo-genai-jobs-2025-update
-  title: "Generative AI and Jobs: A 2025 Update"
-  organization: "International Labour Organization (ILO)"
-  type: "research"
-  evidence_type: "primary-source"
-  notes: >
-    Fala em exposição das tarefas à IA generativa, não em substituição
-    direta e automática de empregos — distinção importante a preservar
-    ao citar. Acesso bloqueado nesta sessão (egress_blocked para
-    ilo.org); URL trazida e checada por quem pesquisou o tema.
-  url: "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update"
-  published: "2025-01-01"
-  accessed: "2026-09-30"
-
 - id: stripe-ai-saas-pricing-models
   title: "AI SaaS Pricing Models"
   organization: "Stripe"
