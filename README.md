@@ -99,6 +99,10 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 - [Uma boa vantagem não precisa durar para sempre](content/business/competitive-advantage/10-transient-advantage.mdx)
 - [Teste a durabilidade da sua vantagem](content/business/competitive-advantage/11-durability-test.mdx)
 
+### Business / Perspectives
+
+- [Perspectivas](content/business/perspectives/popular-ai-claims-need-context.mdx)
+
 ### Organization
 
 - [Alfabetização em IA não é alfabetização em prompts](content/organization/ai-literacy.mdx)
