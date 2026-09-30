@@ -83,9 +83,7 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 - [AI-enabled vs. AI-native](content/business/business-models/01-ai-enabled-vs-ai-native.mdx)
 - [Service-as-software: quando o cliente compra o resultado, não a ferramenta](content/business/business-models/02-from-software-to-service-as-software.mdx)
 - [Como IA muda pricing: seat, uso e resultado coexistindo](content/business/business-models/03-how-ai-changes-pricing.mdx)
-- [IA e o custo do trabalho: nem sempre é substituição](content/business/business-models/04-ai-and-the-cost-of-work.mdx)
-- [IA pode mudar a unidade econômica do trabalho profissional](content/business/business-models/05-how-ai-may-change-professional-services.mdx)
-- [O que continua valioso quando produzir fica mais barato](content/business/business-models/06-what-remains-valuable-when-production-gets-cheaper.mdx)
+- [Como IA muda serviços profissionais](content/business/business-models/04-how-ai-may-change-professional-services.mdx)
 
 ### Business / Competitive Advantage
 
