@@ -677,3 +677,70 @@
     filing específico (ano/seção) antes da revisão editorial final.
   url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=c3.ai&type=10-K"
   accessed: "2026-09-30"
+
+# Fontes de content/business/economics/. Acesso à rede desta sessão
+# bloqueado para todos os domínios abaixo; URLs trazidas e checadas por
+# quem pesquisou o tema.
+
+- id: openai-cost-optimization-guide
+  title: "Cost Optimization"
+  organization: "OpenAI"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta redução de custo por meio de menos requests, menos tokens,
+    batching, caching e escolha de modelos mais eficientes.
+  url: "https://developers.openai.com/api/docs/guides/cost-optimization"
+  accessed: "2026-09-30"
+
+- id: openai-model-optimization-guide
+  title: "Model Optimization"
+  organization: "OpenAI"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta que fine-tuning pode permitir que um modelo menor, mais
+    barato e mais rápido tenha bom desempenho em uma tarefa específica.
+  url: "https://developers.openai.com/api/docs/guides/model-optimization"
+  accessed: "2026-09-30"
+
+- id: aws-bedrock-provisioned-throughput
+  title: "Provisioned Throughput"
+  organization: "AWS (Amazon Bedrock)"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta capacidade provisionada (paga por hora) como alternativa
+    ao on-demand, mostrando que inferência pode ter diferentes
+    estruturas econômicas ligadas a throughput e previsibilidade.
+  url: "https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html"
+  accessed: "2026-09-30"
+
+- id: stanford-ai-index-2025-inference-cost
+  title: "The 2025 AI Index Report — Research and Development"
+  organization: "Stanford Institute for Human-Centered Artificial Intelligence (HAI)"
+  type: "research"
+  evidence_type: "independent-benchmark"
+  notes: >
+    Reporta queda superior a 280x no custo de inferência para um nível
+    de desempenho comparável ao GPT-3.5 entre novembro de 2022 e outubro
+    de 2024, com estimativas de redução anual entre 9x e 900x dependendo
+    da tarefa — usado para evitar tratar o custo atual de inferência
+    como permanente.
+  url: "https://hai.stanford.edu/ai-index/2025-ai-index-report/research-and-development"
+  published: "2025-01-01"
+  accessed: "2026-09-30"
+
+- id: servicenow-2025-10k-filing
+  title: "ServiceNow — 10-K filing (fiscal year 2025)"
+  organization: "ServiceNow / U.S. Securities and Exchange Commission (EDGAR)"
+  type: "regulatory-filing"
+  evidence_type: "primary-source"
+  notes: >
+    Reporta margem bruta de subscription de 80% em 2025 — usado como um
+    exemplo primário de empresa SaaS com margem elevada, não como prova
+    de que toda SaaS opera nessa faixa (contrastar com outras margens
+    citadas no mesmo conteúdo: Palantir ~82%, CrowdStrike ~78%,
+    Snowflake ~72% product gross margin, cada uma sua própria fonte).
+  url: "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm"
+  accessed: "2026-09-30"

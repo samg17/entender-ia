@@ -1,0 +1,92 @@
+---
+id: "economics-of-software-and-ai"
+
+title: "A economia dos sistemas de IA"
+slug: "economia-dos-sistemas-de-ia"
+description: "Sistemas de IA acrescentam um custo computacional recorrente à economia do software — entender sua viabilidade exige olhar além do preço por token e calcular quanto custa produzir um resultado com o nível de qualidade necessário."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - custo
+  - inferencia
+
+prerequisites: []
+
+related:
+  - cost-per-successful-task
+  - how-ai-changes-pricing
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - openai-api-pricing
+  - nvidia-fiscal-2026-results
+  - servicenow-2025-10k-filing
+  - stanford-ai-index-2025-inference-cost
+---
+
+## Em uma frase
+
+Sistemas de IA introduzem uma nova variável na economia do software: parte do trabalho realizado pelo produto passa a ter um custo computacional recorrente. Por isso, entender sua viabilidade exige olhar além do preço por token e calcular quanto custa produzir um resultado com o nível de qualidade necessário.
+
+## Do custo do software ao custo da execução
+
+Produtos de software historicamente conseguem atender usuários adicionais com custos incrementais relativamente baixos. Há custos de infraestrutura, suporte e operação, mas uma mesma base de código pode servir muitas pessoas sem que o custo cresça na mesma proporção — isso não significa custo marginal zero, apenas que reproduzir e servir a lógica já construída costuma ser barato comparado a produzi-la.
+
+Sistemas de IA acrescentam outra dinâmica. Cada execução pode consumir tokens, capacidade computacional, ferramentas externas e outras etapas de processamento — a documentação de provedores como OpenAI mostra explicitamente cobrança por tokens de entrada e saída, cache e chamadas de ferramenta (ver [`openai-api-pricing`](../../../references/sources.yaml)). Quanto mais o sistema trabalha, maior tende a ser seu custo total de execução.
+
+Isso não significa que sistemas de IA tenham necessariamente margens menores que o software tradicional. Custos de inferência vêm caindo rapidamente — o AI Index da Stanford HAI documentou queda superior a 280 vezes no custo de inferência para atingir um nível de desempenho comparável ao GPT-3.5 entre novembro de 2022 e outubro de 2024, com reduções anuais estimadas entre 9x e 900x dependendo da tarefa (ver [`stanford-ai-index-2025-inference-cost`](../../../references/sources.yaml)) — e arquiteturas podem se tornar mais eficientes. Significa apenas que o uso precisa entrar explicitamente na conta.
+
+## Duas afirmações que não deveriam ser tratadas como regra
+
+**"SaaS tem margem bruta de 80%-90%."** Há empresas de software com margens nessa faixa — a ServiceNow reportou margem bruta de subscription de 80% em 2025 (ver [`servicenow-2025-10k-filing`](../../../references/sources.yaml)) — mas isso não é uma propriedade universal do SaaS; margens variam bastante entre empresas e modelos de negócio. A formulação mais precisa: produtos de software historicamente conseguem servir usuários adicionais com custos incrementais relativamente baixos, o que *permite* margens brutas elevadas em muitos modelos SaaS, sem garanti-las.
+
+**"Aplicações de IA têm margem de 0% a 30%."** Não há base sólida para tratar essa faixa como característica da camada de aplicação, e ela tende a envelhecer mal justamente porque o custo de inferência está caindo rápido. A tese mais durável: IA introduz custos variáveis que precisam ser considerados no desenho da margem, enquanto o preço da inteligência computacional continua mudando.
+
+Da mesma forma, a margem bruta elevada de um fornecedor de hardware específico (a NVIDIA reportou 71,1% no fiscal de 2026, ver [`nvidia-fiscal-2026-results`](../../../references/sources.yaml)) não permite concluir sozinha "a maior parte do valor fica com fornecedores de GPU" — essa é uma pergunta de cadeia de valor mais ampla do que um número de margem isolado sustenta (veja [`where-value-moves`](../competitive-advantage/05-where-value-moves.mdx)).
+
+## O custo do modelo não é o custo do produto
+
+Uma chamada de modelo normalmente representa apenas uma parte do trabalho necessário para produzir um resultado:
+
+```
+entrada → recuperação de contexto → modelo → ferramentas/APIs → validação
+→ possível retry → revisão humana → resultado
+```
+
+Cada etapa pode adicionar custo. Por isso, comparar sistemas apenas pelo preço por milhão de tokens pode levar a uma conclusão errada. A pergunta mais útil não é "quanto custa o modelo?", mas **quanto custa concluir a tarefa no nível de qualidade que precisamos?** — o tema do próximo conteúdo desta trilha (veja [`cost-per-successful-task`](02-cost-per-successful-task.mdx)).
+
+## Custo, preço e valor são coisas diferentes
+
+A economia do produto tem três perguntas relacionadas, mas distintas:
+
+- **Custo**: quanto custa produzir o resultado?
+- **Preço**: como e quanto o cliente paga pelo produto?
+- **Valor**: quanto esse resultado vale para o cliente?
+
+IA pode aproximar essas três dimensões porque o custo passa a variar mais diretamente com o trabalho realizado pelo sistema. Isso ajuda a explicar o crescimento de modelos de cobrança por uso, ação ou resultado — mas não significa que assinaturas ou licenças por usuário vão desaparecer; os diferentes modelos coexistem (veja [`how-ai-changes-pricing`](../business-models/03-how-ai-changes-pricing.mdx) para a discussão completa de pricing). O objetivo aqui é só deixar claro que custo e preço são perguntas separadas — como cobrar é assunto de `business-models`, não desta trilha.
+
+## Perguntas para fazer
+
+- Quanto custa uma tarefa concluída dentro do padrão esperado, não só uma chamada de modelo?
+- O que acontece com o custo total quando o uso aumenta — e o que acontece com o custo por tarefa?
+- Estamos tratando um número de margem ou de custo específico de uma empresa como se fosse uma propriedade universal da categoria?
+
+## Fontes principais
+
+- OpenAI — API Pricing. Estrutura de cobrança por uso (tokens, cache, ferramentas) que sustenta a ideia de custo variável de execução.
+- Stanford HAI — "The 2025 AI Index Report", Research and Development. Evidência de queda acentuada e contínua no custo de inferência, usada para evitar tratar o custo atual como permanente.
+- ServiceNow — 10-K (2025). Exemplo primário de margem SaaS elevada, não generalizada como propriedade universal.
+- NVIDIA — resultados financeiros do quarto trimestre e fiscal 2026. Margem de um fornecedor específico de hardware, não usada isoladamente para concluir sobre distribuição de valor na cadeia.
