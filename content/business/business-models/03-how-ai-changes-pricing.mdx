@@ -1,0 +1,86 @@
+---
+id: "how-ai-changes-pricing"
+
+title: "Como IA muda pricing: seat, uso e resultado coexistindo"
+slug: "como-ia-muda-pricing"
+description: "Per-seat, usage-based, outcome-based e híbrido não são uma progressão linear — coexistem no mercado, e o modelo certo depende de onde o valor é criado e de quão bem o resultado pode ser medido."
+
+locale: "pt-BR"
+
+type: "guide"
+category: "business"
+subcategory: "business-models"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - pricing
+  - modelos-de-negocio
+
+prerequisites:
+  - from-software-to-service-as-software
+
+related:
+  - ai-and-the-cost-of-work
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - stripe-ai-saas-pricing-models
+  - openai-api-pricing
+  - salesforce-agentforce-pricing
+  - intercom-fin-pricing
+  - salesforce-help-agent-pricing
+  - c3ai-sec-filing-consumption-pricing
+---
+
+## Em uma frase
+
+Per-seat, usage-based, outcome-based e híbrido coexistem no mercado de produtos com IA — não há uma progressão linear obrigatória de um para o outro, e o modelo mais adequado depende de onde o valor é criado e de quão claramente o resultado pode ser medido.
+
+```
+SEAT       pago pelo acesso de uma pessoa
+USAGE      pago pelo quanto o sistema trabalha
+OUTCOME    pago pelo que o sistema consegue entregar
+```
+
+A Stripe documenta hoje cinco modelos frequentes em AI SaaS coexistindo: assinatura/tier, usage-based, híbrido, seat-based e outcome-based (ver [`stripe-ai-saas-pricing-models`](../../../references/sources.yaml)) — não uma sequência de "seat → usage → outcome", mas várias combinações vivas ao mesmo tempo.
+
+## Per-seat ainda existe
+
+É comum ouvir que "per-seat está desalinhado com IA" — essa afirmação é forte demais. A Salesforce continua oferecendo Agentforce com licenciamento por usuário ao mesmo tempo em que oferece modelos por consumo no mesmo produto (ver [`salesforce-agentforce-pricing`](../../../references/sources.yaml)).
+
+Uma formulação mais precisa: **per-seat pode ficar menos adequado quando o valor ou o custo do produto deixa de acompanhar o número de usuários humanos** — não quando IA simplesmente aparece no produto.
+
+## Usage-based
+
+Uso pode ser medido de várias formas — tokens, chamadas de API, documentos, minutos, ações, compute. A OpenAI cobra vários produtos agentic com base em consumo de tokens e uso de ferramentas (ver [`openai-api-pricing`](../../../references/sources.yaml)). A C3.ai informa formalmente, em filing à SEC, que usa modelos de consumo ligados a CPU/GPU e capacidade de execução em determinados contratos empresariais (ver [`c3ai-sec-filing-consumption-pricing`](../../../references/sources.yaml)) — evidência mais concreta do que simplesmente afirmar que "empresas vão trocar headcount por tokens".
+
+## Outcome-based
+
+Aqui existem exemplos primários bem definidos. O Fin, da Intercom, cobra por resultados específicos produzidos pelo agente — resolução, qualificação, desqualificação, ou execução bem-sucedida de determinados procedimentos (ver [`intercom-fin-pricing`](../../../references/sources.yaml)). A Salesforce documenta um modelo estritamente outcome-based para certas resoluções do seu Help Agent: se a sessão não atinge a definição de resolução, não é cobrada (ver [`salesforce-help-agent-pricing`](../../../references/sources.yaml)).
+
+Mas outcome-based tem um requisito importante: só funciona bem quando é possível definir e atribuir o resultado com clareza. A própria Stripe faz essa ressalva — outcome pricing funciona melhor quando a atribuição é clara e o resultado é mensurável. Quando o resultado é ambíguo ou depende de múltiplos fatores fora do controle do sistema, cobrar por outcome tende a criar disputas em vez de simplicidade.
+
+## Híbrido, não sequência
+
+Na prática, o que se observa não é uma progressão limpa de seat para usage para outcome. É mais parecido com várias camadas coexistindo — seat, usage, assinatura combinada com uso, cobrança por ação, cobrança por conversa, outcome — dependendo do produto, do segmento de cliente e de quão fácil é medir o resultado.
+
+## Perguntas para fazer
+
+- O valor do nosso produto escala com número de usuários, com quanto o sistema processa, ou com o resultado que ele entrega?
+- Conseguimos definir e atribuir um resultado com clareza suficiente para cobrar por ele, ou isso geraria disputa sobre "o que conta como sucesso"?
+- Faz sentido combinar modelos (ex.: assinatura base + uso adicional) em vez de escolher um único?
+
+## Fontes principais
+
+- Stripe — "AI SaaS Pricing Models". Taxonomia dos cinco modelos coexistindo, e a ressalva sobre quando outcome pricing funciona bem.
+- OpenAI — API pricing. Exemplo primário de usage-based pricing por tokens/ferramentas.
+- Salesforce — Agentforce pricing. Exemplo primário de seat e consumo coexistindo no mesmo produto.
+- Intercom — Fin pricing. Exemplo primário de outcome-based pricing (cobrança por resolução).
+- Salesforce — documentação de pricing do Help Agent. Exemplo primário de modelo estritamente outcome-based.
+- C3.ai — filing 10-K à SEC. Exemplo primário de usage-based pricing em contrato enterprise, ligado a capacidade de execução.

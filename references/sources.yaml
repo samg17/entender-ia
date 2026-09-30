@@ -513,3 +513,167 @@
     fonte de framework prático, não como padrão oficial ou acadêmico.
   url: "https://www.youtube.com/watch?v=fs1Ky20OTYc"
   accessed: "2026-09-30"
+
+# Fontes de content/business/business-models/. Apenas a Microsoft WorkLab
+# foi confirmada por fetch direto nesta sessão; as demais tiveram acesso
+# bloqueado (rede desta sessão) e foram trazidas e checadas por quem
+# pesquisou o tema — ver nota de cada entrada.
+
+- id: ibm-ai-native
+  title: "What Is AI Native?"
+  organization: "IBM"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Define AI-native como produto/empresa/workflow concebido desde o
+    início com IA como componente central, em contraste com IA adicionada
+    depois como feature; a própria IBM observa que o termo também virou
+    buzzword. Acesso bloqueado nesta sessão (egress_blocked para
+    ibm.com); URL trazida e checada por quem pesquisou o tema.
+  url: "https://www.ibm.com/think/topics/ai-native"
+  accessed: "2026-09-30"
+
+- id: microsoft-worklab-ai-native-startups
+  title: "What Can AI-Native Startups Teach the Rest of Us? A Lot"
+  authors:
+    - "Jared Spataro"
+  organization: "Microsoft WorkLab"
+  type: "article"
+  evidence_type: "primary-source"
+  notes: >
+    Confirmado por fetch direto nesta sessão. Startups AI-native
+    incorporam IA em toda a operação (tanto em uso defensivo de corte de
+    custo quanto ofensivo de nova oportunidade) — usado como exemplo de
+    organizações desenhadas ao redor de IA, não como prova de que esse é
+    o único modelo viável.
+  url: "https://www.microsoft.com/en-us/worklab/what-can-ai-native-startups-teach-the-rest-of-us"
+  published: "2024-09-24"
+  accessed: "2026-09-30"
+
+- id: gartner-services-as-software
+  title: "Services as Software"
+  organization: "Gartner"
+  type: "article"
+  evidence_type: "market-research"
+  notes: >
+    Análise de mercado de uma consultoria, não padrão formal — usar como
+    evidência de que o termo "services as software" já circula entre
+    analistas para ofertas agentic orientadas a resultado, não como fato
+    estabelecido sobre a indústria. Acesso bloqueado nesta sessão
+    (egress_blocked para gartner.com); URL trazida e checada por quem
+    pesquisou o tema.
+  url: "https://www.gartner.com/en/articles/services-as-software"
+  accessed: "2026-09-30"
+
+- id: anthropic-economic-index
+  title: "Anthropic Economic Index: Understanding AI's effects on the economy"
+  organization: "Anthropic"
+  type: "research"
+  evidence_type: "primary-source"
+  notes: >
+    Fetch parcial nesta sessão não confirmou o dado específico de 57%
+    augmentation / 43% automation citado em material de origem — não
+    citar esse número exato sem reconfirmação direta na página com os
+    dados. Usar apenas a afirmação mais geral, sustentável mesmo sem o
+    número: o uso observado de IA no trabalho combina augmentation e
+    automation, não é só substituição.
+  url: "https://www.anthropic.com/economic-index"
+  accessed: "2026-09-30"
+
+- id: ilo-genai-jobs-2025-update
+  title: "Generative AI and Jobs: A 2025 Update"
+  organization: "International Labour Organization (ILO)"
+  type: "research"
+  evidence_type: "primary-source"
+  notes: >
+    Fala em exposição das tarefas à IA generativa, não em substituição
+    direta e automática de empregos — distinção importante a preservar
+    ao citar. Acesso bloqueado nesta sessão (egress_blocked para
+    ilo.org); URL trazida e checada por quem pesquisou o tema.
+  url: "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update"
+  published: "2025-01-01"
+  accessed: "2026-09-30"
+
+- id: stripe-ai-saas-pricing-models
+  title: "AI SaaS Pricing Models"
+  organization: "Stripe"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta cinco modelos frequentes em AI SaaS (assinatura/tier,
+    usage-based, híbrido, seat-based, outcome-based) coexistindo, sem
+    progressão linear obrigatória entre eles; observa que outcome
+    pricing funciona melhor quando attribution é clara e o resultado é
+    mensurável. Acesso bloqueado nesta sessão (egress_blocked para
+    stripe.com); URL trazida e checada por quem pesquisou o tema.
+  url: "https://stripe.com/resources/more/ai-saas-pricing-models"
+  accessed: "2026-09-30"
+
+- id: openai-api-pricing
+  title: "API Pricing"
+  organization: "OpenAI"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Exemplo primário de cobrança por consumo (tokens/uso de ferramentas)
+    em produtos agentic. Acesso bloqueado nesta sessão (egress_blocked
+    para openai.com); URL trazida e checada por quem pesquisou o tema.
+  url: "https://openai.com/api/pricing/"
+  accessed: "2026-09-30"
+
+- id: salesforce-agentforce-pricing
+  title: "Agentforce Pricing"
+  organization: "Salesforce"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Mostra licenciamento por usuário (seat) coexistindo com modelos por
+    consumo no mesmo produto — evidência primária de que per-seat não
+    desapareceu, apenas deixou de ser a única opção. Acesso bloqueado
+    nesta sessão (egress_blocked para salesforce.com); URL trazida e
+    checada por quem pesquisou o tema.
+  url: "https://www.salesforce.com/agentforce/pricing/"
+  accessed: "2026-09-30"
+
+- id: intercom-fin-pricing
+  title: "Fin (AI Agent) pricing"
+  organization: "Intercom"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta cobrança por resultado (resolução, qualificação,
+    desqualificação, execução de procedimentos) — exemplo primário de
+    outcome-based pricing em produto agentic. Acesso bloqueado nesta
+    sessão (egress_blocked para intercom.com); URL trazida e checada por
+    quem pesquisou o tema.
+  url: "https://www.intercom.com/fin"
+  accessed: "2026-09-30"
+
+- id: salesforce-help-agent-pricing
+  title: "Salesforce Help Agent — outcome-based pricing documentation"
+  organization: "Salesforce"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documenta modelo estritamente outcome-based para determinadas
+    resoluções: se a sessão não atinge a definição de resolução, não é
+    cobrada. Acesso bloqueado nesta sessão (egress_blocked para
+    help.salesforce.com); URL trazida e checada por quem pesquisou o
+    tema.
+  url: "https://help.salesforce.com"
+  accessed: "2026-09-30"
+
+- id: c3ai-sec-filing-consumption-pricing
+  title: "C3.ai — 10-K filing (modelo de consumo ligado a CPU/GPU e capacidade de execução)"
+  organization: "C3.ai / U.S. Securities and Exchange Commission (EDGAR)"
+  type: "regulatory-filing"
+  evidence_type: "primary-source"
+  notes: >
+    Filing formal à SEC informando uso de modelos de consumo ligados a
+    CPU/GPU e capacidade de execução em determinados contratos —
+    exemplo primário de usage-based pricing em enterprise AI. Acesso
+    bloqueado nesta sessão (egress_blocked para sec.gov); URL trazida e
+    checada por quem pesquisou o tema; um contribuidor deve localizar o
+    filing específico (ano/seção) antes da revisão editorial final.
+  url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=c3.ai&type=10-K"
+  accessed: "2026-09-30"
