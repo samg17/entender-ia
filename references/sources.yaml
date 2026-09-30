@@ -744,3 +744,96 @@
     Snowflake ~72% product gross margin, cada uma sua própria fonte).
   url: "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm"
   accessed: "2026-09-30"
+
+# Fontes de content/business/business-models/05-how-ai-may-change-professional-services.mdx.
+# Acesso à rede desta sessão bloqueado para todos os domínios abaixo; URLs
+# trazidas e checadas por quem pesquisou o tema.
+
+- id: pwc-2026-reimagining-professional-services
+  title: "Reimagining the Future of Professional Services"
+  organization: "PwC"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Descreve serviços profissionais historicamente escalando por pessoas,
+    e IA tornando conhecimento e expertise mais reutilizáveis entre
+    engagements — mudança de expertise isolada em times para uma
+    combinação mais integrada de tecnologia, dados e julgamento humano.
+  url: "https://www.pwc.com/us/en/services/ai/reimagining-the-future-of-professional-services.html"
+  published: "2026-01-01"
+  accessed: "2026-09-30"
+
+- id: thomson-reuters-2026-ai-professional-services-report
+  title: "2026 AI in Professional Services Report"
+  organization: "Thomson Reuters"
+  type: "research"
+  evidence_type: "survey"
+  notes: >
+    Pesquisa com mais de 1.500 profissionais de legal, tax, accounting,
+    risk, fraud e government. Usada para: IA já incorporada a workflows
+    profissionais; apenas 18% das organizações pesquisadas dizem medir
+    ROI de IA; dois terços dos respondentes corporativos querem que suas
+    firmas externas usem IA, embora menos de 20% exijam isso
+    formalmente.
+  url: "https://www.thomsonreuters.com/en/reports/2026-ai-in-professional-services-report"
+  published: "2026-01-01"
+  accessed: "2026-09-30"
+
+- id: thomson-reuters-future-of-professionals-2026
+  title: "Future of Professionals 2026"
+  organization: "Thomson Reuters"
+  type: "research"
+  evidence_type: "survey"
+  notes: >
+    Pesquisa com mais de 1.800 profissionais em 62 países. Usada para
+    mudanças em desenvolvimento profissional, papéis, retenção e
+    expectativas de clientes.
+  url: "https://www.thomsonreuters.com/en/institute/reports/future-of-professionals-2026"
+  published: "2026-01-01"
+  accessed: "2026-09-30"
+
+- id: thomson-reuters-future-of-professionals-2026-legal
+  title: "Future of Professionals 2026 — Legal Report"
+  organization: "Thomson Reuters"
+  type: "research"
+  evidence_type: "survey"
+  notes: >
+    Recorte jurídico da mesma pesquisa. Usada especificamente para
+    pressão sobre billing: 71% dos profissionais jurídicos internos
+    pesquisados esperam que firmas externas mudem modelos comerciais à
+    medida que o uso de IA aumenta, enquanto apenas 28% das firmas dizem
+    já ter alterado suas estruturas de pricing — evidência de pressão
+    sobre o modelo, não de "fim da hora faturável".
+  url: "https://www.thomsonreuters.com/en/institute/future-of-professionals-2026/report-legal"
+  published: "2026-01-01"
+  accessed: "2026-09-30"
+
+- id: aba-formal-opinion-512-genai
+  title: "Formal Opinion 512: Generative Artificial Intelligence Tools"
+  organization: "American Bar Association"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Fonte primária sobre responsabilidade profissional com uso de GenAI:
+    mantém obrigações de competência, confidencialidade, comunicação,
+    supervisão, veracidade e cobrança razoável. Discute explicitamente
+    que um advogado não pode faturar o tempo que uma tarefa teria levado
+    sem IA quando o trabalho efetivamente consumiu menos tempo.
+  url: "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-512.pdf"
+  published: "2024-07-29"
+  accessed: "2026-09-30"
+
+- id: deloitte-2021-value-based-pricing-legal
+  title: "Value-based Pricing for Legal Services"
+  organization: "Deloitte"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Diferencia time billing de value-based pricing e descreve modelos
+    baseados em unidades entregues, resultados bem-sucedidos, mitigação
+    de risco e outras métricas de valor — usada para mostrar que a
+    mudança de horas para unidades/resultados antecede a atual onda de
+    IA generativa.
+  url: "https://www.deloitte.com/us/en/services/tax/articles/value-pricing-legal-services.html"
+  published: "2021-01-01"
+  accessed: "2026-09-30"
