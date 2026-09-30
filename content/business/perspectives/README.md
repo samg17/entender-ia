@@ -4,48 +4,31 @@ Análise de afirmações populares sobre IA, software e mercado que merecem mais
 
 Esta subcategoria usa o tipo de conteúdo `perspective` (veja [`templates/perspective.mdx`](../../../templates/perspective.mdx)) e existe para decompor afirmações — não para funcionar como seção de opinião aleatória, "mitos" ou debunking.
 
+## Conteúdo existente
+
+- [`popular-ai-claims-need-context.mdx`](popular-ai-claims-need-context.mdx) — um único ensaio curto reunindo várias afirmações populares ("SaaS está morto", "agentes vão substituir software", "dados proprietários são o novo moat", entre outras), em vez de um `perspective` por afirmação. Decisão deliberada: aprofundar poucas tensões com clareza, evitando virar catálogo de clichês. Cobre boa parte dos exemplos listados abaixo — eles permanecem aqui como referência do que já foi tratado, não como pendência.
+
 ## Princípio central
 
 > Não buscamos o oposto da narrativa dominante. Buscamos uma descrição mais completa da realidade.
 
 Discordar da narrativa dominante não é um objetivo em si. Ver também [`principles/editorial-principles.md`](../../../principles/editorial-principles.md#contrapontos-sem-contrarianismo).
 
-## Exemplos de afirmações que um `perspective` pode analisar (não escritos ainda)
+## Afirmações já tratadas (em `popular-ai-claims-need-context.mdx`)
 
 - "SaaS está morto."
 - "Agentes vão substituir software."
+- "Gerar software ficou fácil, então software perdeu valor."
+- "Dados proprietários são o novo moat."
 - "Todo negócio precisa de agentes."
-- "IA vai tornar software quase gratuito."
-- "Mais contexto sempre melhora o sistema."
-- "Tudo deveria ser automatizado."
-- "AI-native significa abandonar software tradicional."
-- "Quem não fizer tudo com IA agora ficará para trás."
-- "Modelos vão commoditizar todo o software."
-- "Gerar software ficou fácil, portanto software perdeu valor."
-
-## Exemplo estrutural planejado: "SaaS está morto"
-
-Um primeiro conteúdo planejado (ainda não escrito) tem o ID estável `saas-is-dead`, `type: "perspective"`, `category: "business"`, `subcategory: "perspectives"`. Deve decompor a afirmação em partes distintas em vez de aceitá-la ou rejeitá-la como um bloco só:
-
-```
-Afirmação: "SaaS está morto."
-      ↓
-O que significa "SaaS" nesse argumento?
-      ↓
-Interface? Modelo de assinatura? Sistema de registro?
-Workflow? Camada de dados? Distribuição? Camada de aplicação?
-      ↓
-Quais partes podem estar mudando de fato?
-      ↓
-Quais continuam necessárias?
-      ↓
-O que ainda não sabemos?
-```
-
-A ideia central a preservar: mudanças na interface de software não significam necessariamente o desaparecimento da infraestrutura ou da lógica de negócio por trás dela.
+- "Mais contexto sempre melhora a IA."
+- "Quem não adotar IA agora ficará para trás."
+- "IA aumenta produtividade, então precisaremos de menos pessoas."
+- "IA democratiza expertise."
+- "A IA não vai substituir você. Alguém usando IA vai."
 
 ## Outro exemplo planejado (não escrito ainda)
 
 Um `perspective` sobre como avaliar conteúdo educacional sobre IA, com ID estável possível `how-to-evaluate-ai-content`. Princípio central: **preço não é proxy de profundidade**, e **certeza não é proxy de conhecimento**. Perguntas que esse conteúdo poderá levantar: o autor mostra fontes? separa fato de interpretação? admite incerteza? diferencia demo de produção? diferencia capacidade técnica de resultado de negócio?
 
-Nenhum destes conteúdos foi escrito ainda.
+Esse conteúdo ainda não foi escrito — se vier a ser, deve seguir o mesmo cuidado de não virar catálogo extenso.

@@ -15,4 +15,4 @@ Está organizada em subcategorias para acomodar dimensões diferentes dessa tran
 
 Conteúdos usam `category: "business"` e um campo opcional `subcategory` apontando para uma destas pastas (veja [`schemas/content.schema.json`](../../schemas/content.schema.json)). Nem todo conteúdo de negócios precisa de subcategoria — use quando ajudar a navegação, não como obrigação burocrática.
 
-Nenhum conteúdo substancial foi escrito ainda nestas subcategorias (exceto o já existente, movido para `strategy/`). Elas existem para receber material à medida que fontes, pesquisas e temas forem trabalhados — veja o fluxo em [`principles/content-workflow.md`](../../principles/content-workflow.md).
+`market/`, `economics/`, `business-models/`, `competitive-advantage/` e `perspectives/` já têm conteúdo publicado (em `status: "draft"`); `strategy/` segue com o conteúdo movido originalmente para lá. Veja o README de cada subcategoria para a lista completa — e o fluxo de criação em [`principles/content-workflow.md`](../../principles/content-workflow.md) para o que ainda está por vir.
