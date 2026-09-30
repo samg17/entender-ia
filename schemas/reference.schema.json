@@ -23,7 +23,7 @@
     },
     "type": {
       "type": "string",
-      "enum": ["paper", "official-documentation", "research", "book", "dataset", "standard", "article"]
+      "enum": ["paper", "official-documentation", "research", "book", "dataset", "standard", "article", "talk"]
     },
     "url": {
       "type": "string",
@@ -48,7 +48,11 @@
         "independent-benchmark",
         "survey",
         "company-case",
-        "author-analysis"
+        "author-analysis",
+        "design-guidance",
+        "risk-management-framework",
+        "empirical-case-study",
+        "practitioner-framework"
       ]
     },
     "notes": {

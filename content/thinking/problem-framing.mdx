@@ -1,9 +1,9 @@
 ---
 id: "problem-framing"
 
-title: "Enquadrar o problema antes da ferramenta"
+title: "Problem framing: antes de decidir onde usar IA"
 slug: "enquadrar-o-problema"
-description: "Antes de perguntar o que a IA consegue fazer, é preciso entender qual problema existe e qual decisão se quer melhorar."
+description: "Organizar um problema antes de escolher a solução — entender o que vale resolver, para quem, com que risco, antes de perguntar como usar IA."
 
 locale: "pt-BR"
 
@@ -21,50 +21,104 @@ prerequisites: []
 related:
   - when-not-to-use-ai
   - ai-opportunity-assessment
+  - agents
 
 authors:
   - sam
 
 created: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-30"
 
-references: []
+references:
+  - google-pair-user-needs
+  - nist-ai-rmf-1
+  - google-user-centred-ml-problem-formulation
+  - youtube-ai-problem-framing
 ---
 
-## Contexto
+## Em uma frase
 
-É comum começar uma iniciativa de IA pela pergunta "o que conseguimos automatizar com isso?" em vez de "qual problema real estamos tentando resolver?". Essa inversão leva a soluções tecnicamente impressionantes que não mudam nada relevante no resultado do negócio ou do processo.
+Problem framing é organizar um problema antes de escolher a solução.
 
-## Modelo mental
+Muitas iniciativas de IA começam ao contrário: "queremos usar um agente", "vamos colocar IA no RH", "vamos criar um chatbot" — a tecnologia aparece antes da pergunta que realmente importa: **qual problema estamos tentando resolver?**
 
-Antes de avaliar uma ferramenta, é preciso conseguir responder com clareza: qual problema existe, qual decisão queremos melhorar, que informação é necessária para essa decisão, o que acontece quando o processo atual erra, e como saberíamos se uma mudança realmente ajudou. Se essas perguntas não têm resposta clara, nenhuma ferramenta — de IA ou não — vai consertar isso sozinha.
+Com IA, construir uma primeira versão ficou muito mais rápido e barato. Isso torna esse enquadramento ainda mais importante: quando produzir custa pouco, escolher bem o que vale a pena construir passa a valer mais.
 
-## Trade-offs
+## Comece pelo problema, não pela ferramenta
 
-Enquadrar bem o problema exige tempo antes de qualquer implementação, o que pode parecer lento em ambientes que valorizam velocidade de execução. Mas pular essa etapa tende a custar mais depois, na forma de retrabalho, soluções mal direcionadas ou expectativas desalinhadas sobre o que foi entregue.
+Antes de decidir se algo precisa de um agente, RAG, automação ou qualquer outro recurso, vale responder: o que acontece hoje, o que está ruim nesse processo, quem sente esse problema, que resultado queremos melhorar, que informação é necessária, o que pode dar errado, e qual parte realmente precisa de IA.
 
-## Perguntas
+```
+problema → resultado desejado → como funciona hoje → o que precisa mudar → solução que faz sentido → IA, se ajudar
+```
 
-- Qual problema específico estamos tentando resolver, e para quem?
-- Qual decisão ou ação melhora quando esse problema é resolvido?
-- Que informação seria necessária para tomar essa decisão bem, com ou sem IA?
-- O que acontece hoje quando esse processo falha ou erra?
-- Como saberíamos, de forma concreta, se uma mudança realmente ajudou?
+O caminho oposto — pegar uma tecnologia nova e procurar onde encaixá-la — tende a produzir soluções tecnicamente interessantes que não mudam nada relevante no resultado (Google PAIR recomenda justamente o inverso: partir da necessidade do usuário e perguntar se IA agrega valor antes de construir — ver [`google-pair-user-needs`](../../references/sources.yaml)).
 
-## Exemplos
+## Exemplo hipotético: PDI no RH
 
-Uma equipe que pergunta "como podemos usar um agente aqui?" tende a chegar a soluções diferentes — e frequentemente menos úteis — do que uma equipe que pergunta "por que essa decisão está demorando tanto e que informação falta para tomá-la mais rápido?".
+*O exemplo abaixo é ilustrativo, criado para aplicar o raciocínio deste conteúdo — não uma prescrição de como um PDI deve funcionar.*
 
-## Erros comuns
+Uma empresa acompanha o Plano de Desenvolvimento Individual por planilhas, documentos soltos e reuniões periódicas. A ideia inicial é "criar um agente de IA para o PDI". Ainda é cedo — primeiro é preciso entender o problema.
 
-- Escolher a ferramenta antes de entender o problema.
-- Confundir "impressionante tecnicamente" com "valioso para o negócio".
-- Medir sucesso pela adoção da ferramenta, não pela melhoria do resultado que o problema original exigia.
+Hoje, gestor e colaborador definem objetivos em uma reunião; depois disso, parte fica em planilhas, parte em documentos, feedbacks ficam espalhados, e o acompanhamento depende de reuniões futuras em que boa parte do tempo é gasta reconstruindo o que já havia sido combinado.
 
-## Implicações
+O problema do colaborador não é "não temos IA" — pode ser não conseguir enxergar com clareza onde está evoluindo e como o trabalho do dia a dia se conecta ao seu plano. O problema do gestor pode ser precisar reconstruir meses de contexto antes de cada conversa, sem conseguir acompanhar vários PDIs ao mesmo tempo. Só a partir daqui existem problemas de verdade para se trabalhar.
 
-Times que praticam esse enquadramento antes de avaliar ferramentas tendem a evitar projetos de IA que geram demonstrações interessantes, mas nenhum valor de negócio sustentado. Este modelo mental é a base de playbooks mais específicos, como [`evaluate-ai-use-case`](../playbooks/evaluate-ai-use-case.mdx).
+## Problema de usuário e problema de negócio não são a mesma coisa
 
-## Referências
+No mesmo exemplo: o problema do *usuário* é pouca clareza sobre desenvolvimento e feedback fragmentado (colaborador), ou informação dispersa e esforço alto para preparar reuniões (gestor). O problema do *negócio* pode ser outro: melhorar desenvolvimento de pessoas, reter talento, reduzir trabalho administrativo.
 
-Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.
+Uma solução só costuma valer a pena quando conecta as duas perspectivas — resolver só o problema de negócio sem que o usuário sinta diferença tende a virar ferramenta que ninguém usa; resolver só o do usuário sem conectar a um resultado de negócio tende a não sobreviver ao próximo corte de orçamento.
+
+## Olhe o processo atual antes de substituir algo
+
+Antes de trocar alguma coisa, entenda como o trabalho é feito sem IA hoje:
+
+```
+reunião → anotações → planilha → documentos → meses passam → nova reunião → reconstruir contexto
+```
+
+Esse desenho já revela oportunidades que nada têm a ver com "falta de inteligência": informação fragmentada, ausência de histórico, tarefas manuais, baixa frequência de acompanhamento. Parte disso nem precisa de IA.
+
+## Separe o que precisa de inteligência do que precisa só de automação
+
+No PDI, um lembrete de revisão ("data chegou → enviar lembrete") é regra simples, sem IA. Recuperar objetivos anteriores, feedbacks e registros relacionados é busca e organização de contexto — aqui RAG pode ajudar (veja [`rag`](../systems/rag.mdx)). Resumir o histórico, identificar temas recorrentes e sugerir perguntas para a próxima conversa é onde IA generativa entra de fato. E aspirações de carreira, feedback sensível e a decisão final sobre o plano continuam sendo julgamento humano.
+
+## "A IA consegue" não é a mesma pergunta que "a IA deveria"
+
+Uma capability pode ser tecnicamente possível e ainda ser uma má ideia. Um sistema pode conseguir analisar um grande volume de informação sobre um colaborador — isso não significa que deveria decidir sozinho sobre performance ou carreira dele. Privacidade, viés, transparência e qualidade dos dados entram nessa segunda pergunta, e vale tratá-los como uma segunda camada de avaliação (contexto, risco, impacto e governança do sistema ao longo do seu ciclo de vida — ver [`nist-ai-rmf-1`](../../references/sources.yaml)), depois de já ter clareza sobre o problema em si.
+
+## Um framework simples: seis blocos
+
+Antes de transformar uma ideia em projeto, responda: **problema** (o que não funciona bem hoje?), **pessoa** (quem sente isso?), **resultado** (o que deveria melhorar?), **processo atual** (como o trabalho acontece hoje?), **informação** (que dados seriam necessários?), e **decisão** (essa parte é regra tradicional, IA assistindo, IA executando, ou responsabilidade humana?).
+
+Aplicado ao PDI: problema é fragmentação e pouco acompanhamento; pessoas são colaborador e gestor; resultado é mais clareza e menos esforço de reconstrução; processo atual são planilhas, documentos e reuniões separadas; informação necessária são objetivos, feedbacks e histórico; e a solução distribui regras tradicionais (lembretes), busca (recuperar histórico), IA (resumir e sugerir) e humano (feedback e decisão de carreira). Repare que não se começou dizendo "vamos construir um agente" — chegou-se às capabilities necessárias depois de entender o problema. Esse mesmo raciocínio — formular o problema a partir de uma necessidade real em vez de ajustá-lo aos dados disponíveis — é o ponto central de um estudo de caso de design centrado no usuário para machine learning (ver [`google-user-centred-ml-problem-formulation`](../../references/sources.yaml)).
+
+## Uma forma de olhar autonomia: Assisted, Augmented, Powered
+
+Uma taxonomia apresentada no framework de AI Problem Framing usado como referência neste conteúdo (ver [`youtube-ai-problem-framing`](../../references/sources.yaml)) separa aplicações em três níveis: **Assisted**, quando a IA ajuda a pessoa a pensar ou produzir (por exemplo, um rascunho de PDI que o gestor revisa); **Augmented**, quando a IA participa de várias partes do processo mas decisões importantes seguem humanas (organiza histórico, sugere próximos passos, enquanto gestor e colaborador decidem); e **Powered**, quando o sistema executa praticamente todo o fluxo sozinho dentro de regras definidas.
+
+Essa classificação não é um padrão universal nem acadêmico — é uma lente prática desta fonte, útil para conversar sobre nível de autonomia. Para um PDI, "Powered" dificilmente deveria significar a IA decidindo sozinha carreira ou avaliação de alguém: o nível de autonomia deve acompanhar o risco, tratado como espectro contínuo, não como três caixas fixas (veja [`agents`](../systems/agents.mdx)).
+
+## O que o problem framing deveria produzir
+
+Não um documento bonito. Ao final, você deveria conseguir dizer com clareza: qual é o problema, quem é afetado, qual resultado se quer, como funciona hoje, quais partes são só automação, quais podem se beneficiar de IA, quais decisões continuam humanas, e quais riscos precisam ser controlados. Se isso ainda não está claro, provavelmente ainda não é hora de discutir arquitetura.
+
+## Perguntas para fazer
+
+- Estamos começando pelo problema ou pela tecnologia?
+- O que acontece hoje sem IA, e quem realmente sente esse problema?
+- Como saberíamos, de forma concreta, se uma mudança melhorou algo?
+- O problema é falta de inteligência ou apenas falta de organização — uma regra tradicional resolveria parte dele?
+- Onde o julgamento humano é insubstituível, e qual é o custo de um erro?
+
+## Fontes principais
+
+- Google PAIR — "User Needs + Defining Success" (People + AI Guidebook). Base para começar pelo problema do usuário e definir sucesso antes de construir.
+- NIST — "AI Risk Management Framework (AI RMF 1.0)", 2023. Base para a segunda camada de avaliação: contexto, risco, impacto e governança ao longo do ciclo de vida do sistema.
+- Google Research — "User-centred design for machine learning in health care: a case study from care management". Caso de saúde usado aqui pelo argumento geral: formular o problema a partir de uma necessidade real, não a partir dos dados disponíveis.
+- Vídeo sobre AI Problem Framing (ver nota editorial). Fonte do framework prático usado como referência e da taxonomia Assisted/Augmented/Powered, apresentada como lente desta fonte — não como padrão oficial.
+
+## Nota editorial
+
+O exemplo de PDI em RH é hipotético, criado para aplicar o framework — não uma recomendação de como um PDI deve ser implementado. A taxonomia Assisted/Augmented/Powered é apresentada como a lente de uma fonte específica, não como classificação oficial ou consenso do mercado; evite reproduzi-la em outros conteúdos como se fosse um padrão estabelecido. O checklist "o processo funciona sem humano de madrugada?" usado em versões anteriores deste conteúdo para diferenciar Assisted de Powered foi removido: autonomia depende de mais fatores do que só operar sem supervisão contínua, e é tratada aqui como espectro (veja [`agents`](../systems/agents.mdx)), não como diagnóstico binário. O título exato do vídeo citado como fonte não foi confirmado nesta sessão — a rede estava bloqueada para youtube.com — e deve ser conferido por um contribuidor antes da revisão editorial final.
