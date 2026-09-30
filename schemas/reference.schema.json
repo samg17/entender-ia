@@ -23,7 +23,7 @@
     },
     "type": {
       "type": "string",
-      "enum": ["paper", "official-documentation", "research", "book", "dataset", "standard", "article", "talk"]
+      "enum": ["paper", "official-documentation", "research", "book", "dataset", "standard", "article", "talk", "regulatory-filing"]
     },
     "url": {
       "type": "string",
@@ -52,7 +52,8 @@
         "design-guidance",
         "risk-management-framework",
         "empirical-case-study",
-        "practitioner-framework"
+        "practitioner-framework",
+        "market-research"
       ]
     },
     "notes": {

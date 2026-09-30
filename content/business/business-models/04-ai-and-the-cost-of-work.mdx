@@ -1,0 +1,81 @@
+---
+id: "ai-and-the-cost-of-work"
+
+title: "IA e o custo do trabalho: nem sempre é substituição"
+slug: "ia-e-o-custo-do-trabalho"
+description: "IA pode transformar parte do custo de execução de tarefas que escalavam com horas humanas para tarefas que também escalam com compute — isso não é o mesmo que eliminar trabalho humano."
+
+locale: "pt-BR"
+
+type: "guide"
+category: "business"
+subcategory: "business-models"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - custo-do-trabalho
+  - modelos-de-negocio
+
+prerequisites:
+  - how-ai-changes-pricing
+
+related:
+  - how-ai-may-change-professional-services
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - anthropic-economic-index
+  - ilo-genai-jobs-2025-update
+---
+
+## Em uma frase
+
+IA pode transformar parte do custo de execução — tarefas que antes escalavam principalmente com horas humanas passam a escalar também com consumo computacional. Isso pode permitir crescer sem crescimento proporcional de headcount, mas não é o mesmo que eliminar trabalho humano, e o efeito depende do tipo de tarefa, da autonomia do sistema e da supervisão necessária.
+
+## Uma afirmação forte demais, e uma versão mais defensável
+
+É comum ouvir que "empresas AI-native substituem custos fixos de folha por custos variáveis de tokens". Essa formulação é mais forte do que a evidência disponível sustenta.
+
+Uma versão mais próxima do que de fato se observa:
+
+```
+Antes
+mais trabalho → mais pessoas → mais custo de trabalho
+
+Em alguns sistemas com IA
+mais trabalho → mais inference/API/compute + menos crescimento
+proporcional de headcount
+```
+
+A diferença entre essas duas formulações importa: a segunda descreve uma mudança real na forma como o custo escala em determinadas tarefas; a primeira promete uma substituição generalizada que ainda não está estabelecida como regra.
+
+## O que a evidência disponível mostra
+
+O Anthropic Economic Index, que analisa como IA está sendo usada no trabalho em escala, descreve o uso observado como uma combinação de **augmentation** (a IA ajuda uma pessoa a fazer algo) e **automation** (a IA faz uma tarefa sozinha) — não uma substituição uniforme (ver [`anthropic-economic-index`](../../../references/sources.yaml)). A proporção exata entre as duas categorias muda conforme o índice é atualizado; o ponto estável é que as duas convivem, em vez de automation dominar por completo.
+
+A Organização Internacional do Trabalho (OIT), em sua análise global sobre IA generativa e empregos, é deliberadamente cuidadosa com a linguagem: fala em **exposição das tarefas** à IA generativa, não em substituição direta e automática de postos de trabalho (ver [`ilo-genai-jobs-2025-update`](../../../references/sources.yaml)). Uma tarefa estar "exposta" significa que ela poderia, em princípio, ser afetada por IA generativa — não que ela necessariamente será automatizada, nem que a pessoa que a executa perderá o emprego.
+
+## Por que a distinção entre exposição e substituição importa para modelo de negócio
+
+Confundir "essa tarefa pode ser feita com ajuda de IA" com "essa tarefa será eliminada" leva a projeções de redução de custo que costumam não se realizar como esperado — porque a maior parte do trabalho real inclui coordenação, julgamento, exceções e revisão que continuam exigindo pessoas, mesmo quando parte da execução migra para IA (veja [`understanding-is-the-bottleneck`](../../thinking/understanding-is-the-bottleneck.mdx) sobre o que continua exigindo entendimento humano quando a produção fica mais barata).
+
+## Perguntas para fazer
+
+- Estamos falando de uma tarefa que pode ser exposta a IA, ou de um cargo inteiro sendo eliminado — e temos evidência para a segunda afirmação?
+- Que parte do custo desta operação hoje escala com horas humanas, e o que aconteceria se parte dela passasse a escalar com compute?
+- Estamos projetando redução de headcount com base em automação completa, ou em augmentation que ainda depende de supervisão?
+
+## Fontes principais
+
+- Anthropic — "Anthropic Economic Index: Understanding AI's effects on the economy". Evidência de que o uso observado de IA no trabalho combina augmentation e automation, não é substituição uniforme.
+- International Labour Organization — "Generative AI and Jobs: A 2025 Update". Distinção entre exposição de tarefas à IA generativa e substituição direta de empregos.
+
+## Nota editorial
+
+Um número específico de proporção augmentation/automation do Anthropic Economic Index (frequentemente citado como 57%/43%) não foi confirmado diretamente nesta sessão — a página não carregou os dados detalhados durante a verificação. Este conteúdo evita citar esse número exato; um contribuidor deve confirmá-lo diretamente na fonte (com a versão do índice e a data) antes de adicioná-lo ao texto.
