@@ -453,3 +453,63 @@
     URL trazida e checada por quem pesquisou o tema.
   url: "https://developers.openai.com/learn/agents"
   accessed: "2026-09-29"
+
+# Fontes de content/thinking/problem-framing.mdx. Acesso à rede desta
+# sessão bloqueado para todos os domínios abaixo; URLs trazidas e checadas
+# por quem pesquisou o tema.
+
+- id: google-pair-user-needs
+  title: "User Needs + Defining Success"
+  organization: "Google PAIR"
+  type: "official-documentation"
+  evidence_type: "design-guidance"
+  notes: >
+    Do People + AI Guidebook. Sustenta começar pelo problema do usuário,
+    definir sucesso antes de construir, e perguntar se IA realmente
+    agrega valor (o guia recomenda considerar regras/heurísticas quando
+    previsibilidade e transparência importam mais do que o que IA
+    ofereceria).
+  url: "https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/"
+  accessed: "2026-09-30"
+
+- id: nist-ai-rmf-1
+  title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
+  organization: "NIST"
+  type: "standard"
+  evidence_type: "risk-management-framework"
+  notes: >
+    Framework voltado a design, desenvolvimento, uso e avaliação
+    responsável de sistemas de IA. Sustenta a camada de contexto, risco,
+    impacto e governança do problem framing, avaliados antes e durante o
+    ciclo de vida do sistema.
+  url: "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+  published: "2023-01-26"
+  accessed: "2026-09-30"
+
+- id: google-user-centred-ml-problem-formulation
+  title: "User-centred design for machine learning in health care: a case study from care management"
+  organization: "Google Research"
+  type: "paper"
+  evidence_type: "empirical-case-study"
+  notes: >
+    Publicado em BMJ Health & Care Informatics. O case é de saúde, mas o
+    argumento é geral: começar por um pain point real, perguntar que
+    valor único ML oferece, definir como o resultado gera ação, e medir
+    sucesso — o erro comum apontado pelos autores é formular o problema
+    para caber nos dados disponíveis, em vez de resolver um problema real.
+  url: "https://research.google/pubs/user-centred-design-for-machine-learning-in-health-care-a-case-study-from-care-management/"
+  accessed: "2026-09-30"
+
+- id: youtube-ai-problem-framing
+  title: "Vídeo sobre AI Problem Framing (canvas e comparação estruturada de casos de uso)"
+  type: "talk"
+  evidence_type: "practitioner-framework"
+  notes: >
+    Talk trazida por quem pesquisou o tema como base do framework de AI
+    Problem Framing usado neste conteúdo (dimensões como status quo,
+    problema de negócio, problema do usuário, dados, integração e risco;
+    a taxonomia AI Assisted/Augmented/Powered). Título exato do vídeo não
+    confirmado nesta sessão (rede bloqueada para youtube.com) — usar como
+    fonte de framework prático, não como padrão oficial ou acadêmico.
+  url: "https://www.youtube.com/watch?v=fs1Ky20OTYc"
+  accessed: "2026-09-30"
