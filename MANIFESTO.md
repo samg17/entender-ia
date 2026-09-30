@@ -21,3 +21,7 @@ As organizações têm um papel importante nesse processo. Suas escolhas sobre t
 Este projeto nasce dessa perspectiva. É uma base aberta sobre fundamentos de tecnologia e negócios para profissionais e curiosos, criada para tornar fundamentos importantes mais acessíveis sem reduzi-los a respostas fáceis.
 
 A intenção não é prever o futuro. É ajudar mais pessoas a entendê-lo enquanto ele está sendo construído, a partir da perspectiva do conhecimento.
+
+Love,
+Samar Ghattas
+
