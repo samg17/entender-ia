@@ -3,7 +3,7 @@ id: "what-is-an-llm"
 
 title: "O que realmente é um LLM"
 slug: "o-que-e-um-llm"
-description: "Um modelo de linguagem grande é um sistema estatístico que prevê a próxima unidade de texto — não um sistema que entende ou raciocina como um ser humano."
+description: "Um LLM é treinado para reconhecer padrões em linguagem e prever o token mais provável em determinado contexto — não um sistema que consulta fatos prontos ou entende como uma pessoa."
 
 locale: "pt-BR"
 
@@ -25,55 +25,100 @@ authors:
   - sam
 
 created: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-30"
 
 references:
   - attention-is-all-you-need
+  - google-ml-crash-course-intro-llm
+  - ouyang-2022-instructgpt
+  - anthropic-constitutional-ai
 ---
 
 ## Em uma frase
 
-Um LLM (*large language model*, modelo de linguagem grande) é um sistema treinado para prever, com base em um texto de entrada, qual é a unidade de texto mais provável de vir em seguida — repetidamente, até formar uma resposta completa.
+Um LLM (*large language model*, modelo de linguagem grande) é um modelo de IA treinado para reconhecer padrões em grandes volumes de linguagem e prever quais tokens são mais prováveis em determinado contexto — a base para capacidades como escrever, resumir, traduzir e responder perguntas.
 
-## Por que isso importa
+## Tokens, não palavras
 
-Muita confusão sobre o que a IA "sabe" ou "entende" vem de tratar um LLM como se fosse um agente com crenças e intenções, quando na prática ele é um mecanismo de previsão estatística treinado sobre grandes quantidades de texto. Entender essa diferença muda como avaliamos o que o sistema pode e não pode fazer de forma confiável.
+Um LLM não recebe texto do jeito que nós lemos. Antes de ser processado, o conteúdo é dividido em unidades menores chamadas *tokens* — um token pode ser uma palavra inteira, parte de uma palavra, pontuação, ou outro fragmento de texto (ver [`google-ml-crash-course-intro-llm`](../../references/sources.yaml)). O modelo aprende relações estatísticas entre tokens e estima a probabilidade de um token, ou sequência de tokens, aparecer em determinado contexto.
 
-## Modelo mental
+Quando um LLM gera uma resposta, ele produz tokens sucessivamente, um a um, com base no contexto disponível e nos padrões aprendidos durante o treinamento.
 
-Pense em um LLM como um sistema extremamente sofisticado de "completar frases", treinado em uma escala tão grande que a previsão de texto plausível passa a parecer raciocínio, explicação, tradução ou código funcional — sem que exista, por trás disso, um modelo do mundo garantido como verdadeiro.
+## Por que Transformers importam
 
-## Como funciona
+A maioria dos LLMs modernos é construída sobre a arquitetura *Transformer*, apresentada em 2017 no artigo "Attention Is All You Need" (ver [`attention-is-all-you-need`](../../references/sources.yaml)). Uma ideia central dos Transformers é o mecanismo de *attention*, que permite ao modelo relacionar diferentes partes de uma sequência entre si ao processar informação — isso viabilizou treinar modelos maiores e trabalhar com contextos muito mais amplos do que arquiteturas anteriores.
 
-O modelo é treinado em duas fases: primeiro em uma quantidade massiva de texto, aprendendo padrões estatísticos de linguagem (pré-treinamento); depois, ajustado com técnicas adicionais para seguir instruções e se comportar de forma mais útil e segura. Internamente, a arquitetura predominante hoje é o *transformer*, que usa um mecanismo chamado atenção para relacionar diferentes partes do texto de entrada entre si.
+Não é preciso entender a matemática por trás de Transformers para usar um LLM, mas vale entender o essencial: o modelo não consulta frases prontas em uma base de respostas. Ele calcula uma saída nova a cada vez, a partir do contexto recebido e dos padrões representados em seus parâmetros.
 
-## Exemplo
+## Pré-treinamento
 
-Ao receber a entrada "A capital da França é", um LLM não "sabe" a resposta no sentido de ter verificado um fato — ele calcula que, dado o padrão estatístico visto durante o treinamento, a palavra "Paris" é a continuação mais provável. Na maioria dos casos isso coincide com o fato correto, mas o mecanismo é de previsão, não de consulta a uma base de verdades.
+A primeira grande etapa costuma ser o *pre-training*: o modelo é exposto a grandes volumes de dados e aprende padrões de linguagem, relações entre conceitos e regularidades presentes nesses dados, ajustando seus parâmetros para melhorar suas próprias previsões. Dependendo da arquitetura, o objetivo pode ser prever o próximo token ou reconstruir tokens ausentes — o ponto central é o mesmo: aprendizado por ajuste de parâmetros, não memorização literal.
 
-## Implicações para negócios
+Vale evitar dizer que o modelo "armazena" ou "comprime todo o conhecimento da internet". Seus parâmetros representam padrões aprendidos durante o treinamento — isso não funciona como um banco de dados do qual fatos são recuperados exatamente quando necessário.
 
-Um LLM não é um banco de dados nem um motor de regras determinístico. Aplicações que dependem de precisão factual garantida (cálculos exatos, políticas internas, dados proprietários atualizados) precisam de mecanismos adicionais — não apenas confiar na previsão do modelo. Isso afeta diretamente como se avalia custo de erro e onde IA generativa é ou não a ferramenta certa (veja [`when-not-to-use-ai`](../thinking/when-not-to-use-ai.mdx)).
+## Pós-treinamento
+
+Um modelo pré-treinado não é automaticamente um bom assistente. Depois do pre-training, modelos passam por diferentes formas de *post-training* para melhorar capacidades como seguir instruções, produzir respostas mais úteis, e se comportar de acordo com certos objetivos ou princípios — mas os caminhos para chegar lá variam entre laboratórios.
+
+Um exemplo conhecido é o InstructGPT: a OpenAI usou demonstrações humanas, *supervised fine-tuning* e depois *reinforcement learning from human feedback* (RLHF) para aproximar o comportamento do modelo das preferências dos usuários (ver [`ouyang-2022-instructgpt`](../../references/sources.yaml)). Outros laboratórios seguem caminhos diferentes: a Anthropic desenvolveu Constitutional AI, combinando fine-tuning supervisionado e reinforcement learning orientado por um conjunto explícito de princípios, em vez de depender só de feedback humano direto (ver [`anthropic-constitutional-ai`](../../references/sources.yaml)).
+
+Por isso, "post-training" é um termo melhor do que tratar RLHF como etapa obrigatória de todo LLM — é uma técnica entre várias possíveis, não a definição do processo.
+
+## Inferência
+
+Depois de treinado, o modelo é usado para gerar resultados — esse processo é chamado de *inference*. Ao receber uma entrada, o sistema a transforma em tokens, processa o contexto e calcula possíveis continuações, gerando novos tokens progressivamente até formar a resposta.
+
+Existe uma distinção importante entre **training** (o processo de ajustar os parâmetros do modelo) e **inference** (o processo de usar esses parâmetros já fixos para produzir uma saída). É por isso que conversar com um LLM normalmente não significa que ele está sendo treinado de novo a cada interação.
+
+## O modelo não é o sistema inteiro
+
+Um LLM também não deve ser confundido com o produto que aparece na tela. Um chatbot, agente ou aplicação combina o modelo com outras peças:
+
+```
+LLM + instruções + contexto + dados + ferramentas + software
+```
+
+O LLM é uma capacidade dentro desse sistema maior — não o sistema inteiro. Isso explica por que dois produtos podem usar exatamente o mesmo modelo e, ainda assim, se comportar de formas muito diferentes.
+
+## Modelos gerais e modelos especializados
+
+Alguns modelos são feitos para funcionar bem numa ampla variedade de tarefas; outros são menores ou adaptados para domínios mais específicos, por caminhos como fine-tuning, distillation ou treinamento direcionado. Especialização pode tornar um modelo menor mais eficiente em determinada tarefa, mas isso não é automático — não significa necessariamente maior precisão ou menor custo em qualquer situação; a escolha depende do problema e precisa ser avaliada na prática.
+
+Da mesma forma, usar dados proprietários não significa necessariamente "treinar um novo LLM". Informações de uma empresa podem entrar como contexto durante a execução, ser recuperadas por outro sistema (veja [`rag`](../systems/rag.mdx)), ou alimentar um processo específico de fine-tuning — são mecanismos diferentes, não a mesma coisa com nomes diferentes.
+
+## O modelo mental mais importante
+
+```
+dados de treinamento → padrões aprendidos → contexto atual → previsão de tokens → resposta
+```
+
+A resposta pode parecer uma explicação, análise ou raciocínio completo, mas continua sendo produzida por um modelo treinado para gerar sequências a partir de padrões e do contexto disponível. Entender essa diferença ajuda a evitar dois extremos: tratar um LLM como um "autocomplete" trivial, ou imaginar que ele compreende o mundo exatamente como uma pessoa. É um tipo diferente de sistema — com capacidades impressionantes e limitações próprias.
 
 ## Equívocos comuns
 
-- "O modelo entende o que está dizendo" — o modelo produz texto estatisticamente plausível; entendimento no sentido humano não é o mecanismo subjacente.
-- "Se a resposta soa confiante, ela é confiável" — confiança na escrita não é correlacionada com correção factual.
-- "Modelos maiores eliminam esse problema" — a arquitetura de previsão estatística permanece a mesma independentemente da escala.
+- "O modelo entende o que está dizendo" — o mecanismo é previsão estatística de tokens, não compreensão no sentido humano.
+- "O modelo armazena/comprime todo o conhecimento da internet" — seus parâmetros representam padrões aprendidos, não uma base de fatos recuperáveis com exatidão.
+- "RLHF é uma etapa obrigatória de todo LLM" — é uma entre várias técnicas de post-training; outros laboratórios usam abordagens diferentes.
+- "Dar dados da empresa ao modelo é treinar uma nova LLM" — normalmente é contexto de execução ou recuperação, não treinamento.
 
 ## O que pode dar errado
 
-Modelos podem gerar informação plausível, mas incorreta (frequentemente chamada de "alucinação"), especialmente para fatos específicos, raros, recentes ou fora do que foi visto no treinamento.
+Modelos podem gerar informação plausível, mas incorreta (frequentemente chamada de "alucinação"), especialmente para fatos específicos, raros, recentes, ou fora do que foi visto no treinamento — o mecanismo de previsão continua o mesmo independentemente da escala do modelo.
 
 ## Perguntas para fazer
 
 - Esta tarefa depende de precisão factual garantida, ou de fluência e síntese de linguagem?
 - Como eu verificaria se a resposta do modelo está correta antes de agir sobre ela?
+- Estou tratando "ter acesso a dados da empresa" como se fosse "a IA aprendeu a empresa"?
 
 ## Conceitos relacionados
 
 - [Janela de contexto](../fundamentals/context-windows.mdx)
+- [RAG](../systems/rag.mdx)
 
-## Referências
+## Fontes principais
 
-- Vaswani et al., "Attention Is All You Need" — ver `references/sources.yaml` (`attention-is-all-you-need`).
+- Vaswani et al. — "Attention Is All You Need" (2017). Arquitetura Transformer e o mecanismo de attention que sustenta a maioria dos LLMs modernos.
+- Google Machine Learning Crash Course — "Introduction to Large Language Models". Fonte institucional para tokens, contexto e treinamento.
+- Ouyang et al. — "Training Language Models to Follow Instructions with Human Feedback" (InstructGPT, 2022). Fonte primária para supervised fine-tuning e RLHF como uma das formas de post-training.
+- Anthropic — "Constitutional AI: Harmlessness from AI Feedback". Fonte primária para mostrar que post-training não se resume a RLHF — outros laboratórios usam feedback orientado por princípios explícitos.

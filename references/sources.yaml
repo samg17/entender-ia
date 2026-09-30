@@ -808,3 +808,47 @@
   url: "https://www.deloitte.com/us/en/services/tax/articles/value-pricing-legal-services.html"
   published: "2021-01-01"
   accessed: "2026-09-30"
+
+# Fontes de content/fundamentals/what-is-an-llm.mdx.
+
+- id: google-ml-crash-course-intro-llm
+  title: "Introduction to Large Language Models"
+  organization: "Google Machine Learning Crash Course"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Fonte institucional para tokens, modelos de linguagem, contexto,
+    Transformer e treinamento. Acesso à rede desta sessão bloqueado
+    (egress_blocked para developers.google.com); URL trazida e checada
+    por quem pesquisou o tema.
+  url: "https://developers.google.com/machine-learning/crash-course/llm"
+  accessed: "2026-09-30"
+
+- id: ouyang-2022-instructgpt
+  title: "Training Language Models to Follow Instructions with Human Feedback"
+  authors:
+    - "Long Ouyang"
+  organization: "OpenAI / arXiv"
+  type: "paper"
+  evidence_type: "primary-source"
+  notes: >
+    Paper do InstructGPT — fonte primária para supervised fine-tuning e
+    RLHF aplicados ao comportamento de modelos de linguagem. Acesso à
+    rede desta sessão bloqueado para arxiv.org; URL trazida e checada
+    por quem pesquisou o tema.
+  url: "https://arxiv.org/abs/2203.02155"
+  published: "2022-03-04"
+  accessed: "2026-09-30"
+
+- id: anthropic-constitutional-ai
+  title: "Constitutional AI: Harmlessness from AI Feedback"
+  organization: "Anthropic"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Confirmado por fetch direto nesta sessão. Descreve Constitutional
+    AI combinando fine-tuning supervisionado e reinforcement learning
+    orientado por um conjunto explícito de princípios (RLAIF) — usado
+    para mostrar que post-training não se resume a RLHF.
+  url: "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback"
+  accessed: "2026-09-30"
