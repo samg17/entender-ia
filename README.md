@@ -42,6 +42,73 @@ O conteúdo vive em [`content/`](content/), organizado por categoria:
 
 Cada conteúdo é um dos quatro tipos: **concept** (o que é isso?), **guide** (como devo pensar sobre isso?), **playbook** (como devo decidir?) ou **perspective** (análises de afirmações populares sobre IA, software e mercado que merecem mais contexto — não é uma seção de "mitos" ou debunking). Veja os [templates](templates/).
 
+## Índice de conteúdos
+
+Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisão editorial.
+
+### Fundamentals
+
+- [O que realmente é um LLM](content/fundamentals/what-is-an-llm.mdx)
+- [Janela de contexto](content/fundamentals/context-windows.mdx)
+
+### Thinking
+
+- [Problem framing: antes de decidir onde usar IA](content/thinking/problem-framing.mdx)
+- [Quando não usar IA](content/thinking/when-not-to-use-ai.mdx)
+- [Entendimento é o novo gargalo](content/thinking/understanding-is-the-bottleneck.mdx)
+
+### Systems
+
+- [RAG: quando a IA precisa buscar antes de responder](content/systems/rag.mdx)
+- [Agentes: quando a IA deixa de só responder e passa a agir](content/systems/agents.mdx)
+
+### Business / Market
+
+- [Entendendo o mercado de IA: da computação em nuvem à economia atual](content/business/market/from-cloud-to-ai.mdx)
+
+### Business / Economics
+
+- [A economia dos sistemas de IA](content/business/economics/01-economics-of-software-and-ai.mdx)
+- [Custo por tarefa concluída com sucesso](content/business/economics/02-cost-per-successful-task.mdx)
+- [Custo, qualidade e latência: três variáveis, não uma](content/business/economics/03-cost-quality-latency-tradeoffs.mdx)
+- [A economia da confiabilidade](content/business/economics/04-economics-of-reliability.mdx)
+- [Escolher a menor capacidade que resolve o problema](content/business/economics/05-model-economics-and-optimization.mdx)
+
+### Business / Strategy
+
+- [Como avaliar uma oportunidade de IA](content/business/strategy/ai-opportunity-assessment.mdx)
+
+### Business / Business Models
+
+- [AI-enabled vs. AI-native](content/business/business-models/01-ai-enabled-vs-ai-native.mdx)
+- [Service-as-software: quando o cliente compra o resultado, não a ferramenta](content/business/business-models/02-from-software-to-service-as-software.mdx)
+- [Como IA muda pricing: seat, uso e resultado coexistindo](content/business/business-models/03-how-ai-changes-pricing.mdx)
+- [IA e o custo do trabalho: nem sempre é substituição](content/business/business-models/04-ai-and-the-cost-of-work.mdx)
+- [IA pode mudar a unidade econômica do trabalho profissional](content/business/business-models/05-how-ai-may-change-professional-services.mdx)
+- [O que continua valioso quando produzir fica mais barato](content/business/business-models/06-what-remains-valuable-when-production-gets-cheaper.mdx)
+
+### Business / Competitive Advantage
+
+- [Usar IA para ficar mais eficiente não significa construir vantagem competitiva](content/business/competitive-advantage/01-productivity-is-not-strategy.mdx)
+- [Ser diferente não significa possuir vantagem competitiva](content/business/competitive-advantage/02-differentiation-vs-competitive-advantage.mdx)
+- [O que acontece quando sua tecnologia deixa de ser rara?](content/business/competitive-advantage/03-commoditization-in-ai.mdx)
+- [Criar algo valioso não significa capturar o valor criado](content/business/competitive-advantage/04-value-creation-vs-value-capture.mdx)
+- [Quando uma camada comoditiza, a vantagem pode mudar de lugar](content/business/competitive-advantage/05-where-value-moves.mdx)
+- [Quando a interface muda, a distribuição também muda](content/business/competitive-advantage/06-distribution-is-changing.mdx)
+- [O que realmente torna uma vantagem difícil de reproduzir?](content/business/competitive-advantage/07-barriers-switching-costs-and-moats.mdx)
+- [Se o modelo pode mudar amanhã, o que realmente pertence ao seu produto?](content/business/competitive-advantage/08-capabilities-not-model-dependencies.mdx)
+- [Se todos acessam o mesmo modelo, o que pode continuar diferente?](content/business/competitive-advantage/09-context-data-workflows-and-learning-loops.mdx)
+- [Uma boa vantagem não precisa durar para sempre](content/business/competitive-advantage/10-transient-advantage.mdx)
+- [Teste a durabilidade da sua vantagem](content/business/competitive-advantage/11-durability-test.mdx)
+
+### Organization
+
+- [Alfabetização em IA não é alfabetização em prompts](content/organization/ai-literacy.mdx)
+
+### Playbooks
+
+- [Avaliar um caso de uso de IA](content/playbooks/evaluate-ai-use-case.mdx)
+
 ## Princípios editoriais
 
 - [`principles/editorial-principles.md`](principles/editorial-principles.md) — os critérios que guiam o que entra e como é escrito.
