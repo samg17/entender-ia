@@ -1,9 +1,9 @@
 ---
 id: "evaluate-ai-use-case"
 
-title: "Avaliar um caso de uso de IA"
+title: "Como avaliar um caso de uso de IA"
 slug: "avaliar-caso-de-uso"
-description: "Um framework de perguntas para decidir se um caso de uso de IA está pronto para ser perseguido, e com que nível de risco."
+description: "Ter uma tarefa que poderia usar IA não significa que IA seja a melhor solução — um roteiro de perguntas para descobrir a solução mais adequada antes de investir tempo nela."
 
 locale: "pt-BR"
 
@@ -20,59 +20,115 @@ tags:
 prerequisites:
   - problem-framing
   - when-not-to-use-ai
-  - ai-opportunity-assessment
 
-related: []
+related:
+  - ai-opportunity-assessment
+  - agents
 
 authors:
   - sam
 
 created: "2026-09-28"
-last_reviewed: "2026-09-28"
+last_reviewed: "2026-09-30"
 
 references: []
 ---
 
 ## Objetivo
 
-Ajudar a decidir se um caso de uso de IA proposto deve avançar, ser ajustado, ou ser descartado — antes de investir em implementação.
+Ajudar a decidir se — e de que forma — IA realmente ajuda em uma tarefa proposta, depois que o problema em si já foi enquadrado (veja [`problem-framing`](../thinking/problem-framing.mdx)). O objetivo desta avaliação não é provar que um projeto precisa de IA. É descobrir a solução mais adequada antes de investir tempo nela.
 
 ## Quando usar
 
-Use este playbook sempre que alguém propuser "usar IA para X", antes de escolher uma ferramenta, arquitetura ou fornecedor. Não é necessário para experimentos de baixo custo e reversíveis, puramente exploratórios.
+Use depois de já ter clareza sobre qual problema está sendo resolvido, e antes de escolher modelo, agente ou arquitetura. Se a resposta a "qual problema estamos tentando resolver?" ainda não está clara, volte primeiro para [`problem-framing`](../thinking/problem-framing.mdx) — este playbook responde a uma pergunta diferente: **IA realmente ajuda aqui, e de que forma?**
 
-## Perguntas
+## O framework: cinco perguntas
 
-1. **Problema**: qual problema específico este caso de uso resolve, e para quem? (veja [`enquadrar-o-problema`](../thinking/problem-framing.mdx))
-2. **Necessidade de IA**: este problema exige especificamente IA generativa, ou uma solução determinística já resolveria melhor? (veja [`quando-nao-usar-ia`](../thinking/when-not-to-use-ai.mdx))
-3. **Custo de erro**: o que acontece quando o sistema erra, e quem detecta o erro?
-4. **Verificação**: existe um jeito viável de verificar a saída antes que ela cause impacto real?
-5. **Métrica**: como saberíamos, de forma concreta, se isso funcionou — e essa métrica existiria mesmo sem IA?
-6. **Estágio**: isso é uma prova de conceito para aprender, ou já está sendo tratado como produção?
+Para a maioria dos casos do dia a dia, cinco perguntas são suficientes:
 
-## Framework de decisão
+1. **Problema**: o que exatamente não funciona bem hoje?
+2. **Necessidade**: qual parte desse problema realmente se beneficia de IA?
+3. **Informação**: temos os dados ou contexto necessários?
+4. **Verificação**: como saberemos quando o resultado está bom ou errado?
+5. **Risco**: o que acontece quando o sistema falha?
 
-- Se as respostas a **Problema** e **Necessidade de IA** não forem claras, o caso de uso não está pronto — volte para o enquadramento do problema.
-- Se o **custo de erro** for alto e a **verificação** for inviável ou cara, restrinja o caso de uso a um papel de apoio à decisão humana, não a decisor autônomo.
-- Se não houver uma **métrica** clara de sucesso, defina uma antes de avançar — mesmo que seja simples.
-- Se o caso de uso ainda está em fase de aprendizado, trate-o explicitamente como prova de conceito, com escopo e recursos proporcionais a isso.
+Se essas respostas ainda não estão claras, provavelmente é cedo para escolher modelo, agente ou arquitetura. A primeira decisão sobre um caso de uso de IA não deveria ser qual tecnologia usar — deveria ser entender se há uma boa razão para usar IA ali.
+
+## Como aplicar, passo a passo
+
+### 1. Comece pelo trabalho, não pela IA
+
+Descreva o que acontece hoje e onde está a dificuldade. Por exemplo: "todo mês recebo várias planilhas de despesas com nomes de colunas e descrições diferentes; preciso consolidá-las e classificar manualmente os gastos."
+
+Aqui normalmente existem pelo menos dois tipos de trabalho. Somar valores e aplicar fórmulas segue regras claras — software tradicional já resolve bem. Interpretar que "AWS", "Amazon Cloud" e "serviço de hospedagem" pertencem à mesma categoria exige lidar com variações de linguagem — aí IA pode ser útil. A pergunta é: **qual parte do problema realmente precisa da capacidade da IA?** Isso evita usar um modelo para tarefas que uma fórmula, filtro, regra ou API resolveria de forma mais simples.
+
+### 2. Veja que tipo de informação a tarefa exige
+
+IA tende a ser mais útil quando o trabalho envolve informação pouco estruturada — textos, documentos, imagens, conversas, ou situações com muitas formas de expressar a mesma coisa. Quando os dados já são estruturados e a regra é conhecida, soluções determinísticas costumam ser mais previsíveis.
+
+Isso não precisa ser uma escolha entre "IA" e "sem IA" — um mesmo processo pode combinar os dois. No exemplo das planilhas: regras tradicionais validam números, calculam totais e identificam duplicatas; IA interpreta descrições pouco padronizadas e sugere categorias. O importante é escolher a ferramenta pela natureza da tarefa, não aplicar a mesma solução a tudo.
+
+### 3. Pergunte como saberemos se funcionou
+
+Um resultado que parece bom não é necessariamente um resultado correto. Antes de construir, defina alguma forma de verificar a qualidade — não precisa ser uma métrica sofisticada: "pelo menos 95 de cada 100 despesas devem ser classificadas corretamente em um conjunto de teste já revisado" já é suficiente para começar.
+
+Esse passo importa especialmente em IA porque respostas diferentes podem parecer igualmente razoáveis. Sem algum critério de sucesso, fica difícil distinguir uma boa demonstração de um sistema que realmente funciona.
+
+### 4. Considere o que acontece quando estiver errado
+
+Nem todo erro tem o mesmo impacto. Classificar incorretamente uma foto em uma pasta pode ser só inconveniente; gerar um valor financeiro incorreto antes de um pagamento tem outra consequência. Quanto maior o impacto de um erro, mais controles o sistema precisa — validações automáticas, limites de ação, aprovação antes de certas operações, ou simplesmente decidir que aquela parte não deve ser automatizada.
+
+A pergunta útil é: **se o sistema errar, conseguimos perceber e corrigir antes que o erro produza uma consequência importante?** Não é necessário repetir que "o humano deve julgar" em todo caso — o ponto é desenhar o nível de controle de acordo com a consequência real do erro.
+
+### 5. Escolha o nível de autonomia depois
+
+Só depois das perguntas anteriores vale decidir quanto do processo o sistema pode executar sozinho. Existe um espectro: uma aplicação pode apenas sugerir uma resposta, preparar uma tarefa para confirmação, ou executar determinadas ações dentro de limites definidos (veja [`agents`](../systems/agents.mdx) sobre autonomia como espectro, não como categorias fixas).
+
+Pergunte: o sistema recomenda, prepara ou executa? E, se executa, até onde pode ir sozinho?
+
+### 6. Teste pequeno antes de ampliar
+
+Quando ainda não se sabe como a IA vai se comportar num caso específico, a forma mais útil de descobrir é testar com um conjunto pequeno e representativo. No exemplo das planilhas, em vez de começar com doze meses e milhares de linhas: selecione umas 50 linhas variadas, defina previamente a classificação correta, execute o processo, compare os resultados, e observe onde e por que ele erra.
+
+Se funcionar, aumente o escopo. Se não funcionar, você aprendeu isso com um experimento pequeno — uma prova de conceito serve para reduzir incerteza, não para demonstrar que uma ideia já escolhida está certa.
+
+## Exemplo completo
+
+Alguém recebe todo mês diferentes planilhas de despesas e quer "usar IA para automatizar tudo". Começando pela solução, a ideia rapidamente vira um agente complexo. Começando pelo problema, aparece uma arquitetura mais simples:
+
+- **O problema**: muito tempo gasto padronizando descrições e classificando despesas.
+- **O que já tem regra clara**: somar valores, validar datas, detectar células vazias e consolidar colunas — resolvido com código ou planilha.
+- **Onde IA pode ajudar**: interpretar descrições diferentes e sugerir uma categoria comum.
+- **Como avaliar**: separar 100 registros já classificados corretamente e medir quantos o sistema classifica da mesma forma.
+- **O risco**: uma classificação errada pode prejudicar uma análise, mas não deveria alterar automaticamente registros contábeis nem executar pagamentos.
+- **Primeiro teste**: rodar o sistema só sobre uma cópia dos dados, comparando resultados antes de integrá-lo ao processo real.
+
+O caso de uso deixa de ser "criar um agente de IA para analisar planilhas" e passa a ser "usar IA para classificar descrições ambíguas de despesas, mantendo cálculos e validações em regras determinísticas". A diferença parece pequena, mas evita muita complexidade desnecessária.
+
+## Onde entram frameworks externos
+
+Frameworks mais elaborados entram como referência quando resolvem uma dúvida específica — não como ponto de partida obrigatório:
+
+- Um canvas de problem framing mais estruturado ajuda quando existe uma ideia maior, com vários stakeholders, dados, integração e objetivos a comparar entre propostas concorrentes — veja [`problem-framing`](../thinking/problem-framing.mdx).
+- Frameworks de gestão de risco de IA ajudam quando risco, impacto, governança e monitoramento começam a importar de verdade.
+- Guias de design centrado no usuário ajudam a validar necessidade do usuário, utilidade real da IA e definição de sucesso.
+- O passo de teste pequeno descrito acima é a versão mínima de uma prova de conceito — formalize mais só se a principal dúvida ainda for "isso funciona suficientemente bem neste caso?".
+- Depois que o caso de uso é aprovado, transformar a ideia em requisitos e comportamento verificável (specs, PRDs, critérios de aceite) é trabalho de construção — não faz parte desta avaliação.
 
 ## Riscos
 
 - Avançar sem métrica leva a projetos que nunca se sabe se funcionaram.
 - Ignorar custo de erro em áreas sensíveis pode gerar dano real antes que alguém perceba o problema.
 - Tratar uma prova de conceito como se já fosse produção acumula dívida técnica e de confiança.
+- Pular direto para escolher modelo ou arquitetura sem antes responder as cinco perguntas tende a produzir soluções mais complexas do que o problema exige.
 
 ## Sinais de alerta
 
 - A justificativa do projeto é "todo mundo está fazendo isso" em vez de um problema específico.
 - Ninguém no time consegue explicar o que aconteceria se o sistema errasse.
-- A métrica de sucesso só existe depois que o projeto já foi lançado.
+- A métrica de sucesso só aparece depois que o projeto já foi lançado.
+- O projeto já chegou pronto como "vamos construir um agente" antes de alguém perguntar qual parte do trabalho realmente precisa de IA.
 
 ## Output esperado
 
-Uma decisão registrada: avançar (com escopo e métrica definidos), ajustar (com o que precisa mudar antes de avançar), ou descartar (com a razão específica).
-
-## Referências
-
-Nenhuma referência externa citada neste conteúdo; ver `principles/evidence-policy.md` para quando referências se tornam necessárias.
+Uma decisão registrada: avançar (com escopo, métrica e nível de autonomia definidos), ajustar (com o que precisa mudar antes de avançar), ou descartar (com a razão específica) — junto com uma frase simples que descreva o caso de uso real, como no exemplo acima, em vez do nome da tecnologia que se pretende usar.
