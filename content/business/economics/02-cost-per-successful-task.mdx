@@ -1,0 +1,77 @@
+---
+id: "cost-per-successful-task"
+
+title: "Custo por tarefa concluída com sucesso"
+slug: "custo-por-tarefa-concluida"
+description: "O menor preço por chamada de modelo não é necessariamente o menor custo do resultado — a unidade econômica que importa é quanto custa concluir a tarefa no nível de qualidade necessário."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - custo
+  - unit-economics
+
+prerequisites:
+  - economics-of-software-and-ai
+
+related:
+  - cost-quality-latency-tradeoffs
+  - economics-of-reliability
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - openai-2025-practical-guide-ai-agents
+---
+
+## Em uma frase
+
+A unidade econômica relevante para avaliar um sistema de IA não é o preço por token. É o custo de produzir um resultado aceitável — o **custo por tarefa concluída com sucesso**.
+
+```
+preço por token → custo por inferência → custo por workflow → custo por tarefa concluída com sucesso → economia do produto
+```
+
+## A fórmula
+
+```
+custo por tarefa concluída com sucesso = custo total do sistema / número de tarefas concluídas dentro do padrão esperado
+```
+
+O numerador pode incluir bem mais do que a chamada ao modelo: inferência, recuperação de contexto, uso de ferramentas, tentativas adicionais (retries), avaliação, infraestrutura, e revisão humana quando ela faz parte do fluxo.
+
+## Por que preço por chamada engana
+
+Um modelo barato por chamada pode exigir mais tentativas, mais etapas de validação ou mais revisão humana para chegar a um resultado aceitável. Um modelo mais caro por chamada pode resolver a mesma tarefa em uma única passagem. O menor custo de inferência, portanto, não é necessariamente o menor custo do resultado:
+
+```
+Modelo grande: $0,40 por execução, 95% de sucesso
+Modelo pequeno: $0,08 por execução, 60% de sucesso + múltiplos retries + revisão humana
+```
+
+Sem calcular o custo por tarefa concluída, a comparação "$0,08 é mais barato que $0,40" é enganosa — o custo real de chegar a um resultado aceitável com o modelo pequeno pode ultrapassar o do modelo grande, uma vez somados retries e revisão.
+
+## Como isso muda a prática
+
+A própria orientação da OpenAI para construção de agentes recomenda estabelecer uma baseline de qualidade com um modelo forte, medir performance com evals, e só então testar a substituição por modelos menores nos pontos em que eles conseguem manter o nível de qualidade necessário (ver [`openai-2025-practical-guide-ai-agents`](../../../references/sources.yaml)) — essa é exatamente a lógica de otimizar pelo custo por tarefa, não pelo preço por chamada isolado.
+
+## Perguntas para fazer
+
+- Estamos comparando modelos ou arquiteturas pelo preço por chamada, ou pelo custo de chegar a um resultado aceitável?
+- Quantas tentativas, validações ou revisões humanas em média uma tarefa exige hoje, e quanto isso adiciona ao custo?
+- Se trocássemos para um modelo mais barato, o que aconteceria com a taxa de sucesso — e o custo total ainda cairia?
+
+## Fontes principais
+
+- OpenAI — "A Practical Guide to Building Agents". Sustenta a prática de estabelecer uma baseline de qualidade antes de testar modelos menores, coerente com otimizar pelo custo por tarefa em vez de pelo preço por chamada.

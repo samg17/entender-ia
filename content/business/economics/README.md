@@ -1,32 +1,19 @@
 # Business / Economics
 
-Trata da economia por trás de software e IA: estrutura de custos, unit economics e o que realmente compõe o custo de operar um sistema de IA em produção.
+Responde a uma pergunta central: o que muda economicamente quando software passa a executar mais trabalho, e esse trabalho tem custo computacional recorrente? O foco é custo, margem, escala, confiabilidade e custo por resultado — não pricing em profundidade, que já é tratado em [`business-models/`](../business-models/).
+
+## Conteúdo existente
+
+1. [`01-economics-of-software-and-ai.mdx`](01-economics-of-software-and-ai.mdx) — do custo do software ao custo da execução; por que "SaaS tem margem de 80-90%" e "apps de IA têm margem de 0-30%" são afirmações fortes demais.
+2. [`02-cost-per-successful-task.mdx`](02-cost-per-successful-task.mdx) — o conceito central desta trilha: a unidade econômica que importa é o custo de produzir um resultado aceitável, não o preço por token.
+3. [`03-cost-quality-latency-tradeoffs.mdx`](03-cost-quality-latency-tradeoffs.mdx) — custo, qualidade e latência como três variáveis que precisam ser otimizadas juntas.
+4. [`04-economics-of-reliability.mdx`](04-economics-of-reliability.mdx) — por que confiabilidade é uma variável econômica, não só técnica; custo esperado do erro; revisão humana como parte do produto, não só custo residual.
+5. [`05-model-economics-and-optimization.mdx`](05-model-economics-and-optimization.mdx) — escolher a menor capacidade que resolve o problema; por que open source não é automaticamente mais barato.
 
 ## Temas futuros (não escritos ainda)
 
-- Economics of software, de SaaS e de IA
-- Custo marginal, custo de inferência, economia de tokens
-- Custo de modelo vs. custo de sistema completo
-- Custo de revisão humana e de avaliação (evals)
-- Custo de erro e custo de falha
-- Latência vs. qualidade
-- Margem bruta, pricing, usage-based pricing
-- Economia da automação e unit economics de IA
-- Custo de construir sistemas confiáveis
+- `06-ai-value-chain.mdx` — quem captura valor entre chips, infraestrutura, modelos e aplicações; requer análise de cadeia de valor mais ampla do que a margem de um fornecedor específico sustenta sozinha.
 
-## Ideia central a preservar
+## Nota editorial
 
-O custo de uma chamada de modelo não representa necessariamente o custo real de operar um sistema de IA. O sistema real tende a envolver:
-
-```
-custo do modelo
-+ infraestrutura
-+ dados
-+ retrieval
-+ avaliação
-+ revisão humana
-+ monitoramento
-+ custo de falha
-```
-
-Nenhum conteúdo foi escrito ainda nesta subcategoria.
+Esta subcategoria evita repetir em profundidade o que já está em `business-models/pricing` — a interface entre as duas é: custo é "quanto custa produzir o resultado", preço é "quanto e como cobramos", e essa distinção é feita explicitamente no primeiro conteúdo, com link para lá. Também evita tratar números específicos de uma empresa (margem, faixa de custo, redução percentual) como propriedade universal de uma categoria inteira — veja [`principles/editorial-principles.md`](../../../principles/editorial-principles.md#honestidade-intelectual).

@@ -1,0 +1,71 @@
+---
+id: "cost-quality-latency-tradeoffs"
+
+title: "Custo, qualidade e latência: três variáveis, não uma"
+slug: "custo-qualidade-latencia"
+description: "Escolher uma arquitetura de IA envolve equilibrar custo, qualidade e latência ao mesmo tempo — otimizar uma isoladamente costuma piorar as outras duas."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - latencia
+  - qualidade
+
+prerequisites:
+  - cost-per-successful-task
+
+related:
+  - model-economics-and-optimization
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - aws-bedrock-provisioned-throughput
+  - openai-cost-optimization-guide
+---
+
+## Em uma frase
+
+Escolher uma arquitetura de IA costuma envolver um equilíbrio entre custo, qualidade e latência — nenhuma das três deveria ser otimizada isoladamente.
+
+```
+qualidade
+custo
+latência
+```
+
+## O trade-off, na prática
+
+Modelos menores tendem a ser mais rápidos e mais baratos, mas podem não atingir a qualidade necessária para tarefas mais exigentes. Modelos maiores podem ser necessários quando a tarefa exige capacidades adicionais, ao custo de mais tempo e mais gasto por execução. Processamento em lote (*batch*) pode reduzir custo em tarefas que não precisam de resposta imediata; aplicações sensíveis à latência podem exigir maior capacidade disponível — a documentação da OpenAI descreve batching e escolha de modelo como estratégias explícitas de redução de custo (ver [`openai-cost-optimization-guide`](../../../references/sources.yaml)).
+
+A escolha certa depende do nível de qualidade necessário para aquela tarefa específica — não existe "o modelo mais barato" ou "o modelo mais poderoso" como resposta padrão.
+
+## Latência tem seu próprio custo — mas não da forma que parece óbvia
+
+É tentador simplificar para "resposta em tempo real exige GPU dedicada". Essa formulação não é necessariamente verdadeira. O que é verdade: infraestruturas comerciais oferecem diferentes modelos de capacidade, e melhor latência ou maior previsibilidade de throughput podem exigir mais capacidade ou modalidades mais caras de inferência. O Amazon Bedrock, por exemplo, permite comprar *Provisioned Throughput* por hora para garantir maior capacidade, como alternativa ao modelo on-demand (ver [`aws-bedrock-provisioned-throughput`](../../../references/sources.yaml)) — uma estrutura de custo diferente, não uma exigência técnica única.
+
+## Por que tratar as três variáveis juntas
+
+Otimizar só por custo tende a sacrificar qualidade ou latência sem que isso apareça imediatamente — até que a taxa de erro ou o tempo de resposta chegue a um ponto que gera custo em outro lugar (mais retries, mais revisão humana, clientes insatisfeitos). Otimizar só por qualidade pode gerar um sistema caro e lento demais para o caso de uso. O objetivo é encontrar o ponto que atende ao nível de qualidade necessário, dentro de um orçamento e uma latência aceitáveis — não maximizar nenhuma das três isoladamente.
+
+## Perguntas para fazer
+
+- Qual das três variáveis (custo, qualidade, latência) é a restrição mais rígida para este caso de uso específico?
+- Esta tarefa realmente precisa de resposta em tempo real, ou processamento em lote resolveria com menos custo?
+- Se reduzíssemos custo trocando de modelo, o que aconteceria com qualidade e latência — e isso ainda seria aceitável?
+
+## Fontes principais
+
+- AWS (Amazon Bedrock) — "Provisioned Throughput". Evidência de que inferência pode ter diferentes estruturas de custo ligadas a capacidade e previsibilidade, não só ao modelo escolhido.
+- OpenAI — "Cost Optimization". Batching, caching e escolha de modelo como estratégias documentadas de redução de custo, aplicáveis conforme a tolerância a latência do caso de uso.

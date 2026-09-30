@@ -1,0 +1,86 @@
+---
+id: "economics-of-reliability"
+
+title: "A economia da confiabilidade"
+slug: "economia-da-confiabilidade"
+description: "Uma saída barata pode ser economicamente cara se exigir muita revisão, gerar retries ou produzir erros de alto impacto — confiabilidade afeta diretamente os unit economics, não é só uma questão técnica."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - confiabilidade
+  - risco
+
+prerequisites:
+  - cost-per-successful-task
+
+related:
+  - cost-quality-latency-tradeoffs
+  - when-not-to-use-ai
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references: []
+---
+
+## Em uma frase
+
+Confiabilidade não é apenas uma questão técnica — é uma variável econômica. Um sistema deve ser avaliado não só pelo custo quando funciona, mas pelo custo de verificar, corrigir e lidar com as vezes em que não funciona.
+
+## Erros fazem parte da economia do sistema
+
+Uma saída incorreta pode gerar uma nova tentativa, exigir revisão humana, ou produzir uma consequência que precisa ser corrigida depois. O custo desses casos varia muito conforme o tipo de tarefa — errar uma sugestão de assunto de e-mail custa pouco; errar um cálculo financeiro ou uma decisão com impacto sobre uma pessoa pode custar muito mais.
+
+Um exercício simples ilustra por que preço por chamada isolado não decide a questão:
+
+```
+Modelo A: $0,02 por tentativa, 70% de sucesso
+Modelo B: $0,08 por tentativa, 97% de sucesso
+```
+
+Dependendo do custo de um erro e do custo de repetir a tentativa, o Modelo B — quatro vezes mais caro por chamada — pode ser economicamente melhor. É a mesma lógica de [`cost-per-successful-task`](02-cost-per-successful-task.mdx), aplicada especificamente ao risco de falha.
+
+## Custo esperado do erro
+
+```
+probabilidade de falha × impacto da falha = custo esperado do erro
+```
+
+O mesmo nível de erro pode ser perfeitamente aceitável em uma tarefa e economicamente inviável em outra — depende de quão caro é um erro específico, não de uma taxa de acerto "boa" em abstrato. Essa fórmula conecta diretamente a economia do sistema com risco e avaliação: veja [`when-not-to-use-ai`](../../thinking/when-not-to-use-ai.mdx) para quando o custo esperado de erro é alto demais para justificar IA como decisor final.
+
+## Três tipos de custo, não um
+
+É comum tratar avaliação (*evals*) como um custo operacional diário obrigatório. Vale separar em três categorias:
+
+- **Custo de construção** (*build cost*): desenvolver e testar o sistema antes de colocá-lo em produção.
+- **Custo de execução** (*run cost*): rodar o sistema para os clientes, dia a dia.
+- **Custo de falha** (*failure cost*): corrigir as consequências quando o sistema erra.
+
+Evals podem entrar tanto no custo de construção quanto no de execução, dependendo de como a organização opera — nem sempre é um custo recorrente obrigatório por chamada.
+
+## Revisão humana não é só custo residual
+
+É tentador tratar revisão humana como "o custo que sobra da IA não ser perfeita". Em muitos produtos, a participação humana é deliberadamente parte da proposta de valor, não um resíduo:
+
+```
+IA produz primeira análise → humano revisa julgamento sensível → sistema entrega resultado
+```
+
+Mão de obra humana nesse fluxo pode ser custo de correção, mecanismo de controle, parte do produto, fonte de confiança para o cliente, ou requisito regulatório — em vez de tratar cada revisão humana como falha do sistema, o que importa economicamente é calcular o custo completo do workflow, incluindo a revisão desenhada de propósito.
+
+## Perguntas para fazer
+
+- Qual é o custo esperado de um erro nesta tarefa específica — e ele muda a comparação entre modelos "baratos" e "caros"?
+- Estamos tratando evals como custo de construção, de execução, ou os dois — e isso está claro para quem decide orçamento?
+- A revisão humana no nosso fluxo é um resíduo a ser eliminado, ou parte deliberada do valor que entregamos?

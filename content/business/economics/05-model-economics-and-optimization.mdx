@@ -1,0 +1,63 @@
+---
+id: "model-economics-and-optimization"
+
+title: "Escolher a menor capacidade que resolve o problema"
+slug: "menor-capacidade-que-resolve-o-problema"
+description: "Modelos menores, routing, caching, batching e fine-tuning podem reduzir custo sem simplesmente piorar qualidade — mas operar um modelo próprio não é automaticamente mais barato do que usar uma API."
+
+locale: "pt-BR"
+
+type: "concept"
+category: "business"
+subcategory: "economics"
+level: "intermediate"
+status: "draft"
+
+tags:
+  - economics
+  - otimizacao
+  - modelos
+
+prerequisites:
+  - cost-quality-latency-tradeoffs
+
+related:
+  - economics-of-reliability
+
+authors:
+  - sam
+
+created: "2026-09-30"
+last_reviewed: "2026-09-30"
+
+references:
+  - openai-model-optimization-guide
+  - openai-cost-optimization-guide
+---
+
+## Em uma frase
+
+Existem várias formas de reduzir o custo de um sistema de IA sem simplesmente diminuir sua qualidade — mas nenhuma delas, incluindo operar modelos próprios, é uma estratégia universal de economia.
+
+## O menu de opções
+
+Reduzir chamadas desnecessárias, diminuir o tamanho do contexto enviado, usar caching, processar tarefas em lote, e direcionar tarefas diferentes para modelos diferentes (*routing*) são estratégias documentadas de redução de custo (ver [`openai-cost-optimization-guide`](../../../references/sources.yaml)). Modelos menores e especializados também podem ser suficientes para problemas bem definidos: a documentação da OpenAI descreve fine-tuning como forma de permitir que um modelo menor, mais barato e mais rápido, tenha bom desempenho em uma tarefa específica (ver [`openai-model-optimization-guide`](../../../references/sources.yaml)). Distillation e outras formas de especialização seguem a mesma lógica.
+
+Nenhuma dessas técnicas deveria ser apresentada como obrigatória para todo sistema — cada uma resolve um tipo específico de ineficiência, e um sistema simples pode não precisar de nenhuma delas.
+
+## Open source não significa automaticamente mais barato
+
+Este é o ponto que mais merece cautela. Quando você usa uma API de um provedor, parte da operação já vem embutida: serving, infraestrutura, escalabilidade, atualização de modelo, disponibilidade. Ao operar um modelo diretamente (open source ou próprio), você pode ganhar mais controle sobre custo e dados, mas também assume capacidade computacional ociosa, GPUs, serving, observabilidade, deployment, engenharia de manutenção e atualização contínua.
+
+Por isso, a pergunta econômica correta não é "API ou open source?". É: **qual opção produz o nível de qualidade necessário pelo menor custo total para o nosso volume e contexto específicos?** A resposta muda conforme o volume de uso, a previsibilidade da demanda, e a capacidade da equipe de operar infraestrutura própria — não existe um vencedor universal entre as duas abordagens.
+
+## Perguntas para fazer
+
+- Já esgotamos otimizações mais simples (menos chamadas, contexto menor, caching, batching) antes de considerar trocar de modelo ou infraestrutura?
+- Um modelo menor e mais especializado resolveria essa tarefa específica com qualidade suficiente?
+- Se considerarmos operar um modelo próprio, incluímos no cálculo capacidade ociosa, engenharia e manutenção — ou só comparamos o custo por token?
+
+## Fontes principais
+
+- OpenAI — "Model Optimization". Fine-tuning como forma de viabilizar modelos menores e mais baratos para tarefas específicas, mantendo qualidade suficiente.
+- OpenAI — "Cost Optimization". Menu de estratégias de redução de custo (requests, tokens, batching, caching, escolha de modelo) tratadas como opções, não como hierarquia obrigatória.
