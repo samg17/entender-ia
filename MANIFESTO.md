@@ -1,4 +1,4 @@
-# Entender IA
+# Entender não é binário :)
 
 ## O seu ponto de vista é seu? A partir de qual ponto de vista?
 
