@@ -8,6 +8,7 @@ Trata da transformação de modelos de negócio provocada por IA: AI-native, AI-
 2. [`02-from-software-to-service-as-software.mdx`](02-from-software-to-service-as-software.mdx) — o cliente deixando de operar a ferramenta e passando a comprar o resultado.
 3. [`03-how-ai-changes-pricing.mdx`](03-how-ai-changes-pricing.mdx) — seat, usage-based, outcome-based e híbrido coexistindo, com exemplos primários de cada um.
 4. [`04-how-ai-may-change-professional-services.mdx`](04-how-ai-may-change-professional-services.mdx) — a arquitetura do serviço profissional mudando: quem executa, onde o conhecimento fica, e pelo que o cliente decide pagar.
+5. [`05-headless-interoperability-and-agents.mdx`](05-headless-interoperability-and-agents.mdx) — o produto deixando de depender de uma única interface: headless, APIs, MCP e agentes, e o que isso muda em distribuição, cobrança e vantagem competitiva.
 
 Todos em `status: "draft"`, aguardando revisão editorial.
 

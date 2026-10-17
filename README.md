@@ -79,6 +79,7 @@ Todo o conteúdo está em `status: "draft"` ou `"in-review"`, aguardando revisã
 - [Service-as-software: quando o cliente compra o resultado, não a ferramenta](content/business/business-models/02-from-software-to-service-as-software.mdx)
 - [Como IA muda pricing: seat, uso e resultado coexistindo](content/business/business-models/03-how-ai-changes-pricing.mdx)
 - [Como IA muda serviços profissionais](content/business/business-models/04-how-ai-may-change-professional-services.mdx)
+- [Quando o produto deixa de depender de uma interface: headless, interoperabilidade e agentes](content/business/business-models/05-headless-interoperability-and-agents.mdx)
 
 ### Business / Competitive Advantage
 

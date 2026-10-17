@@ -794,3 +794,54 @@
     para mostrar que post-training não se resume a RLHF.
   url: "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback"
   accessed: "2026-09-30"
+
+# Fontes de headless-interoperability-and-agents.mdx — URLs verificadas
+# (HTTP 200) em 2026-10-17.
+
+- id: shopify-headless-commerce-overview
+  title: "About headless commerce"
+  organization: "Shopify"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documentação oficial que descreve a separação entre a interface
+    (storefront) e o núcleo da plataforma de comércio, acessado por
+    APIs — usada como referência para a definição de arquitetura
+    headless, sem depender de um exemplo de IA.
+  url: "https://shopify.dev/docs/storefronts/headless/overview"
+  accessed: "2026-10-17"
+
+- id: mcp-architecture
+  title: "Architecture overview"
+  organization: "Model Context Protocol"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Documentação oficial do MCP: arquitetura cliente-servidor e
+    componentes (ferramentas, recursos, prompts) que conectam
+    aplicações de IA a sistemas externos.
+  url: "https://modelcontextprotocol.io/docs/learn/architecture"
+  accessed: "2026-10-17"
+
+- id: stripe-ai-pricing-models
+  title: "AI pricing models: How the main structures work and when to use them"
+  organization: "Stripe"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Artigo da Stripe sobre estruturas de precificação para produtos
+    com IA (assinatura, por usuário, consumo, híbrido, por resultado)
+    e seus trade-offs. Complementa stripe-ai-saas-pricing-models.
+  url: "https://stripe.com/resources/more/ai-pricing-models"
+  accessed: "2026-10-17"
+
+- id: openai-building-agents-track
+  title: "Building agents"
+  organization: "OpenAI"
+  type: "official-documentation"
+  evidence_type: "primary-source"
+  notes: >
+    Trilha educacional da OpenAI sobre componentes de agentes
+    (instruções, ferramentas, limites de atuação).
+  url: "https://developers.openai.com/tracks/building-agents"
+  accessed: "2026-10-17"
